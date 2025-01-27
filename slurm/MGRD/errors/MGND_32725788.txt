@@ -1,0 +1,42 @@
+/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/serialization.py", line 423, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol)
+  File "/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/serialization.py", line 650, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+RuntimeError: [enforce fail at inline_container.cc:445] . PytorchStreamWriter failed writing file data/2: file write failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 346, in <module>
+    ins.run()
+  File "main.py", line 161, in run
+    training_time = self.train()
+  File "main.py", line 263, in train
+    self.save_model(is_best=True)
+  File "main.py", line 326, in save_model
+    torch.save(checkpoint_dict, out_tar)
+  File "/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/serialization.py", line 424, in save
+    return
+  File "/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/serialization.py", line 290, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:325] . unexpected pos 21367424 vs 21367312
+terminate called after throwing an instance of 'c10::Error'
+  what():  [enforce fail at inline_container.cc:325] . unexpected pos 21367424 vs 21367312
+frame #0: c10::ThrowEnforceNotMet(char const*, int, char const*, std::string const&, void const*) + 0x55 (0x2b0483a8d2f5 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x3cbaccc (0x2b0440d35ccc in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: mz_zip_writer_add_mem_ex_v2 + 0x5c5 (0x2b0440d2f615 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: caffe2::serialize::PyTorchStreamWriter::writeRecord(std::string const&, void const*, unsigned long, bool) + 0xb9 (0x2b0440d372b9 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: caffe2::serialize::PyTorchStreamWriter::writeEndOfFile() + 0x2c3 (0x2b0440d37783 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: caffe2::serialize::PyTorchStreamWriter::~PyTorchStreamWriter() + 0x125 (0x2b0440d379f5 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: <unknown function> + 0x84ecf5 (0x2b042d884cf5 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_python.so)
+frame #7: <unknown function> + 0x3e4272 (0x2b042d41a272 in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x3e51af (0x2b042d41b1af in /users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/lib/libtorch_python.so)
+<omitting python frames>
+frame #21: __libc_start_main + 0xf5 (0x2b0402bd9555 in /lib64/libc.so.6)
+
+/var/spool/slurmd/job32725788/slurm_script: line 30: 95357 Aborted                 (core dumped) python main.py -dataset FACT -lifelong_name MGRD -using_MAE_loss True -MAE_loss_weights 0.001 0.001 0.001 0.001 -save_path ./checkpoint/MGRD/

@@ -1,0 +1,839 @@
+2025-01-06 01:42:27,235: Namespace(batch_size='3072', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20250106014211/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, multi_distill_num=3, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=3, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=[4000.0, 15000.0, 80000.0, 80000.0], token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2025-01-06 01:42:43,553: Snapshot:0	Epoch:0	Loss:24.263	translation_Loss:24.263	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:10.68	Hits@10:26.04	Best:10.68
+2025-01-06 01:42:54,524: Snapshot:0	Epoch:1	Loss:15.05	translation_Loss:15.05	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:18.45	Hits@10:40.4	Best:18.45
+2025-01-06 01:43:06,869: Snapshot:0	Epoch:2	Loss:8.578	translation_Loss:8.578	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:23.52	Hits@10:45.2	Best:23.52
+2025-01-06 01:43:17,920: Snapshot:0	Epoch:3	Loss:4.719	translation_Loss:4.719	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:25.7	Hits@10:47.17	Best:25.7
+2025-01-06 01:43:30,439: Snapshot:0	Epoch:4	Loss:2.73	translation_Loss:2.73	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:26.78	Hits@10:47.92	Best:26.78
+2025-01-06 01:43:41,526: Snapshot:0	Epoch:5	Loss:1.812	translation_Loss:1.812	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.18	Hits@10:48.21	Best:27.18
+2025-01-06 01:43:53,396: Snapshot:0	Epoch:6	Loss:1.354	translation_Loss:1.354	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.32	Hits@10:48.36	Best:27.32
+2025-01-06 01:44:04,513: Snapshot:0	Epoch:7	Loss:1.1	translation_Loss:1.1	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.4	Hits@10:48.33	Best:27.4
+2025-01-06 01:44:16,864: Snapshot:0	Epoch:8	Loss:0.954	translation_Loss:0.954	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.47	Hits@10:48.4	Best:27.47
+2025-01-06 01:44:27,699: Snapshot:0	Epoch:9	Loss:0.847	translation_Loss:0.847	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.46	Hits@10:48.17	Best:27.47
+2025-01-06 01:44:40,281: Snapshot:0	Epoch:10	Loss:0.774	translation_Loss:0.774	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.25	Hits@10:47.93	Best:27.47
+2025-01-06 01:44:50,874: Early Stopping! Snapshot: 0 Epoch: 11 Best Results: 27.47
+2025-01-06 01:44:50,874: Start to training tokens! Snapshot: 0 Epoch: 11 Loss:0.72 MRR:27.25 Best Results: 27.47
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:44:50,874: Snapshot:0	Epoch:11	Loss:0.72	translation_Loss:0.72	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.25	Hits@10:47.56	Best:27.47
+2025-01-06 01:45:02,286: Snapshot:0	Epoch:12	Loss:32.113	translation_Loss:16.535	token_training_loss:15.578	distillation_Loss:0.0                                                   	MRR:27.25	Hits@10:47.56	Best:27.47
+2025-01-06 01:45:14,820: End of token training: 0 Epoch: 13 Loss:16.637 MRR:27.25 Best Results: 27.47
+2025-01-06 01:45:14,821: Snapshot:0	Epoch:13	Loss:16.637	translation_Loss:16.548	token_training_loss:0.09	distillation_Loss:0.0                                                           	MRR:27.25	Hits@10:47.56	Best:27.47
+2025-01-06 01:45:15,126: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2025-01-06 01:45:20,320: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2782 | 0.1681 | 0.3418 | 0.4108 |  0.4833 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:45:38,241: Snapshot:1	Epoch:0	Loss:20.305	translation_Loss:18.964	token_training_loss:0.0	distillation_Loss:1.341                                                   	MRR:10.54	Hits@10:24.77	Best:10.54
+2025-01-06 01:45:47,814: Snapshot:1	Epoch:1	Loss:10.815	translation_Loss:8.606	token_training_loss:0.0	distillation_Loss:2.209                                                   	MRR:15.5	Hits@10:31.54	Best:15.5
+2025-01-06 01:45:57,464: Snapshot:1	Epoch:2	Loss:7.114	translation_Loss:4.867	token_training_loss:0.0	distillation_Loss:2.247                                                   	MRR:15.88	Hits@10:32.17	Best:15.88
+2025-01-06 01:46:08,429: Snapshot:1	Epoch:3	Loss:5.737	translation_Loss:3.607	token_training_loss:0.0	distillation_Loss:2.13                                                   	MRR:16.63	Hits@10:32.53	Best:16.63
+2025-01-06 01:46:18,360: Snapshot:1	Epoch:4	Loss:5.223	translation_Loss:3.185	token_training_loss:0.0	distillation_Loss:2.038                                                   	MRR:16.3	Hits@10:32.17	Best:16.63
+2025-01-06 01:46:29,481: Snapshot:1	Epoch:5	Loss:4.995	translation_Loss:3.009	token_training_loss:0.0	distillation_Loss:1.987                                                   	MRR:16.37	Hits@10:32.06	Best:16.63
+2025-01-06 01:46:39,005: Early Stopping! Snapshot: 1 Epoch: 6 Best Results: 16.63
+2025-01-06 01:46:39,005: Start to training tokens! Snapshot: 1 Epoch: 6 Loss:4.881 MRR:16.35 Best Results: 16.63
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:46:39,006: Snapshot:1	Epoch:6	Loss:4.881	translation_Loss:2.93	token_training_loss:0.0	distillation_Loss:1.951                                                   	MRR:16.35	Hits@10:32.08	Best:16.63
+2025-01-06 01:46:50,288: Snapshot:1	Epoch:7	Loss:34.798	translation_Loss:19.109	token_training_loss:15.689	distillation_Loss:0.0                                                   	MRR:16.35	Hits@10:32.08	Best:16.63
+2025-01-06 01:46:59,779: End of token training: 1 Epoch: 8 Loss:19.215 MRR:16.35 Best Results: 16.63
+2025-01-06 01:46:59,780: Snapshot:1	Epoch:8	Loss:19.215	translation_Loss:19.104	token_training_loss:0.111	distillation_Loss:0.0                                                           	MRR:16.35	Hits@10:32.08	Best:16.63
+2025-01-06 01:47:00,052: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2025-01-06 01:47:10,044: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2503 | 0.1415 | 0.3111 | 0.3784 |  0.4522 |
+|     1      | 0.168  | 0.0866 |  0.2   | 0.2551 |  0.323  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:47:25,367: Snapshot:2	Epoch:0	Loss:13.772	translation_Loss:11.972	token_training_loss:0.0	distillation_Loss:1.8                                                   	MRR:11.25	Hits@10:25.73	Best:11.25
+2025-01-06 01:47:32,718: Snapshot:2	Epoch:1	Loss:7.661	translation_Loss:5.03	token_training_loss:0.0	distillation_Loss:2.631                                                   	MRR:18.83	Hits@10:35.69	Best:18.83
+2025-01-06 01:47:41,170: Snapshot:2	Epoch:2	Loss:5.404	translation_Loss:3.395	token_training_loss:0.0	distillation_Loss:2.009                                                   	MRR:19.73	Hits@10:36.23	Best:19.73
+2025-01-06 01:47:48,355: Snapshot:2	Epoch:3	Loss:4.314	translation_Loss:2.671	token_training_loss:0.0	distillation_Loss:1.643                                                   	MRR:20.92	Hits@10:37.08	Best:20.92
+2025-01-06 01:47:55,791: Snapshot:2	Epoch:4	Loss:3.718	translation_Loss:2.317	token_training_loss:0.0	distillation_Loss:1.4                                                   	MRR:20.96	Hits@10:36.91	Best:20.96
+2025-01-06 01:48:02,735: Snapshot:2	Epoch:5	Loss:3.41	translation_Loss:2.148	token_training_loss:0.0	distillation_Loss:1.261                                                   	MRR:20.85	Hits@10:36.85	Best:20.96
+2025-01-06 01:48:10,814: Snapshot:2	Epoch:6	Loss:3.255	translation_Loss:2.072	token_training_loss:0.0	distillation_Loss:1.184                                                   	MRR:20.78	Hits@10:36.8	Best:20.96
+2025-01-06 01:48:19,303: Snapshot:2	Epoch:7	Loss:3.173	translation_Loss:2.029	token_training_loss:0.0	distillation_Loss:1.144                                                   	MRR:21.07	Hits@10:36.66	Best:21.07
+2025-01-06 01:48:26,377: Snapshot:2	Epoch:8	Loss:3.126	translation_Loss:1.998	token_training_loss:0.0	distillation_Loss:1.128                                                   	MRR:21.12	Hits@10:36.84	Best:21.12
+2025-01-06 01:48:33,618: Snapshot:2	Epoch:9	Loss:3.106	translation_Loss:1.997	token_training_loss:0.0	distillation_Loss:1.108                                                   	MRR:20.59	Hits@10:36.48	Best:21.12
+2025-01-06 01:48:41,400: Snapshot:2	Epoch:10	Loss:3.085	translation_Loss:1.975	token_training_loss:0.0	distillation_Loss:1.11                                                   	MRR:20.92	Hits@10:36.33	Best:21.12
+2025-01-06 01:48:49,814: Early Stopping! Snapshot: 2 Epoch: 11 Best Results: 21.12
+2025-01-06 01:48:49,815: Start to training tokens! Snapshot: 2 Epoch: 11 Loss:3.064 MRR:20.76 Best Results: 21.12
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:48:49,815: Snapshot:2	Epoch:11	Loss:3.064	translation_Loss:1.959	token_training_loss:0.0	distillation_Loss:1.104                                                   	MRR:20.76	Hits@10:36.2	Best:21.12
+2025-01-06 01:48:57,129: Snapshot:2	Epoch:12	Loss:31.516	translation_Loss:15.317	token_training_loss:16.199	distillation_Loss:0.0                                                   	MRR:20.76	Hits@10:36.2	Best:21.12
+2025-01-06 01:49:05,509: End of token training: 2 Epoch: 13 Loss:15.634 MRR:20.76 Best Results: 21.12
+2025-01-06 01:49:05,509: Snapshot:2	Epoch:13	Loss:15.634	translation_Loss:15.328	token_training_loss:0.306	distillation_Loss:0.0                                                           	MRR:20.76	Hits@10:36.2	Best:21.12
+2025-01-06 01:49:05,785: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2025-01-06 01:49:18,159: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2199 | 0.1179 | 0.2745 | 0.3392 |  0.4094 |
+|     1      | 0.1602 | 0.0786 | 0.1911 | 0.2471 |  0.3179 |
+|     2      | 0.2094 | 0.1321 | 0.2308 | 0.2854 |  0.3672 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:49:27,132: Snapshot:3	Epoch:0	Loss:6.942	translation_Loss:6.259	token_training_loss:0.0	distillation_Loss:0.684                                                   	MRR:6.18	Hits@10:13.99	Best:6.18
+2025-01-06 01:49:30,843: Snapshot:3	Epoch:1	Loss:4.993	translation_Loss:4.295	token_training_loss:0.0	distillation_Loss:0.698                                                   	MRR:13.66	Hits@10:29.66	Best:13.66
+2025-01-06 01:49:34,641: Snapshot:3	Epoch:2	Loss:3.701	translation_Loss:3.105	token_training_loss:0.0	distillation_Loss:0.597                                                   	MRR:17.52	Hits@10:33.79	Best:17.52
+2025-01-06 01:49:38,355: Snapshot:3	Epoch:3	Loss:2.976	translation_Loss:2.463	token_training_loss:0.0	distillation_Loss:0.513                                                   	MRR:20.69	Hits@10:36.02	Best:20.69
+2025-01-06 01:49:41,566: Snapshot:3	Epoch:4	Loss:2.533	translation_Loss:2.067	token_training_loss:0.0	distillation_Loss:0.467                                                   	MRR:22.56	Hits@10:37.5	Best:22.56
+2025-01-06 01:49:45,547: Snapshot:3	Epoch:5	Loss:2.23	translation_Loss:1.806	token_training_loss:0.0	distillation_Loss:0.424                                                   	MRR:23.52	Hits@10:38.13	Best:23.52
+2025-01-06 01:49:49,038: Snapshot:3	Epoch:6	Loss:2.01	translation_Loss:1.621	token_training_loss:0.0	distillation_Loss:0.389                                                   	MRR:24.24	Hits@10:38.55	Best:24.24
+2025-01-06 01:49:52,272: Snapshot:3	Epoch:7	Loss:1.851	translation_Loss:1.49	token_training_loss:0.0	distillation_Loss:0.361                                                   	MRR:24.63	Hits@10:38.99	Best:24.63
+2025-01-06 01:49:56,136: Snapshot:3	Epoch:8	Loss:1.736	translation_Loss:1.397	token_training_loss:0.0	distillation_Loss:0.34                                                   	MRR:24.97	Hits@10:39.03	Best:24.97
+2025-01-06 01:49:59,434: Snapshot:3	Epoch:9	Loss:1.658	translation_Loss:1.333	token_training_loss:0.0	distillation_Loss:0.324                                                   	MRR:25.11	Hits@10:38.95	Best:25.11
+2025-01-06 01:50:03,319: Snapshot:3	Epoch:10	Loss:1.608	translation_Loss:1.296	token_training_loss:0.0	distillation_Loss:0.312                                                   	MRR:25.36	Hits@10:39.08	Best:25.36
+2025-01-06 01:50:06,774: Snapshot:3	Epoch:11	Loss:1.552	translation_Loss:1.249	token_training_loss:0.0	distillation_Loss:0.303                                                   	MRR:25.5	Hits@10:39.0	Best:25.5
+2025-01-06 01:50:10,058: Snapshot:3	Epoch:12	Loss:1.525	translation_Loss:1.227	token_training_loss:0.0	distillation_Loss:0.298                                                   	MRR:25.49	Hits@10:38.83	Best:25.5
+2025-01-06 01:50:14,391: Snapshot:3	Epoch:13	Loss:1.497	translation_Loss:1.204	token_training_loss:0.0	distillation_Loss:0.293                                                   	MRR:25.42	Hits@10:39.07	Best:25.5
+2025-01-06 01:50:17,697: Early Stopping! Snapshot: 3 Epoch: 14 Best Results: 25.5
+2025-01-06 01:50:17,698: Start to training tokens! Snapshot: 3 Epoch: 14 Loss:1.484 MRR:25.42 Best Results: 25.5
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:50:17,698: Snapshot:3	Epoch:14	Loss:1.484	translation_Loss:1.195	token_training_loss:0.0	distillation_Loss:0.289                                                   	MRR:25.42	Hits@10:38.86	Best:25.5
+2025-01-06 01:50:21,416: Snapshot:3	Epoch:15	Loss:18.366	translation_Loss:5.904	token_training_loss:12.462	distillation_Loss:0.0                                                   	MRR:25.42	Hits@10:38.86	Best:25.5
+2025-01-06 01:50:24,772: End of token training: 3 Epoch: 16 Loss:7.313 MRR:25.42 Best Results: 25.5
+2025-01-06 01:50:24,773: Snapshot:3	Epoch:16	Loss:7.313	translation_Loss:5.909	token_training_loss:1.405	distillation_Loss:0.0                                                           	MRR:25.42	Hits@10:38.86	Best:25.5
+2025-01-06 01:50:25,052: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2025-01-06 01:50:38,693: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2197 | 0.1179 | 0.2741 | 0.3388 |  0.4098 |
+|     1      | 0.1602 | 0.0774 | 0.192  | 0.2494 |  0.3203 |
+|     2      | 0.2005 | 0.122  | 0.2201 | 0.2787 |  0.3642 |
+|     3      | 0.2495 | 0.1735 | 0.2821 | 0.3273 |  0.3857 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:50:46,705: Snapshot:4	Epoch:0	Loss:4.708	translation_Loss:4.195	token_training_loss:0.0	distillation_Loss:0.513                                                   	MRR:6.09	Hits@10:16.44	Best:6.09
+2025-01-06 01:50:49,210: Snapshot:4	Epoch:1	Loss:3.576	translation_Loss:2.827	token_training_loss:0.0	distillation_Loss:0.749                                                   	MRR:10.57	Hits@10:27.34	Best:10.57
+2025-01-06 01:50:52,021: Snapshot:4	Epoch:2	Loss:2.934	translation_Loss:2.165	token_training_loss:0.0	distillation_Loss:0.768                                                   	MRR:13.87	Hits@10:33.21	Best:13.87
+2025-01-06 01:50:54,495: Snapshot:4	Epoch:3	Loss:2.464	translation_Loss:1.742	token_training_loss:0.0	distillation_Loss:0.722                                                   	MRR:17.53	Hits@10:36.11	Best:17.53
+2025-01-06 01:50:56,831: Snapshot:4	Epoch:4	Loss:2.131	translation_Loss:1.465	token_training_loss:0.0	distillation_Loss:0.667                                                   	MRR:19.19	Hits@10:38.09	Best:19.19
+2025-01-06 01:50:59,984: Snapshot:4	Epoch:5	Loss:1.9	translation_Loss:1.279	token_training_loss:0.0	distillation_Loss:0.621                                                   	MRR:20.58	Hits@10:39.94	Best:20.58
+2025-01-06 01:51:02,552: Snapshot:4	Epoch:6	Loss:1.724	translation_Loss:1.134	token_training_loss:0.0	distillation_Loss:0.589                                                   	MRR:21.6	Hits@10:41.06	Best:21.6
+2025-01-06 01:51:05,318: Snapshot:4	Epoch:7	Loss:1.58	translation_Loss:1.019	token_training_loss:0.0	distillation_Loss:0.561                                                   	MRR:21.89	Hits@10:41.68	Best:21.89
+2025-01-06 01:51:07,829: Snapshot:4	Epoch:8	Loss:1.473	translation_Loss:0.937	token_training_loss:0.0	distillation_Loss:0.536                                                   	MRR:22.25	Hits@10:41.91	Best:22.25
+2025-01-06 01:51:10,596: Snapshot:4	Epoch:9	Loss:1.385	translation_Loss:0.869	token_training_loss:0.0	distillation_Loss:0.515                                                   	MRR:22.47	Hits@10:41.92	Best:22.47
+2025-01-06 01:51:13,336: Snapshot:4	Epoch:10	Loss:1.318	translation_Loss:0.821	token_training_loss:0.0	distillation_Loss:0.496                                                   	MRR:22.49	Hits@10:42.02	Best:22.49
+2025-01-06 01:51:15,857: Snapshot:4	Epoch:11	Loss:1.272	translation_Loss:0.785	token_training_loss:0.0	distillation_Loss:0.487                                                   	MRR:22.56	Hits@10:42.05	Best:22.56
+2025-01-06 01:51:18,631: Snapshot:4	Epoch:12	Loss:1.235	translation_Loss:0.757	token_training_loss:0.0	distillation_Loss:0.478                                                   	MRR:22.47	Hits@10:41.71	Best:22.56
+2025-01-06 01:51:20,993: Snapshot:4	Epoch:13	Loss:1.207	translation_Loss:0.738	token_training_loss:0.0	distillation_Loss:0.469                                                   	MRR:22.65	Hits@10:41.85	Best:22.65
+2025-01-06 01:51:23,689: Snapshot:4	Epoch:14	Loss:1.185	translation_Loss:0.725	token_training_loss:0.0	distillation_Loss:0.46                                                   	MRR:22.59	Hits@10:41.87	Best:22.65
+2025-01-06 01:51:26,135: Snapshot:4	Epoch:15	Loss:1.171	translation_Loss:0.715	token_training_loss:0.0	distillation_Loss:0.456                                                   	MRR:22.41	Hits@10:41.94	Best:22.65
+2025-01-06 01:51:28,792: Snapshot:4	Epoch:16	Loss:1.156	translation_Loss:0.704	token_training_loss:0.0	distillation_Loss:0.451                                                   	MRR:22.69	Hits@10:41.97	Best:22.69
+2025-01-06 01:51:31,317: Snapshot:4	Epoch:17	Loss:1.143	translation_Loss:0.694	token_training_loss:0.0	distillation_Loss:0.448                                                   	MRR:22.36	Hits@10:41.91	Best:22.69
+2025-01-06 01:51:33,606: Snapshot:4	Epoch:18	Loss:1.136	translation_Loss:0.689	token_training_loss:0.0	distillation_Loss:0.446                                                   	MRR:22.53	Hits@10:41.91	Best:22.69
+2025-01-06 01:51:35,889: Early Stopping! Snapshot: 4 Epoch: 19 Best Results: 22.69
+2025-01-06 01:51:35,889: Start to training tokens! Snapshot: 4 Epoch: 19 Loss:1.125 MRR:22.49 Best Results: 22.69
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:51:35,890: Snapshot:4	Epoch:19	Loss:1.125	translation_Loss:0.685	token_training_loss:0.0	distillation_Loss:0.441                                                   	MRR:22.49	Hits@10:42.08	Best:22.69
+2025-01-06 01:51:38,555: Snapshot:4	Epoch:20	Loss:16.085	translation_Loss:4.076	token_training_loss:12.01	distillation_Loss:0.0                                                   	MRR:22.49	Hits@10:42.08	Best:22.69
+2025-01-06 01:51:40,786: End of token training: 4 Epoch: 21 Loss:6.88 MRR:22.49 Best Results: 22.69
+2025-01-06 01:51:40,786: Snapshot:4	Epoch:21	Loss:6.88	translation_Loss:4.074	token_training_loss:2.806	distillation_Loss:0.0                                                           	MRR:22.49	Hits@10:42.08	Best:22.69
+2025-01-06 01:51:41,063: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2025-01-06 01:51:55,675: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2186 | 0.1172 | 0.2727 | 0.3372 |  0.4081 |
+|     1      | 0.1598 | 0.0779 | 0.1904 | 0.2468 |  0.3168 |
+|     2      | 0.1932 | 0.1179 | 0.2107 | 0.2654 |  0.3462 |
+|     3      | 0.2469 | 0.1693 | 0.2778 | 0.3266 |  0.3888 |
+|     4      | 0.2202 | 0.1246 | 0.2426 | 0.312  |  0.4127 |
++------------+--------+--------+--------+--------+---------+
+2025-01-06 01:51:55,678: Final Result:
+[+------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2782 | 0.1681 | 0.3418 | 0.4108 |  0.4833 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2503 | 0.1415 | 0.3111 | 0.3784 |  0.4522 |
+|     1      | 0.168  | 0.0866 |  0.2   | 0.2551 |  0.323  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2199 | 0.1179 | 0.2745 | 0.3392 |  0.4094 |
+|     1      | 0.1602 | 0.0786 | 0.1911 | 0.2471 |  0.3179 |
+|     2      | 0.2094 | 0.1321 | 0.2308 | 0.2854 |  0.3672 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2197 | 0.1179 | 0.2741 | 0.3388 |  0.4098 |
+|     1      | 0.1602 | 0.0774 | 0.192  | 0.2494 |  0.3203 |
+|     2      | 0.2005 | 0.122  | 0.2201 | 0.2787 |  0.3642 |
+|     3      | 0.2495 | 0.1735 | 0.2821 | 0.3273 |  0.3857 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2186 | 0.1172 | 0.2727 | 0.3372 |  0.4081 |
+|     1      | 0.1598 | 0.0779 | 0.1904 | 0.2468 |  0.3168 |
+|     2      | 0.1932 | 0.1179 | 0.2107 | 0.2654 |  0.3462 |
+|     3      | 0.2469 | 0.1693 | 0.2778 | 0.3266 |  0.3888 |
+|     4      | 0.2202 | 0.1246 | 0.2426 | 0.312  |  0.4127 |
++------------+--------+--------+--------+--------+---------+]
+2025-01-06 01:51:55,678: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 167.58485221862793 |   0.278   |    0.168     |    0.342     |     0.483     |
+|    1     | 95.33179974555969  |    0.21   |    0.115     |    0.257     |     0.389     |
+|    2     | 112.24702477455139 |   0.196   |    0.107     |    0.233     |     0.365     |
+|    3     | 64.87485480308533  |   0.199   |    0.111     |    0.236     |     0.368     |
+|    4     | 61.06140327453613  |   0.198   |    0.111     |    0.233     |     0.366     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2025-01-06 01:51:55,678: Sum_Training_Time:501.0999348163605
+2025-01-06 01:51:55,678: Every_Training_Time:[167.58485221862793, 95.33179974555969, 112.24702477455139, 64.87485480308533, 61.06140327453613]
+2025-01-06 01:51:55,678: Forward transfer: 0.015399999999999999 Backward transfer: -0.021650000000000003
+2025-01-06 01:52:15,953: Namespace(batch_size='3072', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20250106015200/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, multi_distill_num=3, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=3, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=[2000.0, 15000.0, 80000.0, 80000.0], token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2025-01-06 01:52:32,225: Snapshot:0	Epoch:0	Loss:24.263	translation_Loss:24.263	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:10.68	Hits@10:26.03	Best:10.68
+2025-01-06 01:52:42,957: Snapshot:0	Epoch:1	Loss:15.05	translation_Loss:15.05	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:18.45	Hits@10:40.4	Best:18.45
+2025-01-06 01:52:55,167: Snapshot:0	Epoch:2	Loss:8.578	translation_Loss:8.578	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:23.52	Hits@10:45.19	Best:23.52
+2025-01-06 01:53:05,727: Snapshot:0	Epoch:3	Loss:4.718	translation_Loss:4.718	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:25.74	Hits@10:47.2	Best:25.74
+2025-01-06 01:53:18,347: Snapshot:0	Epoch:4	Loss:2.732	translation_Loss:2.732	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:26.72	Hits@10:48.02	Best:26.72
+2025-01-06 01:53:29,253: Snapshot:0	Epoch:5	Loss:1.812	translation_Loss:1.812	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.25	Hits@10:48.16	Best:27.25
+2025-01-06 01:53:40,962: Snapshot:0	Epoch:6	Loss:1.355	translation_Loss:1.355	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.44	Hits@10:48.25	Best:27.44
+2025-01-06 01:53:52,059: Snapshot:0	Epoch:7	Loss:1.103	translation_Loss:1.103	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.37	Hits@10:48.41	Best:27.44
+2025-01-06 01:54:04,162: Snapshot:0	Epoch:8	Loss:0.955	translation_Loss:0.955	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.42	Hits@10:48.41	Best:27.44
+2025-01-06 01:54:14,821: Early Stopping! Snapshot: 0 Epoch: 9 Best Results: 27.44
+2025-01-06 01:54:14,821: Start to training tokens! Snapshot: 0 Epoch: 9 Loss:0.846 MRR:27.42 Best Results: 27.44
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:54:14,822: Snapshot:0	Epoch:9	Loss:0.846	translation_Loss:0.846	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.42	Hits@10:48.19	Best:27.44
+2025-01-06 01:54:27,506: Snapshot:0	Epoch:10	Loss:32.147	translation_Loss:16.569	token_training_loss:15.578	distillation_Loss:0.0                                                   	MRR:27.42	Hits@10:48.19	Best:27.44
+2025-01-06 01:54:37,834: End of token training: 0 Epoch: 11 Loss:16.669 MRR:27.42 Best Results: 27.44
+2025-01-06 01:54:37,834: Snapshot:0	Epoch:11	Loss:16.669	translation_Loss:16.58	token_training_loss:0.09	distillation_Loss:0.0                                                           	MRR:27.42	Hits@10:48.19	Best:27.44
+2025-01-06 01:54:38,158: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2025-01-06 01:54:43,076: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2766 | 0.1638 | 0.3435 | 0.4141 |  0.4839 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:55:00,013: Snapshot:1	Epoch:0	Loss:20.116	translation_Loss:19.071	token_training_loss:0.0	distillation_Loss:1.045                                                   	MRR:10.67	Hits@10:25.64	Best:10.67
+2025-01-06 01:55:09,733: Snapshot:1	Epoch:1	Loss:9.916	translation_Loss:7.801	token_training_loss:0.0	distillation_Loss:2.115                                                   	MRR:16.66	Hits@10:33.49	Best:16.66
+2025-01-06 01:55:20,961: Snapshot:1	Epoch:2	Loss:6.071	translation_Loss:3.63	token_training_loss:0.0	distillation_Loss:2.441                                                   	MRR:17.66	Hits@10:34.52	Best:17.66
+2025-01-06 01:55:30,548: Snapshot:1	Epoch:3	Loss:4.717	translation_Loss:2.389	token_training_loss:0.0	distillation_Loss:2.329                                                   	MRR:17.93	Hits@10:34.76	Best:17.93
+2025-01-06 01:55:41,752: Snapshot:1	Epoch:4	Loss:4.223	translation_Loss:2.026	token_training_loss:0.0	distillation_Loss:2.197                                                   	MRR:17.95	Hits@10:34.53	Best:17.95
+2025-01-06 01:55:52,906: Snapshot:1	Epoch:5	Loss:4.008	translation_Loss:1.899	token_training_loss:0.0	distillation_Loss:2.109                                                   	MRR:17.75	Hits@10:34.21	Best:17.95
+2025-01-06 01:56:03,556: Snapshot:1	Epoch:6	Loss:3.915	translation_Loss:1.851	token_training_loss:0.0	distillation_Loss:2.064                                                   	MRR:18.07	Hits@10:34.25	Best:18.07
+2025-01-06 01:56:13,325: Snapshot:1	Epoch:7	Loss:3.842	translation_Loss:1.808	token_training_loss:0.0	distillation_Loss:2.034                                                   	MRR:17.69	Hits@10:34.34	Best:18.07
+2025-01-06 01:56:23,912: Snapshot:1	Epoch:8	Loss:3.79	translation_Loss:1.778	token_training_loss:0.0	distillation_Loss:2.012                                                   	MRR:17.59	Hits@10:34.26	Best:18.07
+2025-01-06 01:56:33,742: Early Stopping! Snapshot: 1 Epoch: 9 Best Results: 18.07
+2025-01-06 01:56:33,742: Start to training tokens! Snapshot: 1 Epoch: 9 Loss:3.769 MRR:17.8 Best Results: 18.07
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:56:33,742: Snapshot:1	Epoch:9	Loss:3.769	translation_Loss:1.77	token_training_loss:0.0	distillation_Loss:1.999                                                   	MRR:17.8	Hits@10:34.11	Best:18.07
+2025-01-06 01:56:44,760: Snapshot:1	Epoch:10	Loss:34.377	translation_Loss:18.688	token_training_loss:15.689	distillation_Loss:0.0                                                   	MRR:17.8	Hits@10:34.11	Best:18.07
+2025-01-06 01:56:55,353: End of token training: 1 Epoch: 11 Loss:18.803 MRR:17.8 Best Results: 18.07
+2025-01-06 01:56:55,354: Snapshot:1	Epoch:11	Loss:18.803	translation_Loss:18.692	token_training_loss:0.111	distillation_Loss:0.0                                                           	MRR:17.8	Hits@10:34.11	Best:18.07
+2025-01-06 01:56:55,664: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2025-01-06 01:57:05,092: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2386 | 0.1304 | 0.2976 | 0.3659 |  0.4402 |
+|     1      | 0.1818 | 0.0974 | 0.2145 | 0.2699 |  0.3425 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:57:19,444: Snapshot:2	Epoch:0	Loss:13.653	translation_Loss:11.825	token_training_loss:0.0	distillation_Loss:1.828                                                   	MRR:11.79	Hits@10:27.06	Best:11.79
+2025-01-06 01:57:26,662: Snapshot:2	Epoch:1	Loss:7.557	translation_Loss:4.899	token_training_loss:0.0	distillation_Loss:2.658                                                   	MRR:19.51	Hits@10:36.78	Best:19.51
+2025-01-06 01:57:34,820: Snapshot:2	Epoch:2	Loss:5.278	translation_Loss:3.265	token_training_loss:0.0	distillation_Loss:2.012                                                   	MRR:20.72	Hits@10:37.41	Best:20.72
+2025-01-06 01:57:42,725: Snapshot:2	Epoch:3	Loss:4.206	translation_Loss:2.567	token_training_loss:0.0	distillation_Loss:1.639                                                   	MRR:21.35	Hits@10:38.15	Best:21.35
+2025-01-06 01:57:50,149: Snapshot:2	Epoch:4	Loss:3.614	translation_Loss:2.216	token_training_loss:0.0	distillation_Loss:1.398                                                   	MRR:21.8	Hits@10:37.87	Best:21.8
+2025-01-06 01:57:58,000: Snapshot:2	Epoch:5	Loss:3.313	translation_Loss:2.056	token_training_loss:0.0	distillation_Loss:1.257                                                   	MRR:21.68	Hits@10:37.67	Best:21.8
+2025-01-06 01:58:05,344: Snapshot:2	Epoch:6	Loss:3.16	translation_Loss:1.979	token_training_loss:0.0	distillation_Loss:1.181                                                   	MRR:21.37	Hits@10:37.47	Best:21.8
+2025-01-06 01:58:13,288: Early Stopping! Snapshot: 2 Epoch: 7 Best Results: 21.8
+2025-01-06 01:58:13,288: Start to training tokens! Snapshot: 2 Epoch: 7 Loss:3.071 MRR:21.38 Best Results: 21.8
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:58:13,289: Snapshot:2	Epoch:7	Loss:3.071	translation_Loss:1.932	token_training_loss:0.0	distillation_Loss:1.139                                                   	MRR:21.38	Hits@10:37.54	Best:21.8
+2025-01-06 01:58:20,747: Snapshot:2	Epoch:8	Loss:30.946	translation_Loss:14.748	token_training_loss:16.199	distillation_Loss:0.0                                                   	MRR:21.38	Hits@10:37.54	Best:21.8
+2025-01-06 01:58:28,610: End of token training: 2 Epoch: 9 Loss:15.041 MRR:21.38 Best Results: 21.8
+2025-01-06 01:58:28,610: Snapshot:2	Epoch:9	Loss:15.041	translation_Loss:14.735	token_training_loss:0.306	distillation_Loss:0.0                                                           	MRR:21.38	Hits@10:37.54	Best:21.8
+2025-01-06 01:58:28,874: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2025-01-06 01:58:41,587: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2091 | 0.1109 | 0.2619 | 0.3246 |  0.3943 |
+|     1      | 0.1716 | 0.0878 | 0.2033 | 0.2592 |  0.3317 |
+|     2      | 0.2148 | 0.1343 | 0.2407 | 0.2937 |  0.3727 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 01:58:50,766: Snapshot:3	Epoch:0	Loss:6.704	translation_Loss:6.004	token_training_loss:0.0	distillation_Loss:0.7                                                   	MRR:6.66	Hits@10:14.92	Best:6.66
+2025-01-06 01:58:54,552: Snapshot:3	Epoch:1	Loss:4.721	translation_Loss:4.005	token_training_loss:0.0	distillation_Loss:0.717                                                   	MRR:14.15	Hits@10:30.18	Best:14.15
+2025-01-06 01:58:57,928: Snapshot:3	Epoch:2	Loss:3.436	translation_Loss:2.846	token_training_loss:0.0	distillation_Loss:0.59                                                   	MRR:18.17	Hits@10:34.54	Best:18.17
+2025-01-06 01:59:01,619: Snapshot:3	Epoch:3	Loss:2.749	translation_Loss:2.249	token_training_loss:0.0	distillation_Loss:0.5                                                   	MRR:21.45	Hits@10:36.92	Best:21.45
+2025-01-06 01:59:05,465: Snapshot:3	Epoch:4	Loss:2.33	translation_Loss:1.877	token_training_loss:0.0	distillation_Loss:0.453                                                   	MRR:23.3	Hits@10:38.41	Best:23.3
+2025-01-06 01:59:09,199: Snapshot:3	Epoch:5	Loss:2.045	translation_Loss:1.635	token_training_loss:0.0	distillation_Loss:0.41                                                   	MRR:24.13	Hits@10:39.27	Best:24.13
+2025-01-06 01:59:12,566: Snapshot:3	Epoch:6	Loss:1.842	translation_Loss:1.469	token_training_loss:0.0	distillation_Loss:0.373                                                   	MRR:24.74	Hits@10:39.6	Best:24.74
+2025-01-06 01:59:15,774: Snapshot:3	Epoch:7	Loss:1.692	translation_Loss:1.35	token_training_loss:0.0	distillation_Loss:0.342                                                   	MRR:25.04	Hits@10:39.93	Best:25.04
+2025-01-06 01:59:19,561: Snapshot:3	Epoch:8	Loss:1.579	translation_Loss:1.257	token_training_loss:0.0	distillation_Loss:0.322                                                   	MRR:25.56	Hits@10:40.03	Best:25.56
+2025-01-06 01:59:23,652: Snapshot:3	Epoch:9	Loss:1.504	translation_Loss:1.198	token_training_loss:0.0	distillation_Loss:0.305                                                   	MRR:25.62	Hits@10:39.83	Best:25.62
+2025-01-06 01:59:27,352: Snapshot:3	Epoch:10	Loss:1.456	translation_Loss:1.162	token_training_loss:0.0	distillation_Loss:0.293                                                   	MRR:25.83	Hits@10:40.06	Best:25.83
+2025-01-06 01:59:30,519: Snapshot:3	Epoch:11	Loss:1.406	translation_Loss:1.121	token_training_loss:0.0	distillation_Loss:0.285                                                   	MRR:26.11	Hits@10:40.06	Best:26.11
+2025-01-06 01:59:33,684: Snapshot:3	Epoch:12	Loss:1.378	translation_Loss:1.099	token_training_loss:0.0	distillation_Loss:0.279                                                   	MRR:26.05	Hits@10:40.1	Best:26.11
+2025-01-06 01:59:37,356: Snapshot:3	Epoch:13	Loss:1.357	translation_Loss:1.082	token_training_loss:0.0	distillation_Loss:0.275                                                   	MRR:26.25	Hits@10:40.1	Best:26.25
+2025-01-06 01:59:41,112: Snapshot:3	Epoch:14	Loss:1.336	translation_Loss:1.065	token_training_loss:0.0	distillation_Loss:0.27                                                   	MRR:26.24	Hits@10:39.91	Best:26.25
+2025-01-06 01:59:44,299: Snapshot:3	Epoch:15	Loss:1.316	translation_Loss:1.049	token_training_loss:0.0	distillation_Loss:0.267                                                   	MRR:26.3	Hits@10:40.07	Best:26.3
+2025-01-06 01:59:47,934: Snapshot:3	Epoch:16	Loss:1.307	translation_Loss:1.043	token_training_loss:0.0	distillation_Loss:0.264                                                   	MRR:26.23	Hits@10:40.19	Best:26.3
+2025-01-06 01:59:51,198: Snapshot:3	Epoch:17	Loss:1.299	translation_Loss:1.037	token_training_loss:0.0	distillation_Loss:0.263                                                   	MRR:26.23	Hits@10:40.11	Best:26.3
+2025-01-06 01:59:54,733: Early Stopping! Snapshot: 3 Epoch: 18 Best Results: 26.3
+2025-01-06 01:59:54,733: Start to training tokens! Snapshot: 3 Epoch: 18 Loss:1.291 MRR:26.24 Best Results: 26.3
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 01:59:54,733: Snapshot:3	Epoch:18	Loss:1.291	translation_Loss:1.028	token_training_loss:0.0	distillation_Loss:0.263                                                   	MRR:26.24	Hits@10:40.36	Best:26.3
+2025-01-06 01:59:58,364: Snapshot:3	Epoch:19	Loss:18.233	translation_Loss:5.772	token_training_loss:12.462	distillation_Loss:0.0                                                   	MRR:26.24	Hits@10:40.36	Best:26.3
+2025-01-06 02:00:02,101: End of token training: 3 Epoch: 20 Loss:7.168 MRR:26.24 Best Results: 26.3
+2025-01-06 02:00:02,101: Snapshot:3	Epoch:20	Loss:7.168	translation_Loss:5.763	token_training_loss:1.405	distillation_Loss:0.0                                                           	MRR:26.24	Hits@10:40.36	Best:26.3
+2025-01-06 02:00:02,356: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2025-01-06 02:00:16,694: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2092 | 0.111  | 0.2627 | 0.3258 |  0.3939 |
+|     1      | 0.172  | 0.0876 | 0.2037 | 0.2595 |  0.3341 |
+|     2      | 0.2113 | 0.1288 | 0.239  | 0.292  |  0.3738 |
+|     3      | 0.2555 | 0.1776 | 0.2887 | 0.3355 |  0.3975 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:00:24,638: Snapshot:4	Epoch:0	Loss:4.546	translation_Loss:4.026	token_training_loss:0.0	distillation_Loss:0.52                                                   	MRR:6.21	Hits@10:16.94	Best:6.21
+2025-01-06 02:00:27,345: Snapshot:4	Epoch:1	Loss:3.434	translation_Loss:2.683	token_training_loss:0.0	distillation_Loss:0.75                                                   	MRR:10.87	Hits@10:27.67	Best:10.87
+2025-01-06 02:00:29,774: Snapshot:4	Epoch:2	Loss:2.809	translation_Loss:2.074	token_training_loss:0.0	distillation_Loss:0.735                                                   	MRR:14.02	Hits@10:33.01	Best:14.02
+2025-01-06 02:00:32,463: Snapshot:4	Epoch:3	Loss:2.338	translation_Loss:1.662	token_training_loss:0.0	distillation_Loss:0.677                                                   	MRR:17.82	Hits@10:37.17	Best:17.82
+2025-01-06 02:00:35,448: Snapshot:4	Epoch:4	Loss:2.002	translation_Loss:1.383	token_training_loss:0.0	distillation_Loss:0.619                                                   	MRR:19.58	Hits@10:39.33	Best:19.58
+2025-01-06 02:00:38,098: Snapshot:4	Epoch:5	Loss:1.779	translation_Loss:1.204	token_training_loss:0.0	distillation_Loss:0.574                                                   	MRR:21.21	Hits@10:41.27	Best:21.21
+2025-01-06 02:00:40,533: Snapshot:4	Epoch:6	Loss:1.597	translation_Loss:1.06	token_training_loss:0.0	distillation_Loss:0.537                                                   	MRR:21.88	Hits@10:42.12	Best:21.88
+2025-01-06 02:00:43,045: Snapshot:4	Epoch:7	Loss:1.451	translation_Loss:0.947	token_training_loss:0.0	distillation_Loss:0.504                                                   	MRR:22.6	Hits@10:42.82	Best:22.6
+2025-01-06 02:00:45,661: Snapshot:4	Epoch:8	Loss:1.34	translation_Loss:0.864	token_training_loss:0.0	distillation_Loss:0.476                                                   	MRR:22.82	Hits@10:42.83	Best:22.82
+2025-01-06 02:00:48,004: Snapshot:4	Epoch:9	Loss:1.259	translation_Loss:0.807	token_training_loss:0.0	distillation_Loss:0.452                                                   	MRR:22.84	Hits@10:43.05	Best:22.84
+2025-01-06 02:00:50,202: Snapshot:4	Epoch:10	Loss:1.193	translation_Loss:0.756	token_training_loss:0.0	distillation_Loss:0.437                                                   	MRR:22.8	Hits@10:42.92	Best:22.84
+2025-01-06 02:00:53,208: Snapshot:4	Epoch:11	Loss:1.154	translation_Loss:0.729	token_training_loss:0.0	distillation_Loss:0.425                                                   	MRR:22.95	Hits@10:42.71	Best:22.95
+2025-01-06 02:00:55,747: Snapshot:4	Epoch:12	Loss:1.115	translation_Loss:0.699	token_training_loss:0.0	distillation_Loss:0.416                                                   	MRR:22.85	Hits@10:42.88	Best:22.95
+2025-01-06 02:00:58,385: Snapshot:4	Epoch:13	Loss:1.092	translation_Loss:0.686	token_training_loss:0.0	distillation_Loss:0.406                                                   	MRR:22.82	Hits@10:43.12	Best:22.95
+2025-01-06 02:01:00,812: Early Stopping! Snapshot: 4 Epoch: 14 Best Results: 22.95
+2025-01-06 02:01:00,812: Start to training tokens! Snapshot: 4 Epoch: 14 Loss:1.074 MRR:22.61 Best Results: 22.95
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:01:00,813: Snapshot:4	Epoch:14	Loss:1.074	translation_Loss:0.67	token_training_loss:0.0	distillation_Loss:0.403                                                   	MRR:22.61	Hits@10:42.71	Best:22.95
+2025-01-06 02:01:03,077: Snapshot:4	Epoch:15	Loss:15.948	translation_Loss:3.939	token_training_loss:12.01	distillation_Loss:0.0                                                   	MRR:22.61	Hits@10:42.71	Best:22.95
+2025-01-06 02:01:05,284: End of token training: 4 Epoch: 16 Loss:6.755 MRR:22.61 Best Results: 22.95
+2025-01-06 02:01:05,284: Snapshot:4	Epoch:16	Loss:6.755	translation_Loss:3.949	token_training_loss:2.806	distillation_Loss:0.0                                                           	MRR:22.61	Hits@10:42.71	Best:22.95
+2025-01-06 02:01:05,498: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2025-01-06 02:01:20,187: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2067 | 0.1083 | 0.2599 | 0.3223 |  0.3931 |
+|     1      | 0.1713 | 0.0875 | 0.2025 | 0.2583 |  0.3314 |
+|     2      | 0.2011 | 0.1208 | 0.2245 | 0.279  |  0.3629 |
+|     3      | 0.2496 | 0.1695 | 0.2798 | 0.3303 |  0.4008 |
+|     4      | 0.2245 | 0.1276 | 0.2479 | 0.3169 |  0.4201 |
++------------+--------+--------+--------+--------+---------+
+2025-01-06 02:01:20,189: Final Result:
+[+------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2766 | 0.1638 | 0.3435 | 0.4141 |  0.4839 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2386 | 0.1304 | 0.2976 | 0.3659 |  0.4402 |
+|     1      | 0.1818 | 0.0974 | 0.2145 | 0.2699 |  0.3425 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2091 | 0.1109 | 0.2619 | 0.3246 |  0.3943 |
+|     1      | 0.1716 | 0.0878 | 0.2033 | 0.2592 |  0.3317 |
+|     2      | 0.2148 | 0.1343 | 0.2407 | 0.2937 |  0.3727 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2092 | 0.111  | 0.2627 | 0.3258 |  0.3939 |
+|     1      | 0.172  | 0.0876 | 0.2037 | 0.2595 |  0.3341 |
+|     2      | 0.2113 | 0.1288 | 0.239  | 0.292  |  0.3738 |
+|     3      | 0.2555 | 0.1776 | 0.2887 | 0.3355 |  0.3975 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2067 | 0.1083 | 0.2599 | 0.3223 |  0.3931 |
+|     1      | 0.1713 | 0.0875 | 0.2025 | 0.2583 |  0.3314 |
+|     2      | 0.2011 | 0.1208 | 0.2245 | 0.279  |  0.3629 |
+|     3      | 0.2496 | 0.1695 | 0.2798 | 0.3303 |  0.4008 |
+|     4      | 0.2245 | 0.1276 | 0.2479 | 0.3169 |  0.4201 |
++------------+--------+--------+--------+--------+---------+]
+2025-01-06 02:01:20,190: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 141.88062524795532 |   0.277   |    0.164     |    0.344     |     0.484     |
+|    1     | 128.5124533176422  |   0.211   |    0.114     |    0.257     |     0.393     |
+|    2     | 80.13250923156738  |   0.197   |    0.109     |    0.235     |     0.366     |
+|    3     | 78.70118856430054  |   0.202   |    0.114     |    0.241     |      0.37     |
+|    4     |  47.2041494846344  |    0.2    |    0.112     |    0.236     |     0.371     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2025-01-06 02:01:20,190: Sum_Training_Time:476.43092584609985
+2025-01-06 02:01:20,190: Every_Training_Time:[141.88062524795532, 128.5124533176422, 80.13250923156738, 78.70118856430054, 47.2041494846344]
+2025-01-06 02:01:20,190: Forward transfer: 0.01625 Backward transfer: -0.025
+2025-01-06 02:01:40,301: Namespace(batch_size='3072', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20250106020125/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, multi_distill_num=3, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=3, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=[3000.0, 16000.0, 90000.0, 90000.0], token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2025-01-06 02:01:56,688: Snapshot:0	Epoch:0	Loss:24.263	translation_Loss:24.263	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:10.68	Hits@10:26.04	Best:10.68
+2025-01-06 02:02:08,262: Snapshot:0	Epoch:1	Loss:15.05	translation_Loss:15.05	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:18.45	Hits@10:40.39	Best:18.45
+2025-01-06 02:02:20,876: Snapshot:0	Epoch:2	Loss:8.578	translation_Loss:8.578	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:23.53	Hits@10:45.2	Best:23.53
+2025-01-06 02:02:31,536: Snapshot:0	Epoch:3	Loss:4.719	translation_Loss:4.719	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:25.76	Hits@10:47.23	Best:25.76
+2025-01-06 02:02:43,804: Snapshot:0	Epoch:4	Loss:2.73	translation_Loss:2.73	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:26.75	Hits@10:48.0	Best:26.75
+2025-01-06 02:02:54,984: Snapshot:0	Epoch:5	Loss:1.812	translation_Loss:1.812	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.24	Hits@10:48.16	Best:27.24
+2025-01-06 02:03:06,844: Snapshot:0	Epoch:6	Loss:1.356	translation_Loss:1.356	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.36	Hits@10:48.28	Best:27.36
+2025-01-06 02:03:17,804: Snapshot:0	Epoch:7	Loss:1.102	translation_Loss:1.102	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.34	Hits@10:48.19	Best:27.36
+2025-01-06 02:03:29,904: Snapshot:0	Epoch:8	Loss:0.954	translation_Loss:0.954	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.38	Hits@10:48.28	Best:27.38
+2025-01-06 02:03:40,479: Snapshot:0	Epoch:9	Loss:0.846	translation_Loss:0.846	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.44	Hits@10:48.08	Best:27.44
+2025-01-06 02:03:53,160: Snapshot:0	Epoch:10	Loss:0.774	translation_Loss:0.774	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.21	Hits@10:47.99	Best:27.44
+2025-01-06 02:04:03,707: Snapshot:0	Epoch:11	Loss:0.721	translation_Loss:0.721	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.29	Hits@10:47.54	Best:27.44
+2025-01-06 02:04:16,144: Early Stopping! Snapshot: 0 Epoch: 12 Best Results: 27.44
+2025-01-06 02:04:16,145: Start to training tokens! Snapshot: 0 Epoch: 12 Loss:0.678 MRR:27.28 Best Results: 27.44
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:04:16,145: Snapshot:0	Epoch:12	Loss:0.678	translation_Loss:0.678	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.28	Hits@10:47.61	Best:27.44
+2025-01-06 02:04:27,759: Snapshot:0	Epoch:13	Loss:32.177	translation_Loss:16.599	token_training_loss:15.578	distillation_Loss:0.0                                                   	MRR:27.28	Hits@10:47.61	Best:27.44
+2025-01-06 02:04:38,589: End of token training: 0 Epoch: 14 Loss:16.674 MRR:27.28 Best Results: 27.44
+2025-01-06 02:04:38,590: Snapshot:0	Epoch:14	Loss:16.674	translation_Loss:16.585	token_training_loss:0.09	distillation_Loss:0.0                                                           	MRR:27.28	Hits@10:47.61	Best:27.44
+2025-01-06 02:04:38,864: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2025-01-06 02:04:44,244: 
++------------+-------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR  | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+-------+--------+--------+--------+---------+
+|     0      | 0.276 | 0.1646 | 0.3403 | 0.4106 |  0.4835 |
++------------+-------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:05:03,623: Snapshot:1	Epoch:0	Loss:20.006	translation_Loss:18.788	token_training_loss:0.0	distillation_Loss:1.218                                                   	MRR:10.55	Hits@10:24.97	Best:10.55
+2025-01-06 02:05:13,164: Snapshot:1	Epoch:1	Loss:10.168	translation_Loss:7.976	token_training_loss:0.0	distillation_Loss:2.192                                                   	MRR:16.07	Hits@10:32.17	Best:16.07
+2025-01-06 02:05:24,684: Snapshot:1	Epoch:2	Loss:6.506	translation_Loss:4.179	token_training_loss:0.0	distillation_Loss:2.327                                                   	MRR:16.74	Hits@10:33.01	Best:16.74
+2025-01-06 02:05:34,269: Snapshot:1	Epoch:3	Loss:5.146	translation_Loss:2.95	token_training_loss:0.0	distillation_Loss:2.196                                                   	MRR:16.83	Hits@10:32.94	Best:16.83
+2025-01-06 02:05:45,406: Snapshot:1	Epoch:4	Loss:4.667	translation_Loss:2.589	token_training_loss:0.0	distillation_Loss:2.078                                                   	MRR:16.76	Hits@10:32.62	Best:16.83
+2025-01-06 02:05:55,569: Snapshot:1	Epoch:5	Loss:4.437	translation_Loss:2.433	token_training_loss:0.0	distillation_Loss:2.004                                                   	MRR:16.65	Hits@10:32.69	Best:16.83
+2025-01-06 02:06:04,898: Early Stopping! Snapshot: 1 Epoch: 6 Best Results: 16.83
+2025-01-06 02:06:04,898: Start to training tokens! Snapshot: 1 Epoch: 6 Loss:4.33 MRR:16.46 Best Results: 16.83
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:06:04,898: Snapshot:1	Epoch:6	Loss:4.33	translation_Loss:2.358	token_training_loss:0.0	distillation_Loss:1.971                                                   	MRR:16.46	Hits@10:32.59	Best:16.83
+2025-01-06 02:06:14,498: Snapshot:1	Epoch:7	Loss:34.376	translation_Loss:18.687	token_training_loss:15.689	distillation_Loss:0.0                                                   	MRR:16.46	Hits@10:32.59	Best:16.83
+2025-01-06 02:06:24,219: End of token training: 1 Epoch: 8 Loss:18.811 MRR:16.46 Best Results: 16.83
+2025-01-06 02:06:24,220: Snapshot:1	Epoch:8	Loss:18.811	translation_Loss:18.7	token_training_loss:0.111	distillation_Loss:0.0                                                           	MRR:16.46	Hits@10:32.59	Best:16.83
+2025-01-06 02:06:24,513: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2025-01-06 02:06:32,923: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2451 | 0.1367 | 0.3069 | 0.3725 |  0.4451 |
+|     1      | 0.1693 | 0.0864 | 0.2007 | 0.2566 |   0.33  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:06:48,451: Snapshot:2	Epoch:0	Loss:13.64	translation_Loss:11.803	token_training_loss:0.0	distillation_Loss:1.837                                                   	MRR:11.1	Hits@10:25.9	Best:11.1
+2025-01-06 02:06:56,377: Snapshot:2	Epoch:1	Loss:7.584	translation_Loss:4.962	token_training_loss:0.0	distillation_Loss:2.621                                                   	MRR:19.15	Hits@10:36.13	Best:19.15
+2025-01-06 02:07:04,629: Snapshot:2	Epoch:2	Loss:5.297	translation_Loss:3.31	token_training_loss:0.0	distillation_Loss:1.987                                                   	MRR:20.31	Hits@10:36.46	Best:20.31
+2025-01-06 02:07:12,226: Snapshot:2	Epoch:3	Loss:4.199	translation_Loss:2.586	token_training_loss:0.0	distillation_Loss:1.614                                                   	MRR:20.99	Hits@10:36.94	Best:20.99
+2025-01-06 02:07:19,221: Snapshot:2	Epoch:4	Loss:3.607	translation_Loss:2.244	token_training_loss:0.0	distillation_Loss:1.363                                                   	MRR:21.14	Hits@10:37.0	Best:21.14
+2025-01-06 02:07:26,258: Snapshot:2	Epoch:5	Loss:3.303	translation_Loss:2.078	token_training_loss:0.0	distillation_Loss:1.225                                                   	MRR:20.88	Hits@10:36.55	Best:21.14
+2025-01-06 02:07:34,832: Snapshot:2	Epoch:6	Loss:3.151	translation_Loss:2.006	token_training_loss:0.0	distillation_Loss:1.145                                                   	MRR:21.02	Hits@10:36.56	Best:21.14
+2025-01-06 02:07:42,296: Early Stopping! Snapshot: 2 Epoch: 7 Best Results: 21.14
+2025-01-06 02:07:42,297: Start to training tokens! Snapshot: 2 Epoch: 7 Loss:3.076 MRR:20.94 Best Results: 21.14
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:07:42,297: Snapshot:2	Epoch:7	Loss:3.076	translation_Loss:1.967	token_training_loss:0.0	distillation_Loss:1.108                                                   	MRR:20.94	Hits@10:36.48	Best:21.14
+2025-01-06 02:07:50,733: Snapshot:2	Epoch:8	Loss:31.245	translation_Loss:15.046	token_training_loss:16.199	distillation_Loss:0.0                                                   	MRR:20.94	Hits@10:36.48	Best:21.14
+2025-01-06 02:07:58,860: End of token training: 2 Epoch: 9 Loss:15.347 MRR:20.94 Best Results: 21.14
+2025-01-06 02:07:58,860: Snapshot:2	Epoch:9	Loss:15.347	translation_Loss:15.041	token_training_loss:0.306	distillation_Loss:0.0                                                           	MRR:20.94	Hits@10:36.48	Best:21.14
+2025-01-06 02:07:59,133: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2025-01-06 02:08:12,089: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2132 | 0.113  | 0.2693 | 0.3315 |  0.3988 |
+|     1      | 0.1594 | 0.0775 | 0.189  | 0.2442 |  0.3163 |
+|     2      | 0.2093 | 0.1306 | 0.2329 | 0.2868 |  0.3651 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:08:21,424: Snapshot:3	Epoch:0	Loss:6.849	translation_Loss:6.13	token_training_loss:0.0	distillation_Loss:0.719                                                   	MRR:6.45	Hits@10:14.32	Best:6.45
+2025-01-06 02:08:25,318: Snapshot:3	Epoch:1	Loss:4.898	translation_Loss:4.204	token_training_loss:0.0	distillation_Loss:0.694                                                   	MRR:13.72	Hits@10:29.36	Best:13.72
+2025-01-06 02:08:28,874: Snapshot:3	Epoch:2	Loss:3.614	translation_Loss:3.042	token_training_loss:0.0	distillation_Loss:0.573                                                   	MRR:17.22	Hits@10:33.4	Best:17.22
+2025-01-06 02:08:32,650: Snapshot:3	Epoch:3	Loss:2.899	translation_Loss:2.42	token_training_loss:0.0	distillation_Loss:0.479                                                   	MRR:20.36	Hits@10:35.64	Best:20.36
+2025-01-06 02:08:36,596: Snapshot:3	Epoch:4	Loss:2.469	translation_Loss:2.036	token_training_loss:0.0	distillation_Loss:0.433                                                   	MRR:22.74	Hits@10:37.24	Best:22.74
+2025-01-06 02:08:40,466: Snapshot:3	Epoch:5	Loss:2.171	translation_Loss:1.78	token_training_loss:0.0	distillation_Loss:0.391                                                   	MRR:23.74	Hits@10:38.04	Best:23.74
+2025-01-06 02:08:43,961: Snapshot:3	Epoch:6	Loss:1.952	translation_Loss:1.592	token_training_loss:0.0	distillation_Loss:0.359                                                   	MRR:24.43	Hits@10:38.49	Best:24.43
+2025-01-06 02:08:47,704: Snapshot:3	Epoch:7	Loss:1.802	translation_Loss:1.471	token_training_loss:0.0	distillation_Loss:0.331                                                   	MRR:24.89	Hits@10:39.1	Best:24.89
+2025-01-06 02:08:51,149: Snapshot:3	Epoch:8	Loss:1.685	translation_Loss:1.374	token_training_loss:0.0	distillation_Loss:0.311                                                   	MRR:25.05	Hits@10:39.15	Best:25.05
+2025-01-06 02:08:55,312: Snapshot:3	Epoch:9	Loss:1.601	translation_Loss:1.305	token_training_loss:0.0	distillation_Loss:0.295                                                   	MRR:25.46	Hits@10:39.01	Best:25.46
+2025-01-06 02:08:58,980: Snapshot:3	Epoch:10	Loss:1.548	translation_Loss:1.264	token_training_loss:0.0	distillation_Loss:0.284                                                   	MRR:25.61	Hits@10:39.07	Best:25.61
+2025-01-06 02:09:02,239: Snapshot:3	Epoch:11	Loss:1.503	translation_Loss:1.227	token_training_loss:0.0	distillation_Loss:0.277                                                   	MRR:25.61	Hits@10:39.27	Best:25.61
+2025-01-06 02:09:06,008: Snapshot:3	Epoch:12	Loss:1.479	translation_Loss:1.207	token_training_loss:0.0	distillation_Loss:0.272                                                   	MRR:25.55	Hits@10:39.26	Best:25.61
+2025-01-06 02:09:09,852: Snapshot:3	Epoch:13	Loss:1.449	translation_Loss:1.181	token_training_loss:0.0	distillation_Loss:0.269                                                   	MRR:25.75	Hits@10:39.5	Best:25.75
+2025-01-06 02:09:13,714: Snapshot:3	Epoch:14	Loss:1.433	translation_Loss:1.168	token_training_loss:0.0	distillation_Loss:0.265                                                   	MRR:25.84	Hits@10:39.32	Best:25.84
+2025-01-06 02:09:17,594: Snapshot:3	Epoch:15	Loss:1.422	translation_Loss:1.159	token_training_loss:0.0	distillation_Loss:0.263                                                   	MRR:26.07	Hits@10:39.64	Best:26.07
+2025-01-06 02:09:21,167: Snapshot:3	Epoch:16	Loss:1.403	translation_Loss:1.142	token_training_loss:0.0	distillation_Loss:0.261                                                   	MRR:25.94	Hits@10:39.5	Best:26.07
+2025-01-06 02:09:25,000: Snapshot:3	Epoch:17	Loss:1.396	translation_Loss:1.136	token_training_loss:0.0	distillation_Loss:0.26                                                   	MRR:25.83	Hits@10:39.58	Best:26.07
+2025-01-06 02:09:28,399: Early Stopping! Snapshot: 3 Epoch: 18 Best Results: 26.07
+2025-01-06 02:09:28,400: Start to training tokens! Snapshot: 3 Epoch: 18 Loss:1.385 MRR:25.87 Best Results: 26.07
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:09:28,400: Snapshot:3	Epoch:18	Loss:1.385	translation_Loss:1.128	token_training_loss:0.0	distillation_Loss:0.257                                                   	MRR:25.87	Hits@10:39.21	Best:26.07
+2025-01-06 02:09:32,576: Snapshot:3	Epoch:19	Loss:18.381	translation_Loss:5.92	token_training_loss:12.462	distillation_Loss:0.0                                                   	MRR:25.87	Hits@10:39.21	Best:26.07
+2025-01-06 02:09:36,362: End of token training: 3 Epoch: 20 Loss:7.312 MRR:25.87 Best Results: 26.07
+2025-01-06 02:09:36,363: Snapshot:3	Epoch:20	Loss:7.312	translation_Loss:5.907	token_training_loss:1.405	distillation_Loss:0.0                                                           	MRR:25.87	Hits@10:39.21	Best:26.07
+2025-01-06 02:09:36,629: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2025-01-06 02:09:51,204: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2135 | 0.1134 | 0.2695 | 0.3312 |  0.398  |
+|     1      | 0.1598 | 0.077  | 0.1902 | 0.2478 |  0.3198 |
+|     2      | 0.205  | 0.1238 | 0.2305 | 0.2849 |  0.3651 |
+|     3      | 0.2567 | 0.184  | 0.2837 | 0.3295 |  0.392  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:09:59,169: Snapshot:4	Epoch:0	Loss:4.717	translation_Loss:4.171	token_training_loss:0.0	distillation_Loss:0.546                                                   	MRR:5.83	Hits@10:15.74	Best:5.83
+2025-01-06 02:10:01,530: Snapshot:4	Epoch:1	Loss:3.609	translation_Loss:2.856	token_training_loss:0.0	distillation_Loss:0.753                                                   	MRR:10.17	Hits@10:25.78	Best:10.17
+2025-01-06 02:10:04,257: Snapshot:4	Epoch:2	Loss:2.956	translation_Loss:2.205	token_training_loss:0.0	distillation_Loss:0.751                                                   	MRR:13.56	Hits@10:32.07	Best:13.56
+2025-01-06 02:10:07,392: Snapshot:4	Epoch:3	Loss:2.484	translation_Loss:1.78	token_training_loss:0.0	distillation_Loss:0.704                                                   	MRR:17.02	Hits@10:35.18	Best:17.02
+2025-01-06 02:10:09,916: Snapshot:4	Epoch:4	Loss:2.145	translation_Loss:1.491	token_training_loss:0.0	distillation_Loss:0.655                                                   	MRR:18.78	Hits@10:37.45	Best:18.78
+2025-01-06 02:10:12,275: Snapshot:4	Epoch:5	Loss:1.912	translation_Loss:1.306	token_training_loss:0.0	distillation_Loss:0.606                                                   	MRR:20.29	Hits@10:39.04	Best:20.29
+2025-01-06 02:10:14,861: Snapshot:4	Epoch:6	Loss:1.723	translation_Loss:1.15	token_training_loss:0.0	distillation_Loss:0.573                                                   	MRR:21.06	Hits@10:40.51	Best:21.06
+2025-01-06 02:10:17,601: Snapshot:4	Epoch:7	Loss:1.583	translation_Loss:1.04	token_training_loss:0.0	distillation_Loss:0.543                                                   	MRR:21.49	Hits@10:41.03	Best:21.49
+2025-01-06 02:10:20,035: Snapshot:4	Epoch:8	Loss:1.471	translation_Loss:0.952	token_training_loss:0.0	distillation_Loss:0.519                                                   	MRR:21.82	Hits@10:41.12	Best:21.82
+2025-01-06 02:10:22,740: Snapshot:4	Epoch:9	Loss:1.388	translation_Loss:0.888	token_training_loss:0.0	distillation_Loss:0.5                                                   	MRR:22.09	Hits@10:41.2	Best:22.09
+2025-01-06 02:10:25,620: Snapshot:4	Epoch:10	Loss:1.32	translation_Loss:0.835	token_training_loss:0.0	distillation_Loss:0.485                                                   	MRR:22.2	Hits@10:40.76	Best:22.2
+2025-01-06 02:10:27,993: Snapshot:4	Epoch:11	Loss:1.278	translation_Loss:0.808	token_training_loss:0.0	distillation_Loss:0.47                                                   	MRR:22.3	Hits@10:40.97	Best:22.3
+2025-01-06 02:10:30,665: Snapshot:4	Epoch:12	Loss:1.234	translation_Loss:0.773	token_training_loss:0.0	distillation_Loss:0.461                                                   	MRR:22.22	Hits@10:40.99	Best:22.3
+2025-01-06 02:10:33,161: Snapshot:4	Epoch:13	Loss:1.209	translation_Loss:0.754	token_training_loss:0.0	distillation_Loss:0.455                                                   	MRR:22.16	Hits@10:40.77	Best:22.3
+2025-01-06 02:10:35,653: Early Stopping! Snapshot: 4 Epoch: 14 Best Results: 22.3
+2025-01-06 02:10:35,653: Start to training tokens! Snapshot: 4 Epoch: 14 Loss:1.189 MRR:22.15 Best Results: 22.3
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:10:35,654: Snapshot:4	Epoch:14	Loss:1.189	translation_Loss:0.741	token_training_loss:0.0	distillation_Loss:0.448                                                   	MRR:22.15	Hits@10:40.85	Best:22.3
+2025-01-06 02:10:38,091: Snapshot:4	Epoch:15	Loss:16.087	translation_Loss:4.077	token_training_loss:12.01	distillation_Loss:0.0                                                   	MRR:22.15	Hits@10:40.85	Best:22.3
+2025-01-06 02:10:40,682: End of token training: 4 Epoch: 16 Loss:6.877 MRR:22.15 Best Results: 22.3
+2025-01-06 02:10:40,682: Snapshot:4	Epoch:16	Loss:6.877	translation_Loss:4.071	token_training_loss:2.806	distillation_Loss:0.0                                                           	MRR:22.15	Hits@10:40.85	Best:22.3
+2025-01-06 02:10:40,899: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2025-01-06 02:10:57,043: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2122 | 0.1124 | 0.2675 | 0.3284 |  0.3971 |
+|     1      | 0.1588 | 0.0767 | 0.1877 | 0.2444 |  0.3168 |
+|     2      | 0.1979 | 0.1188 | 0.2189 | 0.2759 |  0.3573 |
+|     3      | 0.2523 | 0.1761 | 0.2802 | 0.3281 |  0.3963 |
+|     4      |  0.22  | 0.1272 | 0.2386 | 0.3083 |  0.4121 |
++------------+--------+--------+--------+--------+---------+
+2025-01-06 02:10:57,045: Final Result:
+[+------------+-------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR  | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+-------+--------+--------+--------+---------+
+|     0      | 0.276 | 0.1646 | 0.3403 | 0.4106 |  0.4835 |
++------------+-------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2451 | 0.1367 | 0.3069 | 0.3725 |  0.4451 |
+|     1      | 0.1693 | 0.0864 | 0.2007 | 0.2566 |   0.33  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2132 | 0.113  | 0.2693 | 0.3315 |  0.3988 |
+|     1      | 0.1594 | 0.0775 | 0.189  | 0.2442 |  0.3163 |
+|     2      | 0.2093 | 0.1306 | 0.2329 | 0.2868 |  0.3651 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2135 | 0.1134 | 0.2695 | 0.3312 |  0.398  |
+|     1      | 0.1598 | 0.077  | 0.1902 | 0.2478 |  0.3198 |
+|     2      | 0.205  | 0.1238 | 0.2305 | 0.2849 |  0.3651 |
+|     3      | 0.2567 | 0.184  | 0.2837 | 0.3295 |  0.392  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2122 | 0.1124 | 0.2675 | 0.3284 |  0.3971 |
+|     1      | 0.1588 | 0.0767 | 0.1877 | 0.2444 |  0.3168 |
+|     2      | 0.1979 | 0.1188 | 0.2189 | 0.2759 |  0.3573 |
+|     3      | 0.2523 | 0.1761 | 0.2802 | 0.3281 |  0.3963 |
+|     4      |  0.22  | 0.1272 | 0.2386 | 0.3083 |  0.4121 |
++------------+--------+--------+--------+--------+---------+]
+2025-01-06 02:10:57,046: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 178.28729605674744 |   0.276   |    0.165     |     0.34     |     0.483     |
+|    1     | 95.84670567512512  |   0.208   |    0.112     |    0.255     |     0.389     |
+|    2     | 82.49192571640015  |   0.193   |    0.105     |    0.231     |      0.36     |
+|    3     | 82.43716287612915  |   0.199   |    0.111     |    0.236     |     0.364     |
+|    4     | 48.05588674545288  |   0.197   |     0.11     |    0.232     |     0.365     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2025-01-06 02:10:57,046: Sum_Training_Time:487.11897706985474
+2025-01-06 02:10:57,046: Every_Training_Time:[178.28729605674744, 95.84670567512512, 82.49192571640015, 82.43716287612915, 48.05588674545288]
+2025-01-06 02:10:57,046: Forward transfer: 0.01515 Backward transfer: -0.022525000000000003
+2025-01-06 02:11:17,404: Namespace(batch_size='3072', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20250106021102/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, multi_distill_num=3, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=3, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=[4000.0, 15000.0, 90000.0, 90000.0], token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2025-01-06 02:11:32,254: Snapshot:0	Epoch:0	Loss:24.263	translation_Loss:24.263	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:10.68	Hits@10:26.04	Best:10.68
+2025-01-06 02:11:44,531: Snapshot:0	Epoch:1	Loss:15.05	translation_Loss:15.05	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:18.45	Hits@10:40.4	Best:18.45
+2025-01-06 02:11:56,461: Snapshot:0	Epoch:2	Loss:8.578	translation_Loss:8.578	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:23.51	Hits@10:45.19	Best:23.51
+2025-01-06 02:12:07,886: Snapshot:0	Epoch:3	Loss:4.719	translation_Loss:4.719	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:25.76	Hits@10:47.16	Best:25.76
+2025-01-06 02:12:18,913: Snapshot:0	Epoch:4	Loss:2.731	translation_Loss:2.731	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:26.75	Hits@10:47.91	Best:26.75
+2025-01-06 02:12:31,294: Snapshot:0	Epoch:5	Loss:1.813	translation_Loss:1.813	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.21	Hits@10:48.25	Best:27.21
+2025-01-06 02:12:42,064: Snapshot:0	Epoch:6	Loss:1.356	translation_Loss:1.356	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.35	Hits@10:48.22	Best:27.35
+2025-01-06 02:12:54,491: Snapshot:0	Epoch:7	Loss:1.103	translation_Loss:1.103	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.33	Hits@10:48.14	Best:27.35
+2025-01-06 02:13:05,197: Snapshot:0	Epoch:8	Loss:0.955	translation_Loss:0.955	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.45	Hits@10:48.3	Best:27.45
+2025-01-06 02:13:17,067: Snapshot:0	Epoch:9	Loss:0.845	translation_Loss:0.845	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.42	Hits@10:48.08	Best:27.45
+2025-01-06 02:13:28,110: Snapshot:0	Epoch:10	Loss:0.774	translation_Loss:0.774	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.25	Hits@10:47.81	Best:27.45
+2025-01-06 02:13:39,580: Early Stopping! Snapshot: 0 Epoch: 11 Best Results: 27.45
+2025-01-06 02:13:39,581: Start to training tokens! Snapshot: 0 Epoch: 11 Loss:0.723 MRR:27.3 Best Results: 27.45
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:13:39,581: Snapshot:0	Epoch:11	Loss:0.723	translation_Loss:0.723	token_training_loss:0.0	distillation_Loss:0.0                                                   	MRR:27.3	Hits@10:47.68	Best:27.45
+2025-01-06 02:13:52,277: Snapshot:0	Epoch:12	Loss:32.051	translation_Loss:16.474	token_training_loss:15.578	distillation_Loss:0.0                                                   	MRR:27.3	Hits@10:47.68	Best:27.45
+2025-01-06 02:14:03,002: End of token training: 0 Epoch: 13 Loss:16.575 MRR:27.3 Best Results: 27.45
+2025-01-06 02:14:03,003: Snapshot:0	Epoch:13	Loss:16.575	translation_Loss:16.485	token_training_loss:0.09	distillation_Loss:0.0                                                           	MRR:27.3	Hits@10:47.68	Best:27.45
+2025-01-06 02:14:03,266: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2025-01-06 02:14:07,902: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2771 | 0.1665 | 0.3414 | 0.4101 |  0.4832 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:14:25,198: Snapshot:1	Epoch:0	Loss:20.31	translation_Loss:18.971	token_training_loss:0.0	distillation_Loss:1.339                                                   	MRR:10.5	Hits@10:24.73	Best:10.5
+2025-01-06 02:14:34,448: Snapshot:1	Epoch:1	Loss:10.817	translation_Loss:8.611	token_training_loss:0.0	distillation_Loss:2.207                                                   	MRR:15.61	Hits@10:31.45	Best:15.61
+2025-01-06 02:14:44,076: Snapshot:1	Epoch:2	Loss:7.115	translation_Loss:4.871	token_training_loss:0.0	distillation_Loss:2.244                                                   	MRR:16.02	Hits@10:32.27	Best:16.02
+2025-01-06 02:14:53,414: Snapshot:1	Epoch:3	Loss:5.737	translation_Loss:3.607	token_training_loss:0.0	distillation_Loss:2.131                                                   	MRR:16.62	Hits@10:32.34	Best:16.62
+2025-01-06 02:15:04,867: Snapshot:1	Epoch:4	Loss:5.22	translation_Loss:3.182	token_training_loss:0.0	distillation_Loss:2.038                                                   	MRR:16.34	Hits@10:32.04	Best:16.62
+2025-01-06 02:15:14,870: Snapshot:1	Epoch:5	Loss:4.991	translation_Loss:3.007	token_training_loss:0.0	distillation_Loss:1.984                                                   	MRR:16.34	Hits@10:32.0	Best:16.62
+2025-01-06 02:15:24,286: Early Stopping! Snapshot: 1 Epoch: 6 Best Results: 16.62
+2025-01-06 02:15:24,286: Start to training tokens! Snapshot: 1 Epoch: 6 Loss:4.88 MRR:16.36 Best Results: 16.62
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:15:24,286: Snapshot:1	Epoch:6	Loss:4.88	translation_Loss:2.929	token_training_loss:0.0	distillation_Loss:1.95                                                   	MRR:16.36	Hits@10:32.0	Best:16.62
+2025-01-06 02:15:34,122: Snapshot:1	Epoch:7	Loss:34.803	translation_Loss:19.114	token_training_loss:15.689	distillation_Loss:0.0                                                   	MRR:16.36	Hits@10:32.0	Best:16.62
+2025-01-06 02:15:44,842: End of token training: 1 Epoch: 8 Loss:19.219 MRR:16.36 Best Results: 16.62
+2025-01-06 02:15:44,842: Snapshot:1	Epoch:8	Loss:19.219	translation_Loss:19.108	token_training_loss:0.111	distillation_Loss:0.0                                                           	MRR:16.36	Hits@10:32.0	Best:16.62
+2025-01-06 02:15:45,110: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2025-01-06 02:15:54,587: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2497 | 0.1417 | 0.308  | 0.3784 |  0.4524 |
+|     1      | 0.1671 | 0.0856 | 0.1987 | 0.2529 |  0.323  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:16:09,186: Snapshot:2	Epoch:0	Loss:13.78	translation_Loss:11.98	token_training_loss:0.0	distillation_Loss:1.799                                                   	MRR:11.34	Hits@10:25.9	Best:11.34
+2025-01-06 02:16:16,297: Snapshot:2	Epoch:1	Loss:7.661	translation_Loss:5.029	token_training_loss:0.0	distillation_Loss:2.633                                                   	MRR:18.94	Hits@10:35.8	Best:18.94
+2025-01-06 02:16:24,888: Snapshot:2	Epoch:2	Loss:5.408	translation_Loss:3.396	token_training_loss:0.0	distillation_Loss:2.012                                                   	MRR:19.87	Hits@10:36.3	Best:19.87
+2025-01-06 02:16:32,084: Snapshot:2	Epoch:3	Loss:4.318	translation_Loss:2.672	token_training_loss:0.0	distillation_Loss:1.646                                                   	MRR:20.83	Hits@10:37.06	Best:20.83
+2025-01-06 02:16:39,414: Snapshot:2	Epoch:4	Loss:3.721	translation_Loss:2.321	token_training_loss:0.0	distillation_Loss:1.4                                                   	MRR:20.84	Hits@10:36.97	Best:20.84
+2025-01-06 02:16:47,513: Snapshot:2	Epoch:5	Loss:3.411	translation_Loss:2.151	token_training_loss:0.0	distillation_Loss:1.261                                                   	MRR:20.93	Hits@10:36.92	Best:20.93
+2025-01-06 02:16:54,984: Snapshot:2	Epoch:6	Loss:3.258	translation_Loss:2.078	token_training_loss:0.0	distillation_Loss:1.181                                                   	MRR:20.85	Hits@10:36.92	Best:20.93
+2025-01-06 02:17:03,560: Snapshot:2	Epoch:7	Loss:3.176	translation_Loss:2.033	token_training_loss:0.0	distillation_Loss:1.143                                                   	MRR:20.98	Hits@10:36.78	Best:20.98
+2025-01-06 02:17:10,703: Snapshot:2	Epoch:8	Loss:3.129	translation_Loss:2.003	token_training_loss:0.0	distillation_Loss:1.126                                                   	MRR:20.98	Hits@10:36.68	Best:20.98
+2025-01-06 02:17:18,096: Snapshot:2	Epoch:9	Loss:3.109	translation_Loss:2.004	token_training_loss:0.0	distillation_Loss:1.106                                                   	MRR:20.68	Hits@10:36.44	Best:20.98
+2025-01-06 02:17:26,051: Early Stopping! Snapshot: 2 Epoch: 10 Best Results: 20.98
+2025-01-06 02:17:26,052: Start to training tokens! Snapshot: 2 Epoch: 10 Loss:3.087 MRR:20.84 Best Results: 20.98
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:17:26,052: Snapshot:2	Epoch:10	Loss:3.087	translation_Loss:1.981	token_training_loss:0.0	distillation_Loss:1.106                                                   	MRR:20.84	Hits@10:36.21	Best:20.98
+2025-01-06 02:17:33,857: Snapshot:2	Epoch:11	Loss:31.511	translation_Loss:15.312	token_training_loss:16.199	distillation_Loss:0.0                                                   	MRR:20.84	Hits@10:36.21	Best:20.98
+2025-01-06 02:17:42,013: End of token training: 2 Epoch: 12 Loss:15.623 MRR:20.84 Best Results: 20.98
+2025-01-06 02:17:42,013: Snapshot:2	Epoch:12	Loss:15.623	translation_Loss:15.317	token_training_loss:0.306	distillation_Loss:0.0                                                           	MRR:20.84	Hits@10:36.21	Best:20.98
+2025-01-06 02:17:42,269: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2025-01-06 02:17:55,160: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.218  | 0.1163 | 0.272  | 0.3368 |  0.4076 |
+|     1      | 0.1603 | 0.0796 | 0.1895 | 0.244  |  0.3155 |
+|     2      | 0.2085 | 0.1306 | 0.2314 | 0.2851 |  0.3638 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:18:04,887: Snapshot:3	Epoch:0	Loss:6.987	translation_Loss:6.27	token_training_loss:0.0	distillation_Loss:0.717                                                   	MRR:6.05	Hits@10:13.65	Best:6.05
+2025-01-06 02:18:08,356: Snapshot:3	Epoch:1	Loss:5.047	translation_Loss:4.349	token_training_loss:0.0	distillation_Loss:0.697                                                   	MRR:13.45	Hits@10:29.03	Best:13.45
+2025-01-06 02:18:12,196: Snapshot:3	Epoch:2	Loss:3.755	translation_Loss:3.171	token_training_loss:0.0	distillation_Loss:0.585                                                   	MRR:17.11	Hits@10:33.34	Best:17.11
+2025-01-06 02:18:15,724: Snapshot:3	Epoch:3	Loss:3.016	translation_Loss:2.521	token_training_loss:0.0	distillation_Loss:0.495                                                   	MRR:20.54	Hits@10:35.69	Best:20.54
+2025-01-06 02:18:19,877: Snapshot:3	Epoch:4	Loss:2.566	translation_Loss:2.119	token_training_loss:0.0	distillation_Loss:0.447                                                   	MRR:22.57	Hits@10:37.03	Best:22.57
+2025-01-06 02:18:23,415: Snapshot:3	Epoch:5	Loss:2.268	translation_Loss:1.861	token_training_loss:0.0	distillation_Loss:0.407                                                   	MRR:23.59	Hits@10:38.04	Best:23.59
+2025-01-06 02:18:27,231: Snapshot:3	Epoch:6	Loss:2.044	translation_Loss:1.671	token_training_loss:0.0	distillation_Loss:0.373                                                   	MRR:24.13	Hits@10:38.28	Best:24.13
+2025-01-06 02:18:30,695: Snapshot:3	Epoch:7	Loss:1.877	translation_Loss:1.534	token_training_loss:0.0	distillation_Loss:0.344                                                   	MRR:24.63	Hits@10:38.74	Best:24.63
+2025-01-06 02:18:34,414: Snapshot:3	Epoch:8	Loss:1.761	translation_Loss:1.434	token_training_loss:0.0	distillation_Loss:0.326                                                   	MRR:25.04	Hits@10:38.98	Best:25.04
+2025-01-06 02:18:38,222: Snapshot:3	Epoch:9	Loss:1.679	translation_Loss:1.369	token_training_loss:0.0	distillation_Loss:0.31                                                   	MRR:25.16	Hits@10:39.05	Best:25.16
+2025-01-06 02:18:42,251: Snapshot:3	Epoch:10	Loss:1.614	translation_Loss:1.316	token_training_loss:0.0	distillation_Loss:0.298                                                   	MRR:25.47	Hits@10:38.99	Best:25.47
+2025-01-06 02:18:45,581: Snapshot:3	Epoch:11	Loss:1.576	translation_Loss:1.286	token_training_loss:0.0	distillation_Loss:0.29                                                   	MRR:25.48	Hits@10:38.95	Best:25.48
+2025-01-06 02:18:49,401: Snapshot:3	Epoch:12	Loss:1.545	translation_Loss:1.259	token_training_loss:0.0	distillation_Loss:0.286                                                   	MRR:25.56	Hits@10:39.09	Best:25.56
+2025-01-06 02:18:52,954: Snapshot:3	Epoch:13	Loss:1.522	translation_Loss:1.24	token_training_loss:0.0	distillation_Loss:0.281                                                   	MRR:25.5	Hits@10:39.06	Best:25.56
+2025-01-06 02:18:56,222: Snapshot:3	Epoch:14	Loss:1.501	translation_Loss:1.223	token_training_loss:0.0	distillation_Loss:0.277                                                   	MRR:25.52	Hits@10:38.85	Best:25.56
+2025-01-06 02:19:00,422: Early Stopping! Snapshot: 3 Epoch: 15 Best Results: 25.56
+2025-01-06 02:19:00,422: Start to training tokens! Snapshot: 3 Epoch: 15 Loss:1.486 MRR:25.53 Best Results: 25.56
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:19:00,423: Snapshot:3	Epoch:15	Loss:1.486	translation_Loss:1.211	token_training_loss:0.0	distillation_Loss:0.275                                                   	MRR:25.53	Hits@10:38.9	Best:25.56
+2025-01-06 02:19:03,733: Snapshot:3	Epoch:16	Loss:18.436	translation_Loss:5.974	token_training_loss:12.462	distillation_Loss:0.0                                                   	MRR:25.53	Hits@10:38.9	Best:25.56
+2025-01-06 02:19:07,493: End of token training: 3 Epoch: 17 Loss:7.37 MRR:25.53 Best Results: 25.56
+2025-01-06 02:19:07,494: Snapshot:3	Epoch:17	Loss:7.37	translation_Loss:5.966	token_training_loss:1.405	distillation_Loss:0.0                                                           	MRR:25.53	Hits@10:38.9	Best:25.56
+2025-01-06 02:19:07,758: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2025-01-06 02:19:22,116: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2178 | 0.1159 | 0.2722 | 0.3378 |  0.4083 |
+|     1      | 0.1612 | 0.0796 | 0.1918 | 0.247  |  0.3178 |
+|     2      | 0.2021 | 0.1232 | 0.2229 | 0.2812 |  0.3636 |
+|     3      | 0.2518 | 0.177  | 0.283  | 0.3255 |  0.3852 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2025-01-06 02:19:30,464: Snapshot:4	Epoch:0	Loss:4.77	translation_Loss:4.222	token_training_loss:0.0	distillation_Loss:0.547                                                   	MRR:5.78	Hits@10:15.99	Best:5.78
+2025-01-06 02:19:32,843: Snapshot:4	Epoch:1	Loss:3.664	translation_Loss:2.906	token_training_loss:0.0	distillation_Loss:0.758                                                   	MRR:10.38	Hits@10:26.16	Best:10.38
+2025-01-06 02:19:35,150: Snapshot:4	Epoch:2	Loss:3.019	translation_Loss:2.259	token_training_loss:0.0	distillation_Loss:0.76                                                   	MRR:13.6	Hits@10:32.19	Best:13.6
+2025-01-06 02:19:37,879: Snapshot:4	Epoch:3	Loss:2.543	translation_Loss:1.826	token_training_loss:0.0	distillation_Loss:0.717                                                   	MRR:17.11	Hits@10:35.17	Best:17.11
+2025-01-06 02:19:40,429: Snapshot:4	Epoch:4	Loss:2.207	translation_Loss:1.538	token_training_loss:0.0	distillation_Loss:0.669                                                   	MRR:18.92	Hits@10:37.3	Best:18.92
+2025-01-06 02:19:43,574: Snapshot:4	Epoch:5	Loss:1.969	translation_Loss:1.347	token_training_loss:0.0	distillation_Loss:0.621                                                   	MRR:20.04	Hits@10:39.12	Best:20.04
+2025-01-06 02:19:46,044: Snapshot:4	Epoch:6	Loss:1.78	translation_Loss:1.193	token_training_loss:0.0	distillation_Loss:0.587                                                   	MRR:21.01	Hits@10:40.33	Best:21.01
+2025-01-06 02:19:48,749: Snapshot:4	Epoch:7	Loss:1.638	translation_Loss:1.079	token_training_loss:0.0	distillation_Loss:0.559                                                   	MRR:21.49	Hits@10:40.97	Best:21.49
+2025-01-06 02:19:51,106: Snapshot:4	Epoch:8	Loss:1.526	translation_Loss:0.991	token_training_loss:0.0	distillation_Loss:0.534                                                   	MRR:22.0	Hits@10:41.27	Best:22.0
+2025-01-06 02:19:53,474: Snapshot:4	Epoch:9	Loss:1.435	translation_Loss:0.922	token_training_loss:0.0	distillation_Loss:0.513                                                   	MRR:22.2	Hits@10:41.36	Best:22.2
+2025-01-06 02:19:55,831: Snapshot:4	Epoch:10	Loss:1.375	translation_Loss:0.876	token_training_loss:0.0	distillation_Loss:0.499                                                   	MRR:22.28	Hits@10:41.27	Best:22.28
+2025-01-06 02:19:58,176: Snapshot:4	Epoch:11	Loss:1.319	translation_Loss:0.832	token_training_loss:0.0	distillation_Loss:0.487                                                   	MRR:22.36	Hits@10:41.24	Best:22.36
+2025-01-06 02:20:00,849: Snapshot:4	Epoch:12	Loss:1.283	translation_Loss:0.804	token_training_loss:0.0	distillation_Loss:0.479                                                   	MRR:22.12	Hits@10:41.39	Best:22.36
+2025-01-06 02:20:03,143: Snapshot:4	Epoch:13	Loss:1.255	translation_Loss:0.786	token_training_loss:0.0	distillation_Loss:0.469                                                   	MRR:22.3	Hits@10:41.25	Best:22.36
+2025-01-06 02:20:05,440: Early Stopping! Snapshot: 4 Epoch: 14 Best Results: 22.36
+2025-01-06 02:20:05,440: Start to training tokens! Snapshot: 4 Epoch: 14 Loss:1.235 MRR:22.36 Best Results: 22.36
+Token added to optimizer, embeddings excluded successfully.
+2025-01-06 02:20:05,440: Snapshot:4	Epoch:14	Loss:1.235	translation_Loss:0.771	token_training_loss:0.0	distillation_Loss:0.464                                                   	MRR:22.36	Hits@10:41.03	Best:22.36
+2025-01-06 02:20:07,748: Snapshot:4	Epoch:15	Loss:16.101	translation_Loss:4.092	token_training_loss:12.01	distillation_Loss:0.0                                                   	MRR:22.36	Hits@10:41.03	Best:22.36
+2025-01-06 02:20:10,035: End of token training: 4 Epoch: 16 Loss:6.902 MRR:22.36 Best Results: 22.36
+2025-01-06 02:20:10,035: Snapshot:4	Epoch:16	Loss:6.902	translation_Loss:4.096	token_training_loss:2.806	distillation_Loss:0.0                                                           	MRR:22.36	Hits@10:41.03	Best:22.36
+2025-01-06 02:20:10,297: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2025-01-06 02:20:25,208: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2167 | 0.1154 | 0.2709 | 0.3354 |  0.4063 |
+|     1      | 0.1601 | 0.0792 | 0.1903 | 0.244  |  0.3143 |
+|     2      | 0.1929 | 0.1177 | 0.2122 | 0.2646 |  0.3437 |
+|     3      | 0.2462 | 0.1695 | 0.2753 | 0.3224 |  0.3872 |
+|     4      | 0.221  | 0.1269 | 0.2414 | 0.3111 |  0.4154 |
++------------+--------+--------+--------+--------+---------+
+2025-01-06 02:20:25,210: Final Result:
+[+------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2771 | 0.1665 | 0.3414 | 0.4101 |  0.4832 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2497 | 0.1417 | 0.308  | 0.3784 |  0.4524 |
+|     1      | 0.1671 | 0.0856 | 0.1987 | 0.2529 |  0.323  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.218  | 0.1163 | 0.272  | 0.3368 |  0.4076 |
+|     1      | 0.1603 | 0.0796 | 0.1895 | 0.244  |  0.3155 |
+|     2      | 0.2085 | 0.1306 | 0.2314 | 0.2851 |  0.3638 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2178 | 0.1159 | 0.2722 | 0.3378 |  0.4083 |
+|     1      | 0.1612 | 0.0796 | 0.1918 | 0.247  |  0.3178 |
+|     2      | 0.2021 | 0.1232 | 0.2229 | 0.2812 |  0.3636 |
+|     3      | 0.2518 | 0.177  | 0.283  | 0.3255 |  0.3852 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2167 | 0.1154 | 0.2709 | 0.3354 |  0.4063 |
+|     1      | 0.1601 | 0.0792 | 0.1903 | 0.244  |  0.3143 |
+|     2      | 0.1929 | 0.1177 | 0.2122 | 0.2646 |  0.3437 |
+|     3      | 0.2462 | 0.1695 | 0.2753 | 0.3224 |  0.3872 |
+|     4      | 0.221  | 0.1269 | 0.2414 | 0.3111 |  0.4154 |
++------------+--------+--------+--------+--------+---------+]
+2025-01-06 02:20:25,211: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 165.59831738471985 |   0.277   |    0.167     |    0.341     |     0.483     |
+|    1     | 93.18369364738464  |    0.21   |    0.114     |    0.255     |     0.389     |
+|    2     | 104.01115441322327 |   0.195   |    0.107     |    0.232     |     0.363     |
+|    3     | 70.47256326675415  |   0.199   |    0.112     |    0.236     |     0.366     |
+|    4     | 46.236196994781494 |   0.198   |    0.111     |    0.232     |     0.364     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2025-01-06 02:20:25,211: Sum_Training_Time:479.5019257068634
+2025-01-06 02:20:25,211: Every_Training_Time:[165.59831738471985, 93.18369364738464, 104.01115441322327, 70.47256326675415, 46.236196994781494]
+2025-01-06 02:20:25,211: Forward transfer: 0.015375 Backward transfer: -0.02215000000000001

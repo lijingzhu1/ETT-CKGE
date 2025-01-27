@@ -1,0 +1,1160 @@
+2024-12-28 02:14:38,126: Namespace(MAE_loss_weights=[1e-05, 1e-05, 1e-05, 1e-05], batch_size='2048', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_layer_epoch_num=10, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20241228021404/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, mask_ratio=0.2, multi_distill_num=3, multi_layer_distance_weight=40, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=5, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, second_layer_epoch_num=20, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=10000.0, token_num=2, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_multi_layer_distance_loss=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2024-12-28 02:14:55,009: Snapshot:0	Epoch:0	Loss:34.762	translation_Loss:34.762	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:12.3	Hits@10:29.6	Best:12.3
+2024-12-28 02:15:08,065: Snapshot:0	Epoch:1	Loss:19.584	translation_Loss:19.584	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:21.23	Hits@10:42.58	Best:21.23
+2024-12-28 02:15:20,646: Snapshot:0	Epoch:2	Loss:10.296	translation_Loss:10.296	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:25.06	Hits@10:46.23	Best:25.06
+2024-12-28 02:15:33,363: Snapshot:0	Epoch:3	Loss:5.408	translation_Loss:5.408	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.54	Hits@10:47.43	Best:26.54
+2024-12-28 02:15:45,864: Snapshot:0	Epoch:4	Loss:3.235	translation_Loss:3.235	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.18	Hits@10:47.95	Best:27.18
+2024-12-28 02:15:59,059: Snapshot:0	Epoch:5	Loss:2.269	translation_Loss:2.269	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.41	Hits@10:48.17	Best:27.41
+2024-12-28 02:16:11,666: Snapshot:0	Epoch:6	Loss:1.786	translation_Loss:1.786	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.37	Hits@10:48.03	Best:27.41
+2024-12-28 02:16:24,342: Snapshot:0	Epoch:7	Loss:1.504	translation_Loss:1.504	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.26	Hits@10:47.89	Best:27.41
+2024-12-28 02:16:37,384: Snapshot:0	Epoch:8	Loss:1.331	translation_Loss:1.331	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.36	Hits@10:47.85	Best:27.41
+2024-12-28 02:16:50,154: Snapshot:0	Epoch:9	Loss:1.201	translation_Loss:1.201	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.33	Hits@10:47.58	Best:27.41
+2024-12-28 02:17:02,717: Early Stopping! Snapshot: 0 Epoch: 10 Best Results: 27.41
+2024-12-28 02:17:02,717: Start to training tokens! Snapshot: 0 Epoch: 10 Loss:1.107 MRR:27.04 Best Results: 27.41
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([2, 200]), requires_grad: True
+ - torch.Size([2, 200]), requires_grad: True
+2024-12-28 02:17:02,718: Snapshot:0	Epoch:10	Loss:1.107	translation_Loss:1.107	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.04	Hits@10:47.42	Best:27.41
+2024-12-28 02:17:15,797: Snapshot:0	Epoch:11	Loss:35.421	translation_Loss:24.671	multi_layer_Loss:10.75	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.04	Hits@10:47.42	Best:27.41
+2024-12-28 02:17:28,842: End of token training: 0 Epoch: 12 Loss:24.671 MRR:27.04 Best Results: 27.41
+2024-12-28 02:17:28,843: Snapshot:0	Epoch:12	Loss:24.671	translation_Loss:24.661	multi_layer_Loss:0.01	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:27.04	Hits@10:47.42	Best:27.41
+2024-12-28 02:17:29,129: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2024-12-28 02:17:34,752: 
++------------+-------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR  | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+-------+--------+--------+--------+---------+
+|     0      | 0.278 | 0.1662 | 0.3443 | 0.4133 |  0.4854 |
++------------+-------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:18:12,907: Snapshot:1	Epoch:0	Loss:28.477	translation_Loss:26.191	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.286                                                   	MRR:12.72	Hits@10:28.07	Best:12.72
+2024-12-28 02:18:24,581: Snapshot:1	Epoch:1	Loss:14.288	translation_Loss:10.877	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.41                                                   	MRR:16.05	Hits@10:31.82	Best:16.05
+2024-12-28 02:18:36,274: Snapshot:1	Epoch:2	Loss:10.118	translation_Loss:6.751	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.368                                                   	MRR:16.3	Hits@10:31.85	Best:16.3
+2024-12-28 02:18:47,846: Snapshot:1	Epoch:3	Loss:9.041	translation_Loss:5.814	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.228                                                   	MRR:16.33	Hits@10:31.79	Best:16.33
+2024-12-28 02:18:59,512: Snapshot:1	Epoch:4	Loss:8.691	translation_Loss:5.528	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.163                                                   	MRR:16.44	Hits@10:31.94	Best:16.44
+2024-12-28 02:19:11,167: Snapshot:1	Epoch:5	Loss:8.485	translation_Loss:5.369	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.116                                                   	MRR:16.28	Hits@10:31.69	Best:16.44
+2024-12-28 02:19:22,714: Snapshot:1	Epoch:6	Loss:8.403	translation_Loss:5.311	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.092                                                   	MRR:16.22	Hits@10:31.74	Best:16.44
+2024-12-28 02:19:34,246: Snapshot:1	Epoch:7	Loss:8.341	translation_Loss:5.262	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.079                                                   	MRR:16.11	Hits@10:31.87	Best:16.44
+2024-12-28 02:19:45,825: Snapshot:1	Epoch:8	Loss:8.284	translation_Loss:5.214	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.07                                                   	MRR:16.25	Hits@10:31.82	Best:16.44
+2024-12-28 02:19:57,370: Early Stopping! Snapshot: 1 Epoch: 9 Best Results: 16.44
+2024-12-28 02:19:57,370: Start to training tokens! Snapshot: 1 Epoch: 9 Loss:8.236 MRR:16.02 Best Results: 16.44
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([2, 200]), requires_grad: True
+ - torch.Size([2, 200]), requires_grad: True
+2024-12-28 02:19:57,371: Snapshot:1	Epoch:9	Loss:8.236	translation_Loss:5.178	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.058                                                   	MRR:16.02	Hits@10:31.59	Best:16.44
+2024-12-28 02:20:09,140: Snapshot:1	Epoch:10	Loss:39.245	translation_Loss:29.518	multi_layer_Loss:9.727	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:16.02	Hits@10:31.59	Best:16.44
+2024-12-28 02:20:21,276: End of token training: 1 Epoch: 11 Loss:29.54 MRR:16.02 Best Results: 16.44
+2024-12-28 02:20:21,276: Snapshot:1	Epoch:11	Loss:29.54	translation_Loss:29.527	multi_layer_Loss:0.013	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:16.02	Hits@10:31.59	Best:16.44
+2024-12-28 02:20:21,573: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2024-12-28 02:20:31,909: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2558 | 0.1455 | 0.3171 | 0.3861 |  0.4638 |
+|     1      | 0.1647 | 0.0843 | 0.1959 | 0.2489 |  0.3194 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:21:00,612: Snapshot:2	Epoch:0	Loss:17.529	translation_Loss:15.57	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.959                                                   	MRR:15.22	Hits@10:31.83	Best:15.22
+2024-12-28 02:21:09,213: Snapshot:2	Epoch:1	Loss:7.519	translation_Loss:4.562	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.957                                                   	MRR:21.53	Hits@10:39.35	Best:21.53
+2024-12-28 02:21:17,898: Snapshot:2	Epoch:2	Loss:5.29	translation_Loss:2.855	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.435                                                   	MRR:21.42	Hits@10:39.25	Best:21.53
+2024-12-28 02:21:26,619: Snapshot:2	Epoch:3	Loss:4.42	translation_Loss:2.306	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.114                                                   	MRR:21.84	Hits@10:39.1	Best:21.84
+2024-12-28 02:21:35,255: Snapshot:2	Epoch:4	Loss:4.027	translation_Loss:2.087	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.94                                                   	MRR:21.21	Hits@10:38.39	Best:21.84
+2024-12-28 02:21:44,183: Snapshot:2	Epoch:5	Loss:3.839	translation_Loss:1.994	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.845                                                   	MRR:21.5	Hits@10:38.14	Best:21.84
+2024-12-28 02:21:52,794: Snapshot:2	Epoch:6	Loss:3.742	translation_Loss:1.944	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.798                                                   	MRR:21.42	Hits@10:37.9	Best:21.84
+2024-12-28 02:22:01,332: Snapshot:2	Epoch:7	Loss:3.71	translation_Loss:1.928	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.782                                                   	MRR:21.17	Hits@10:37.94	Best:21.84
+2024-12-28 02:22:09,877: Early Stopping! Snapshot: 2 Epoch: 8 Best Results: 21.84
+2024-12-28 02:22:09,877: Start to training tokens! Snapshot: 2 Epoch: 8 Loss:3.664 MRR:21.37 Best Results: 21.84
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([2, 200]), requires_grad: True
+ - torch.Size([2, 200]), requires_grad: True
+2024-12-28 02:22:09,878: Snapshot:2	Epoch:8	Loss:3.664	translation_Loss:1.899	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.765                                                   	MRR:21.37	Hits@10:38.17	Best:21.84
+2024-12-28 02:22:18,481: Snapshot:2	Epoch:9	Loss:33.357	translation_Loss:21.298	multi_layer_Loss:12.059	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:21.37	Hits@10:38.17	Best:21.84
+2024-12-28 02:22:27,679: End of token training: 2 Epoch: 10 Loss:21.368 MRR:21.37 Best Results: 21.84
+2024-12-28 02:22:27,679: Snapshot:2	Epoch:10	Loss:21.368	translation_Loss:21.289	multi_layer_Loss:0.08	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:21.37	Hits@10:38.17	Best:21.84
+2024-12-28 02:22:27,971: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2024-12-28 02:22:42,222: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2119 | 0.1119 | 0.2686 | 0.3296 |  0.3966 |
+|     1      | 0.1483 | 0.0726 | 0.1763 | 0.2265 |  0.291  |
+|     2      | 0.2152 | 0.129  |  0.24  |  0.3   |  0.387  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:22:57,771: Snapshot:3	Epoch:0	Loss:8.733	translation_Loss:8.281	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.453                                                   	MRR:11.91	Hits@10:28.57	Best:11.91
+2024-12-28 02:23:01,798: Snapshot:3	Epoch:1	Loss:4.241	translation_Loss:3.291	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.95                                                   	MRR:23.52	Hits@10:42.8	Best:23.52
+2024-12-28 02:23:05,798: Snapshot:3	Epoch:2	Loss:2.454	translation_Loss:1.3	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.155                                                   	MRR:27.79	Hits@10:46.25	Best:27.79
+2024-12-28 02:23:10,256: Snapshot:3	Epoch:3	Loss:1.823	translation_Loss:0.737	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.087                                                   	MRR:28.46	Hits@10:46.55	Best:28.46
+2024-12-28 02:23:14,323: Snapshot:3	Epoch:4	Loss:1.538	translation_Loss:0.555	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.983                                                   	MRR:28.92	Hits@10:46.46	Best:28.92
+2024-12-28 02:23:18,274: Snapshot:3	Epoch:5	Loss:1.371	translation_Loss:0.461	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.91                                                   	MRR:29.0	Hits@10:46.67	Best:29.0
+2024-12-28 02:23:22,252: Snapshot:3	Epoch:6	Loss:1.263	translation_Loss:0.413	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.851                                                   	MRR:29.28	Hits@10:46.36	Best:29.28
+2024-12-28 02:23:26,136: Snapshot:3	Epoch:7	Loss:1.181	translation_Loss:0.378	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.804                                                   	MRR:29.02	Hits@10:46.8	Best:29.28
+2024-12-28 02:23:30,143: Snapshot:3	Epoch:8	Loss:1.125	translation_Loss:0.358	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.766                                                   	MRR:29.08	Hits@10:46.32	Best:29.28
+2024-12-28 02:23:34,016: Snapshot:3	Epoch:9	Loss:1.083	translation_Loss:0.344	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.738                                                   	MRR:28.64	Hits@10:45.8	Best:29.28
+2024-12-28 02:23:37,911: Snapshot:3	Epoch:10	Loss:1.053	translation_Loss:0.337	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.716                                                   	MRR:29.15	Hits@10:45.97	Best:29.28
+2024-12-28 02:23:41,883: Snapshot:3	Epoch:11	Loss:1.025	translation_Loss:0.33	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.694                                                   	MRR:29.33	Hits@10:46.0	Best:29.33
+2024-12-28 02:23:45,798: Snapshot:3	Epoch:12	Loss:1.015	translation_Loss:0.327	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.687                                                   	MRR:29.21	Hits@10:46.12	Best:29.33
+2024-12-28 02:23:49,676: Snapshot:3	Epoch:13	Loss:0.992	translation_Loss:0.319	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.674                                                   	MRR:28.88	Hits@10:45.55	Best:29.33
+2024-12-28 02:23:54,102: Snapshot:3	Epoch:14	Loss:0.978	translation_Loss:0.313	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.665                                                   	MRR:28.76	Hits@10:45.75	Best:29.33
+2024-12-28 02:23:57,975: Snapshot:3	Epoch:15	Loss:0.968	translation_Loss:0.309	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.658                                                   	MRR:28.88	Hits@10:45.13	Best:29.33
+2024-12-28 02:24:01,920: Early Stopping! Snapshot: 3 Epoch: 16 Best Results: 29.33
+2024-12-28 02:24:01,920: Start to training tokens! Snapshot: 3 Epoch: 16 Loss:0.958 MRR:29.15 Best Results: 29.33
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([2, 200]), requires_grad: True
+ - torch.Size([2, 200]), requires_grad: True
+2024-12-28 02:24:01,921: Snapshot:3	Epoch:16	Loss:0.958	translation_Loss:0.303	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.655                                                   	MRR:29.15	Hits@10:45.36	Best:29.33
+2024-12-28 02:24:05,790: Snapshot:3	Epoch:17	Loss:16.722	translation_Loss:7.545	multi_layer_Loss:9.177	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:29.15	Hits@10:45.36	Best:29.33
+2024-12-28 02:24:09,693: End of token training: 3 Epoch: 18 Loss:8.077 MRR:29.15 Best Results: 29.33
+2024-12-28 02:24:09,694: Snapshot:3	Epoch:18	Loss:8.077	translation_Loss:7.554	multi_layer_Loss:0.523	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:29.15	Hits@10:45.36	Best:29.33
+2024-12-28 02:24:09,984: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2024-12-28 02:24:26,518: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2087 | 0.1106 | 0.2647 | 0.3231 |  0.3894 |
+|     1      | 0.1447 | 0.0695 | 0.1709 | 0.2206 |  0.2888 |
+|     2      | 0.1844 | 0.1042 | 0.2025 | 0.2565 |  0.3403 |
+|     3      | 0.2921 | 0.2004 | 0.3298 | 0.3874 |  0.462  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:24:39,675: Snapshot:4	Epoch:0	Loss:4.766	translation_Loss:4.487	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.279                                                   	MRR:10.92	Hits@10:27.22	Best:10.92
+2024-12-28 02:24:42,539: Snapshot:4	Epoch:1	Loss:2.355	translation_Loss:1.828	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.527                                                   	MRR:18.67	Hits@10:41.06	Best:18.67
+2024-12-28 02:24:45,384: Snapshot:4	Epoch:2	Loss:1.424	translation_Loss:0.768	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.656                                                   	MRR:24.43	Hits@10:46.42	Best:24.43
+2024-12-28 02:24:48,250: Snapshot:4	Epoch:3	Loss:0.982	translation_Loss:0.328	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.654                                                   	MRR:26.11	Hits@10:48.07	Best:26.11
+2024-12-28 02:24:51,135: Snapshot:4	Epoch:4	Loss:0.786	translation_Loss:0.208	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.579                                                   	MRR:27.29	Hits@10:49.05	Best:27.29
+2024-12-28 02:24:53,991: Snapshot:4	Epoch:5	Loss:0.684	translation_Loss:0.174	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.51                                                   	MRR:27.7	Hits@10:49.76	Best:27.7
+2024-12-28 02:24:56,931: Snapshot:4	Epoch:6	Loss:0.615	translation_Loss:0.15	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.465                                                   	MRR:27.82	Hits@10:50.39	Best:27.82
+2024-12-28 02:24:59,778: Snapshot:4	Epoch:7	Loss:0.554	translation_Loss:0.128	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.426                                                   	MRR:28.02	Hits@10:50.36	Best:28.02
+2024-12-28 02:25:02,763: Snapshot:4	Epoch:8	Loss:0.519	translation_Loss:0.126	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.393                                                   	MRR:28.46	Hits@10:50.67	Best:28.46
+2024-12-28 02:25:05,601: Snapshot:4	Epoch:9	Loss:0.486	translation_Loss:0.115	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.372                                                   	MRR:28.31	Hits@10:50.9	Best:28.46
+2024-12-28 02:25:08,362: Snapshot:4	Epoch:10	Loss:0.465	translation_Loss:0.113	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.352                                                   	MRR:27.92	Hits@10:51.16	Best:28.46
+2024-12-28 02:25:11,107: Snapshot:4	Epoch:11	Loss:0.45	translation_Loss:0.11	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.339                                                   	MRR:27.76	Hits@10:50.9	Best:28.46
+2024-12-28 02:25:13,932: Snapshot:4	Epoch:12	Loss:0.433	translation_Loss:0.105	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.327                                                   	MRR:27.63	Hits@10:50.8	Best:28.46
+2024-12-28 02:25:16,698: Early Stopping! Snapshot: 4 Epoch: 13 Best Results: 28.46
+2024-12-28 02:25:16,699: Start to training tokens! Snapshot: 4 Epoch: 13 Loss:0.417 MRR:27.86 Best Results: 28.46
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([2, 200]), requires_grad: True
+ - torch.Size([2, 200]), requires_grad: True
+2024-12-28 02:25:16,699: Snapshot:4	Epoch:13	Loss:0.417	translation_Loss:0.103	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.314                                                   	MRR:27.86	Hits@10:50.65	Best:28.46
+2024-12-28 02:25:19,460: Snapshot:4	Epoch:14	Loss:14.618	translation_Loss:4.221	multi_layer_Loss:10.397	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.86	Hits@10:50.65	Best:28.46
+2024-12-28 02:25:22,298: End of token training: 4 Epoch: 15 Loss:4.834 MRR:27.86 Best Results: 28.46
+2024-12-28 02:25:22,298: Snapshot:4	Epoch:15	Loss:4.834	translation_Loss:4.23	multi_layer_Loss:0.604	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:27.86	Hits@10:50.65	Best:28.46
+2024-12-28 02:25:22,669: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2024-12-28 02:25:41,083: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.1942 | 0.1011 | 0.245  | 0.3023 |  0.3652 |
+|     1      | 0.1413 | 0.0671 | 0.1659 | 0.216  |  0.283  |
+|     2      | 0.1739 | 0.0996 | 0.189  | 0.2385 |  0.3199 |
+|     3      | 0.2633 | 0.1835 | 0.2932 | 0.3345 |  0.4044 |
+|     4      | 0.275  | 0.1605 |  0.31  | 0.3923 |  0.5071 |
++------------+--------+--------+--------+--------+---------+
+2024-12-28 02:25:41,085: Final Result:
+[+------------+-------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR  | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+-------+--------+--------+--------+---------+
+|     0      | 0.278 | 0.1662 | 0.3443 | 0.4133 |  0.4854 |
++------------+-------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2558 | 0.1455 | 0.3171 | 0.3861 |  0.4638 |
+|     1      | 0.1647 | 0.0843 | 0.1959 | 0.2489 |  0.3194 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2119 | 0.1119 | 0.2686 | 0.3296 |  0.3966 |
+|     1      | 0.1483 | 0.0726 | 0.1763 | 0.2265 |  0.291  |
+|     2      | 0.2152 | 0.129  |  0.24  |  0.3   |  0.387  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2087 | 0.1106 | 0.2647 | 0.3231 |  0.3894 |
+|     1      | 0.1447 | 0.0695 | 0.1709 | 0.2206 |  0.2888 |
+|     2      | 0.1844 | 0.1042 | 0.2025 | 0.2565 |  0.3403 |
+|     3      | 0.2921 | 0.2004 | 0.3298 | 0.3874 |  0.462  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.1942 | 0.1011 | 0.245  | 0.3023 |  0.3652 |
+|     1      | 0.1413 | 0.0671 | 0.1659 | 0.216  |  0.283  |
+|     2      | 0.1739 | 0.0996 | 0.189  | 0.2385 |  0.3199 |
+|     3      | 0.2633 | 0.1835 | 0.2932 | 0.3345 |  0.4044 |
+|     4      | 0.275  | 0.1605 |  0.31  | 0.3923 |  0.5071 |
++------------+--------+--------+--------+--------+---------+]
+2024-12-28 02:25:41,086: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 170.7161259651184  |   0.278   |    0.166     |    0.344     |     0.485     |
+|    1     | 161.89371752738953 |   0.212   |    0.116     |    0.258     |     0.394     |
+|    2     | 111.85776615142822 |    0.19   |    0.102     |    0.228     |     0.356     |
+|    3     |  85.4004271030426  |   0.191   |    0.105     |    0.227     |     0.353     |
+|    4     | 54.19047737121582  |   0.186   |    0.103     |    0.218     |     0.344     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2024-12-28 02:25:41,086: Sum_Training_Time:584.0585141181946
+2024-12-28 02:25:41,086: Every_Training_Time:[170.7161259651184, 161.89371752738953, 111.85776615142822, 85.4004271030426, 54.19047737121582]
+2024-12-28 02:25:41,086: Forward transfer: 0.01805 Backward transfer: -0.04432500000000002
+2024-12-28 02:26:17,253: Namespace(MAE_loss_weights=[1e-05, 1e-05, 1e-05, 1e-05], batch_size='2048', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_layer_epoch_num=10, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20241228022545/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, mask_ratio=0.2, multi_distill_num=3, multi_layer_distance_weight=40, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=5, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, second_layer_epoch_num=20, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=10000.0, token_num=10, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_multi_layer_distance_loss=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2024-12-28 02:26:34,180: Snapshot:0	Epoch:0	Loss:34.762	translation_Loss:34.762	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:12.3	Hits@10:29.6	Best:12.3
+2024-12-28 02:26:47,237: Snapshot:0	Epoch:1	Loss:19.584	translation_Loss:19.584	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:21.24	Hits@10:42.61	Best:21.24
+2024-12-28 02:26:59,705: Snapshot:0	Epoch:2	Loss:10.296	translation_Loss:10.296	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:25.07	Hits@10:46.25	Best:25.07
+2024-12-28 02:27:12,199: Snapshot:0	Epoch:3	Loss:5.408	translation_Loss:5.408	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.55	Hits@10:47.56	Best:26.55
+2024-12-28 02:27:24,915: Snapshot:0	Epoch:4	Loss:3.233	translation_Loss:3.233	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.14	Hits@10:48.0	Best:27.14
+2024-12-28 02:27:38,245: Snapshot:0	Epoch:5	Loss:2.268	translation_Loss:2.268	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.43	Hits@10:48.1	Best:27.43
+2024-12-28 02:27:50,932: Snapshot:0	Epoch:6	Loss:1.786	translation_Loss:1.786	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.34	Hits@10:48.0	Best:27.43
+2024-12-28 02:28:03,385: Snapshot:0	Epoch:7	Loss:1.506	translation_Loss:1.506	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.3	Hits@10:47.93	Best:27.43
+2024-12-28 02:28:16,434: Snapshot:0	Epoch:8	Loss:1.33	translation_Loss:1.33	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.27	Hits@10:47.66	Best:27.43
+2024-12-28 02:28:28,982: Snapshot:0	Epoch:9	Loss:1.2	translation_Loss:1.2	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.2	Hits@10:47.58	Best:27.43
+2024-12-28 02:28:41,590: Early Stopping! Snapshot: 0 Epoch: 10 Best Results: 27.43
+2024-12-28 02:28:41,590: Start to training tokens! Snapshot: 0 Epoch: 10 Loss:1.107 MRR:26.98 Best Results: 27.43
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([10, 200]), requires_grad: True
+ - torch.Size([10, 200]), requires_grad: True
+2024-12-28 02:28:41,591: Snapshot:0	Epoch:10	Loss:1.107	translation_Loss:1.107	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.98	Hits@10:47.28	Best:27.43
+2024-12-28 02:28:54,808: Snapshot:0	Epoch:11	Loss:42.428	translation_Loss:24.771	multi_layer_Loss:17.656	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.98	Hits@10:47.28	Best:27.43
+2024-12-28 02:29:07,894: End of token training: 0 Epoch: 12 Loss:24.776 MRR:26.98 Best Results: 27.43
+2024-12-28 02:29:07,895: Snapshot:0	Epoch:12	Loss:24.776	translation_Loss:24.761	multi_layer_Loss:0.014	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:26.98	Hits@10:47.28	Best:27.43
+2024-12-28 02:29:08,180: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2024-12-28 02:29:13,782: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2775 | 0.1654 | 0.3437 | 0.413  |  0.4852 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:29:52,023: Snapshot:1	Epoch:0	Loss:29.886	translation_Loss:27.322	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.565                                                   	MRR:10.88	Hits@10:24.72	Best:10.88
+2024-12-28 02:30:03,839: Snapshot:1	Epoch:1	Loss:16.69	translation_Loss:13.91	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.78                                                   	MRR:13.67	Hits@10:27.89	Best:13.67
+2024-12-28 02:30:15,748: Snapshot:1	Epoch:2	Loss:12.508	translation_Loss:9.852	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.656                                                   	MRR:13.98	Hits@10:27.93	Best:13.98
+2024-12-28 02:30:27,345: Snapshot:1	Epoch:3	Loss:11.362	translation_Loss:8.818	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.544                                                   	MRR:13.87	Hits@10:27.8	Best:13.98
+2024-12-28 02:30:39,118: Snapshot:1	Epoch:4	Loss:10.956	translation_Loss:8.477	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.479                                                   	MRR:13.87	Hits@10:28.03	Best:13.98
+2024-12-28 02:30:50,819: Snapshot:1	Epoch:5	Loss:10.722	translation_Loss:8.283	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.439                                                   	MRR:13.91	Hits@10:27.97	Best:13.98
+2024-12-28 02:31:02,414: Snapshot:1	Epoch:6	Loss:10.629	translation_Loss:8.212	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.418                                                   	MRR:13.77	Hits@10:27.91	Best:13.98
+2024-12-28 02:31:14,116: Early Stopping! Snapshot: 1 Epoch: 7 Best Results: 13.98
+2024-12-28 02:31:14,116: Start to training tokens! Snapshot: 1 Epoch: 7 Loss:10.545 MRR:13.73 Best Results: 13.98
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([10, 200]), requires_grad: True
+ - torch.Size([10, 200]), requires_grad: True
+2024-12-28 02:31:14,117: Snapshot:1	Epoch:7	Loss:10.545	translation_Loss:8.151	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.394                                                   	MRR:13.73	Hits@10:27.92	Best:13.98
+2024-12-28 02:31:25,784: Snapshot:1	Epoch:8	Loss:50.059	translation_Loss:31.833	multi_layer_Loss:18.225	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:13.73	Hits@10:27.92	Best:13.98
+2024-12-28 02:31:37,429: End of token training: 1 Epoch: 9 Loss:31.876 MRR:13.73 Best Results: 13.98
+2024-12-28 02:31:37,429: Snapshot:1	Epoch:9	Loss:31.876	translation_Loss:31.856	multi_layer_Loss:0.02	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:13.73	Hits@10:27.92	Best:13.98
+2024-12-28 02:31:37,790: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2024-12-28 02:31:48,123: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2641 | 0.1471 | 0.3352 | 0.405  |  0.4771 |
+|     1      | 0.1401 | 0.0702 | 0.1633 | 0.2124 |  0.2787 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:32:17,093: Snapshot:2	Epoch:0	Loss:20.901	translation_Loss:17.618	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.283                                                   	MRR:14.73	Hits@10:29.42	Best:14.73
+2024-12-28 02:32:25,764: Snapshot:2	Epoch:1	Loss:11.825	translation_Loss:7.815	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:4.01                                                   	MRR:18.61	Hits@10:34.23	Best:18.61
+2024-12-28 02:32:34,594: Snapshot:2	Epoch:2	Loss:8.817	translation_Loss:5.683	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.134                                                   	MRR:19.55	Hits@10:34.62	Best:19.55
+2024-12-28 02:32:43,743: Snapshot:2	Epoch:3	Loss:7.649	translation_Loss:4.947	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.702                                                   	MRR:19.55	Hits@10:34.48	Best:19.55
+2024-12-28 02:32:52,323: Snapshot:2	Epoch:4	Loss:7.221	translation_Loss:4.699	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.522                                                   	MRR:19.29	Hits@10:34.13	Best:19.55
+2024-12-28 02:33:00,939: Snapshot:2	Epoch:5	Loss:7.049	translation_Loss:4.587	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.462                                                   	MRR:19.3	Hits@10:34.22	Best:19.55
+2024-12-28 02:33:09,536: Snapshot:2	Epoch:6	Loss:7.006	translation_Loss:4.562	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.444                                                   	MRR:19.3	Hits@10:34.2	Best:19.55
+2024-12-28 02:33:18,141: Early Stopping! Snapshot: 2 Epoch: 7 Best Results: 19.55
+2024-12-28 02:33:18,142: Start to training tokens! Snapshot: 2 Epoch: 7 Loss:6.956 MRR:19.41 Best Results: 19.55
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([10, 200]), requires_grad: True
+ - torch.Size([10, 200]), requires_grad: True
+2024-12-28 02:33:18,142: Snapshot:2	Epoch:7	Loss:6.956	translation_Loss:4.532	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.424                                                   	MRR:19.41	Hits@10:34.09	Best:19.55
+2024-12-28 02:33:27,072: Snapshot:2	Epoch:8	Loss:42.364	translation_Loss:24.169	multi_layer_Loss:18.195	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:19.41	Hits@10:34.09	Best:19.55
+2024-12-28 02:33:35,519: End of token training: 2 Epoch: 9 Loss:24.266 MRR:19.41 Best Results: 19.55
+2024-12-28 02:33:35,519: Snapshot:2	Epoch:9	Loss:24.266	translation_Loss:24.171	multi_layer_Loss:0.096	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:19.41	Hits@10:34.09	Best:19.55
+2024-12-28 02:33:35,832: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2024-12-28 02:33:49,845: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.226  | 0.118  | 0.2882 | 0.3567 |  0.4302 |
+|     1      | 0.1286 | 0.0601 | 0.1485 | 0.1963 |  0.2644 |
+|     2      | 0.1918 | 0.1169 | 0.2168 | 0.266  |  0.338  |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:34:05,848: Snapshot:3	Epoch:0	Loss:10.018	translation_Loss:9.236	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.781                                                   	MRR:10.91	Hits@10:25.3	Best:10.91
+2024-12-28 02:34:09,886: Snapshot:3	Epoch:1	Loss:6.462	translation_Loss:5.216	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.246                                                   	MRR:18.55	Hits@10:36.37	Best:18.55
+2024-12-28 02:34:13,944: Snapshot:3	Epoch:2	Loss:4.656	translation_Loss:3.396	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.26                                                   	MRR:22.98	Hits@10:39.15	Best:22.98
+2024-12-28 02:34:17,991: Snapshot:3	Epoch:3	Loss:3.77	translation_Loss:2.591	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.179                                                   	MRR:24.73	Hits@10:40.79	Best:24.73
+2024-12-28 02:34:22,004: Snapshot:3	Epoch:4	Loss:3.285	translation_Loss:2.175	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.111                                                   	MRR:25.44	Hits@10:40.99	Best:25.44
+2024-12-28 02:34:26,088: Snapshot:3	Epoch:5	Loss:2.987	translation_Loss:1.93	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.056                                                   	MRR:26.15	Hits@10:41.18	Best:26.15
+2024-12-28 02:34:30,148: Snapshot:3	Epoch:6	Loss:2.787	translation_Loss:1.777	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.01                                                   	MRR:26.18	Hits@10:41.48	Best:26.18
+2024-12-28 02:34:34,209: Snapshot:3	Epoch:7	Loss:2.663	translation_Loss:1.684	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.978                                                   	MRR:26.51	Hits@10:41.04	Best:26.51
+2024-12-28 02:34:38,181: Snapshot:3	Epoch:8	Loss:2.576	translation_Loss:1.624	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.952                                                   	MRR:26.29	Hits@10:40.84	Best:26.51
+2024-12-28 02:34:42,155: Snapshot:3	Epoch:9	Loss:2.518	translation_Loss:1.587	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.931                                                   	MRR:26.46	Hits@10:41.1	Best:26.51
+2024-12-28 02:34:46,236: Snapshot:3	Epoch:10	Loss:2.48	translation_Loss:1.563	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.917                                                   	MRR:26.58	Hits@10:41.38	Best:26.58
+2024-12-28 02:34:50,242: Snapshot:3	Epoch:11	Loss:2.441	translation_Loss:1.536	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.906                                                   	MRR:26.39	Hits@10:41.04	Best:26.58
+2024-12-28 02:34:54,195: Snapshot:3	Epoch:12	Loss:2.424	translation_Loss:1.525	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.899                                                   	MRR:26.28	Hits@10:40.73	Best:26.58
+2024-12-28 02:34:58,134: Snapshot:3	Epoch:13	Loss:2.4	translation_Loss:1.511	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.889                                                   	MRR:26.23	Hits@10:40.84	Best:26.58
+2024-12-28 02:35:02,684: Snapshot:3	Epoch:14	Loss:2.394	translation_Loss:1.505	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.89                                                   	MRR:26.19	Hits@10:40.56	Best:26.58
+2024-12-28 02:35:06,711: Early Stopping! Snapshot: 3 Epoch: 15 Best Results: 26.58
+2024-12-28 02:35:06,711: Start to training tokens! Snapshot: 3 Epoch: 15 Loss:2.371 MRR:25.94 Best Results: 26.58
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([10, 200]), requires_grad: True
+ - torch.Size([10, 200]), requires_grad: True
+2024-12-28 02:35:06,712: Snapshot:3	Epoch:15	Loss:2.371	translation_Loss:1.492	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.879                                                   	MRR:25.94	Hits@10:40.68	Best:26.58
+2024-12-28 02:35:10,648: Snapshot:3	Epoch:16	Loss:25.645	translation_Loss:9.113	multi_layer_Loss:16.532	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:25.94	Hits@10:40.68	Best:26.58
+2024-12-28 02:35:14,663: End of token training: 3 Epoch: 17 Loss:10.181 MRR:25.94 Best Results: 26.58
+2024-12-28 02:35:14,664: Snapshot:3	Epoch:17	Loss:10.181	translation_Loss:9.113	multi_layer_Loss:1.068	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:25.94	Hits@10:40.68	Best:26.58
+2024-12-28 02:35:14,955: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2024-12-28 02:35:31,756: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2239 | 0.1173 | 0.286  | 0.3537 |  0.4276 |
+|     1      | 0.1284 | 0.0594 | 0.1489 | 0.1967 |  0.2648 |
+|     2      | 0.1771 | 0.1024 | 0.1985 | 0.2499 |  0.3271 |
+|     3      | 0.2629 | 0.182  | 0.2967 | 0.3434 |  0.4092 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:35:44,430: Snapshot:4	Epoch:0	Loss:6.082	translation_Loss:5.594	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.488                                                   	MRR:9.08	Hits@10:24.16	Best:9.08
+2024-12-28 02:35:47,288: Snapshot:4	Epoch:1	Loss:3.845	translation_Loss:2.86	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.985                                                   	MRR:16.2	Hits@10:36.87	Best:16.2
+2024-12-28 02:35:50,152: Snapshot:4	Epoch:2	Loss:2.895	translation_Loss:1.815	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.08                                                   	MRR:20.62	Hits@10:40.98	Best:20.62
+2024-12-28 02:35:53,069: Snapshot:4	Epoch:3	Loss:2.316	translation_Loss:1.341	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.975                                                   	MRR:22.93	Hits@10:43.59	Best:22.93
+2024-12-28 02:35:55,952: Snapshot:4	Epoch:4	Loss:1.985	translation_Loss:1.113	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.872                                                   	MRR:24.09	Hits@10:45.59	Best:24.09
+2024-12-28 02:35:58,806: Snapshot:4	Epoch:5	Loss:1.748	translation_Loss:0.94	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.808                                                   	MRR:24.8	Hits@10:46.35	Best:24.8
+2024-12-28 02:36:01,756: Snapshot:4	Epoch:6	Loss:1.595	translation_Loss:0.837	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.758                                                   	MRR:25.12	Hits@10:46.94	Best:25.12
+2024-12-28 02:36:04,620: Snapshot:4	Epoch:7	Loss:1.468	translation_Loss:0.753	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.715                                                   	MRR:25.46	Hits@10:46.85	Best:25.46
+2024-12-28 02:36:07,436: Snapshot:4	Epoch:8	Loss:1.396	translation_Loss:0.712	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.684                                                   	MRR:25.67	Hits@10:47.41	Best:25.67
+2024-12-28 02:36:10,320: Snapshot:4	Epoch:9	Loss:1.329	translation_Loss:0.668	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.66                                                   	MRR:25.47	Hits@10:47.35	Best:25.67
+2024-12-28 02:36:13,188: Snapshot:4	Epoch:10	Loss:1.283	translation_Loss:0.646	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.637                                                   	MRR:25.39	Hits@10:47.16	Best:25.67
+2024-12-28 02:36:16,447: Snapshot:4	Epoch:11	Loss:1.253	translation_Loss:0.63	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.623                                                   	MRR:24.91	Hits@10:46.86	Best:25.67
+2024-12-28 02:36:19,207: Snapshot:4	Epoch:12	Loss:1.235	translation_Loss:0.621	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.614                                                   	MRR:25.13	Hits@10:47.48	Best:25.67
+2024-12-28 02:36:22,042: Early Stopping! Snapshot: 4 Epoch: 13 Best Results: 25.67
+2024-12-28 02:36:22,042: Start to training tokens! Snapshot: 4 Epoch: 13 Loss:1.21 MRR:24.64 Best Results: 25.67
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([10, 200]), requires_grad: True
+ - torch.Size([10, 200]), requires_grad: True
+2024-12-28 02:36:22,043: Snapshot:4	Epoch:13	Loss:1.21	translation_Loss:0.61	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.6                                                   	MRR:24.64	Hits@10:46.54	Best:25.67
+2024-12-28 02:36:24,850: Snapshot:4	Epoch:14	Loss:20.374	translation_Loss:5.352	multi_layer_Loss:15.022	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:24.64	Hits@10:46.54	Best:25.67
+2024-12-28 02:36:27,601: End of token training: 4 Epoch: 15 Loss:7.491 MRR:24.64 Best Results: 25.67
+2024-12-28 02:36:27,602: Snapshot:4	Epoch:15	Loss:7.491	translation_Loss:5.363	multi_layer_Loss:2.128	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:24.64	Hits@10:46.54	Best:25.67
+2024-12-28 02:36:27,885: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2024-12-28 02:36:45,905: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2177 | 0.1137 | 0.2765 | 0.3422 |  0.4126 |
+|     1      | 0.1287 | 0.0598 | 0.1488 | 0.1975 |  0.2645 |
+|     2      | 0.1664 | 0.096  | 0.1856 | 0.2331 |  0.3042 |
+|     3      | 0.2499 | 0.173  | 0.2731 | 0.3223 |  0.3925 |
+|     4      | 0.2515 | 0.1444 | 0.284  | 0.3619 |  0.4743 |
++------------+--------+--------+--------+--------+---------+
+2024-12-28 02:36:45,907: Final Result:
+[+------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2775 | 0.1654 | 0.3437 | 0.413  |  0.4852 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2641 | 0.1471 | 0.3352 | 0.405  |  0.4771 |
+|     1      | 0.1401 | 0.0702 | 0.1633 | 0.2124 |  0.2787 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.226  | 0.118  | 0.2882 | 0.3567 |  0.4302 |
+|     1      | 0.1286 | 0.0601 | 0.1485 | 0.1963 |  0.2644 |
+|     2      | 0.1918 | 0.1169 | 0.2168 | 0.266  |  0.338  |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2239 | 0.1173 | 0.286  | 0.3537 |  0.4276 |
+|     1      | 0.1284 | 0.0594 | 0.1489 | 0.1967 |  0.2648 |
+|     2      | 0.1771 | 0.1024 | 0.1985 | 0.2499 |  0.3271 |
+|     3      | 0.2629 | 0.182  | 0.2967 | 0.3434 |  0.4092 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2177 | 0.1137 | 0.2765 | 0.3422 |  0.4126 |
+|     1      | 0.1287 | 0.0598 | 0.1488 | 0.1975 |  0.2645 |
+|     2      | 0.1664 | 0.096  | 0.1856 | 0.2331 |  0.3042 |
+|     3      | 0.2499 | 0.173  | 0.2731 | 0.3223 |  0.3925 |
+|     4      | 0.2515 | 0.1444 | 0.284  | 0.3619 |  0.4743 |
++------------+--------+--------+--------+--------+---------+]
+2024-12-28 02:36:45,908: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 170.64205694198608 |   0.278   |    0.165     |    0.344     |     0.485     |
+|    1     | 138.9675793647766  |   0.204   |     0.11     |    0.252     |     0.381     |
+|    2     | 103.6051697731018  |   0.182   |    0.097     |    0.219     |     0.347     |
+|    3     |  82.8042163848877  |   0.186   |    0.102     |    0.223     |      0.35     |
+|    4     | 54.27499723434448  |   0.185   |    0.102     |    0.219     |     0.347     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2024-12-28 02:36:45,908: Sum_Training_Time:550.2940196990967
+2024-12-28 02:36:45,908: Every_Training_Time:[170.64205694198608, 138.9675793647766, 103.6051697731018, 82.8042163848877, 54.27499723434448]
+2024-12-28 02:36:45,908: Forward transfer: 0.0161 Backward transfer: -0.027400000000000008
+2024-12-28 02:37:22,204: Namespace(MAE_loss_weights=[1e-05, 1e-05, 1e-05, 1e-05], batch_size='3072', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_layer_epoch_num=10, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20241228023650/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, mask_ratio=0.2, multi_distill_num=3, multi_layer_distance_weight=40, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=5, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, second_layer_epoch_num=20, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=10000.0, token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_multi_layer_distance_loss=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2024-12-28 02:37:39,709: Snapshot:0	Epoch:0	Loss:24.263	translation_Loss:24.263	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:10.68	Hits@10:26.04	Best:10.68
+2024-12-28 02:37:52,499: Snapshot:0	Epoch:1	Loss:15.05	translation_Loss:15.05	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:18.45	Hits@10:40.4	Best:18.45
+2024-12-28 02:38:05,641: Snapshot:0	Epoch:2	Loss:8.578	translation_Loss:8.578	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:23.51	Hits@10:45.18	Best:23.51
+2024-12-28 02:38:18,876: Snapshot:0	Epoch:3	Loss:4.718	translation_Loss:4.718	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:25.75	Hits@10:47.24	Best:25.75
+2024-12-28 02:38:31,620: Snapshot:0	Epoch:4	Loss:2.732	translation_Loss:2.732	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.74	Hits@10:47.98	Best:26.74
+2024-12-28 02:38:44,769: Snapshot:0	Epoch:5	Loss:1.812	translation_Loss:1.812	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.23	Hits@10:48.23	Best:27.23
+2024-12-28 02:38:57,917: Snapshot:0	Epoch:6	Loss:1.355	translation_Loss:1.355	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.38	Hits@10:48.29	Best:27.38
+2024-12-28 02:39:10,606: Snapshot:0	Epoch:7	Loss:1.103	translation_Loss:1.103	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.3	Hits@10:48.13	Best:27.38
+2024-12-28 02:39:23,790: Snapshot:0	Epoch:8	Loss:0.956	translation_Loss:0.956	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.36	Hits@10:48.1	Best:27.38
+2024-12-28 02:39:36,862: Snapshot:0	Epoch:9	Loss:0.847	translation_Loss:0.847	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.45	Hits@10:48.09	Best:27.45
+2024-12-28 02:39:49,687: Snapshot:0	Epoch:10	Loss:0.775	translation_Loss:0.775	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.26	Hits@10:48.04	Best:27.45
+2024-12-28 02:40:02,889: Snapshot:0	Epoch:11	Loss:0.723	translation_Loss:0.723	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.33	Hits@10:47.59	Best:27.45
+2024-12-28 02:40:16,303: Snapshot:0	Epoch:12	Loss:0.679	translation_Loss:0.679	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.27	Hits@10:47.65	Best:27.45
+2024-12-28 02:40:28,969: Snapshot:0	Epoch:13	Loss:0.64	translation_Loss:0.64	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.03	Hits@10:47.52	Best:27.45
+2024-12-28 02:40:42,048: Early Stopping! Snapshot: 0 Epoch: 14 Best Results: 27.45
+2024-12-28 02:40:42,049: Start to training tokens! Snapshot: 0 Epoch: 14 Loss:0.595 MRR:27.0 Best Results: 27.45
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:40:42,050: Snapshot:0	Epoch:14	Loss:0.595	translation_Loss:0.595	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.0	Hits@10:47.24	Best:27.45
+2024-12-28 02:40:55,550: Snapshot:0	Epoch:15	Loss:32.104	translation_Loss:16.526	multi_layer_Loss:15.578	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.0	Hits@10:47.24	Best:27.45
+2024-12-28 02:41:08,394: End of token training: 0 Epoch: 16 Loss:16.633 MRR:27.0 Best Results: 27.45
+2024-12-28 02:41:08,394: Snapshot:0	Epoch:16	Loss:16.633	translation_Loss:16.544	multi_layer_Loss:0.09	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:27.0	Hits@10:47.24	Best:27.45
+2024-12-28 02:41:08,689: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2024-12-28 02:41:14,356: 
++------------+-------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR  | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+-------+--------+--------+--------+---------+
+|     0      | 0.277 | 0.1657 | 0.3424 | 0.4118 |  0.4843 |
++------------+-------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:41:52,999: Snapshot:1	Epoch:0	Loss:20.737	translation_Loss:19.184	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.553                                                   	MRR:9.83	Hits@10:23.25	Best:9.83
+2024-12-28 02:42:04,633: Snapshot:1	Epoch:1	Loss:12.093	translation_Loss:10.175	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.918                                                   	MRR:14.2	Hits@10:29.01	Best:14.2
+2024-12-28 02:42:16,202: Snapshot:1	Epoch:2	Loss:8.437	translation_Loss:6.643	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.793                                                   	MRR:14.72	Hits@10:29.55	Best:14.72
+2024-12-28 02:42:27,813: Snapshot:1	Epoch:3	Loss:7.036	translation_Loss:5.311	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.725                                                   	MRR:14.74	Hits@10:29.55	Best:14.74
+2024-12-28 02:42:40,000: Snapshot:1	Epoch:4	Loss:6.503	translation_Loss:4.83	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.673                                                   	MRR:14.75	Hits@10:29.44	Best:14.75
+2024-12-28 02:42:51,774: Snapshot:1	Epoch:5	Loss:6.244	translation_Loss:4.623	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.621                                                   	MRR:14.83	Hits@10:29.41	Best:14.83
+2024-12-28 02:43:03,814: Snapshot:1	Epoch:6	Loss:6.104	translation_Loss:4.509	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.595                                                   	MRR:14.92	Hits@10:29.34	Best:14.92
+2024-12-28 02:43:15,658: Snapshot:1	Epoch:7	Loss:6.026	translation_Loss:4.449	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.578                                                   	MRR:14.94	Hits@10:29.23	Best:14.94
+2024-12-28 02:43:27,842: Snapshot:1	Epoch:8	Loss:5.971	translation_Loss:4.406	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.566                                                   	MRR:14.65	Hits@10:29.18	Best:14.94
+2024-12-28 02:43:40,137: Snapshot:1	Epoch:9	Loss:5.938	translation_Loss:4.379	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.559                                                   	MRR:14.63	Hits@10:29.18	Best:14.94
+2024-12-28 02:43:51,905: Snapshot:1	Epoch:10	Loss:5.89	translation_Loss:4.339	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.551                                                   	MRR:14.59	Hits@10:29.19	Best:14.94
+2024-12-28 02:44:03,992: Snapshot:1	Epoch:11	Loss:5.89	translation_Loss:4.347	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.544                                                   	MRR:14.57	Hits@10:29.04	Best:14.94
+2024-12-28 02:44:15,628: Early Stopping! Snapshot: 1 Epoch: 12 Best Results: 14.94
+2024-12-28 02:44:15,628: Start to training tokens! Snapshot: 1 Epoch: 12 Loss:5.861 MRR:14.58 Best Results: 14.94
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:44:15,629: Snapshot:1	Epoch:12	Loss:5.861	translation_Loss:4.318	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.543                                                   	MRR:14.58	Hits@10:28.97	Best:14.94
+2024-12-28 02:44:27,670: Snapshot:1	Epoch:13	Loss:36.265	translation_Loss:20.576	multi_layer_Loss:15.689	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:14.58	Hits@10:28.97	Best:14.94
+2024-12-28 02:44:39,812: End of token training: 1 Epoch: 14 Loss:20.675 MRR:14.58 Best Results: 14.94
+2024-12-28 02:44:39,812: Snapshot:1	Epoch:14	Loss:20.675	translation_Loss:20.564	multi_layer_Loss:0.111	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:14.58	Hits@10:28.97	Best:14.94
+2024-12-28 02:44:40,153: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2024-12-28 02:44:50,533: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2638 | 0.1474 | 0.334  | 0.4029 |  0.4774 |
+|     1      | 0.1494 | 0.0751 | 0.1765 | 0.2277 |  0.2931 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:45:19,912: Snapshot:2	Epoch:0	Loss:13.742	translation_Loss:12.196	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.546                                                   	MRR:10.79	Hits@10:25.07	Best:10.79
+2024-12-28 02:45:28,556: Snapshot:2	Epoch:1	Loss:7.291	translation_Loss:4.79	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.501                                                   	MRR:18.96	Hits@10:36.2	Best:18.96
+2024-12-28 02:45:37,177: Snapshot:2	Epoch:2	Loss:5.123	translation_Loss:3.166	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.957                                                   	MRR:19.73	Hits@10:36.38	Best:19.73
+2024-12-28 02:45:45,829: Snapshot:2	Epoch:3	Loss:4.106	translation_Loss:2.483	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.623                                                   	MRR:20.61	Hits@10:36.42	Best:20.61
+2024-12-28 02:45:54,512: Snapshot:2	Epoch:4	Loss:3.549	translation_Loss:2.149	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.401                                                   	MRR:20.74	Hits@10:36.36	Best:20.74
+2024-12-28 02:46:03,656: Snapshot:2	Epoch:5	Loss:3.264	translation_Loss:1.999	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.265                                                   	MRR:20.63	Hits@10:36.2	Best:20.74
+2024-12-28 02:46:12,247: Snapshot:2	Epoch:6	Loss:3.093	translation_Loss:1.9	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.193                                                   	MRR:20.63	Hits@10:36.2	Best:20.74
+2024-12-28 02:46:20,931: Snapshot:2	Epoch:7	Loss:3.013	translation_Loss:1.866	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.147                                                   	MRR:20.63	Hits@10:35.96	Best:20.74
+2024-12-28 02:46:30,016: Snapshot:2	Epoch:8	Loss:2.962	translation_Loss:1.837	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.125                                                   	MRR:20.43	Hits@10:35.8	Best:20.74
+2024-12-28 02:46:38,672: Early Stopping! Snapshot: 2 Epoch: 9 Best Results: 20.74
+2024-12-28 02:46:38,673: Start to training tokens! Snapshot: 2 Epoch: 9 Loss:2.926 MRR:20.46 Best Results: 20.74
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:46:38,673: Snapshot:2	Epoch:9	Loss:2.926	translation_Loss:1.82	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.106                                                   	MRR:20.46	Hits@10:35.7	Best:20.74
+2024-12-28 02:46:47,801: Snapshot:2	Epoch:10	Loss:31.401	translation_Loss:15.203	multi_layer_Loss:16.199	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:20.46	Hits@10:35.7	Best:20.74
+2024-12-28 02:46:56,381: End of token training: 2 Epoch: 11 Loss:15.516 MRR:20.46 Best Results: 20.74
+2024-12-28 02:46:56,381: Snapshot:2	Epoch:11	Loss:15.516	translation_Loss:15.21	multi_layer_Loss:0.306	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:20.46	Hits@10:35.7	Best:20.74
+2024-12-28 02:46:56,746: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2024-12-28 02:47:10,657: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2206 | 0.1155 | 0.2792 | 0.3453 |  0.4181 |
+|     1      | 0.1367 | 0.063  | 0.1617 | 0.2124 |  0.2796 |
+|     2      | 0.2043 | 0.1272 | 0.226  | 0.2826 |  0.3599 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:47:26,712: Snapshot:3	Epoch:0	Loss:6.516	translation_Loss:6.178	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.338                                                   	MRR:7.28	Hits@10:16.14	Best:7.28
+2024-12-28 02:47:31,134: Snapshot:3	Epoch:1	Loss:4.008	translation_Loss:3.289	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.719                                                   	MRR:18.04	Hits@10:36.22	Best:18.04
+2024-12-28 02:47:35,228: Snapshot:3	Epoch:2	Loss:2.748	translation_Loss:1.87	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.878                                                   	MRR:22.63	Hits@10:41.06	Best:22.63
+2024-12-28 02:47:39,185: Snapshot:3	Epoch:3	Loss:2.084	translation_Loss:1.227	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.857                                                   	MRR:25.2	Hits@10:42.4	Best:25.2
+2024-12-28 02:47:43,279: Snapshot:3	Epoch:4	Loss:1.737	translation_Loss:0.95	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.787                                                   	MRR:26.23	Hits@10:43.09	Best:26.23
+2024-12-28 02:47:47,328: Snapshot:3	Epoch:5	Loss:1.512	translation_Loss:0.79	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.722                                                   	MRR:26.77	Hits@10:43.69	Best:26.77
+2024-12-28 02:47:51,687: Snapshot:3	Epoch:6	Loss:1.354	translation_Loss:0.687	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.667                                                   	MRR:26.74	Hits@10:44.07	Best:26.77
+2024-12-28 02:47:55,664: Snapshot:3	Epoch:7	Loss:1.247	translation_Loss:0.621	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.626                                                   	MRR:26.99	Hits@10:43.71	Best:26.99
+2024-12-28 02:47:59,699: Snapshot:3	Epoch:8	Loss:1.16	translation_Loss:0.568	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.592                                                   	MRR:27.39	Hits@10:43.99	Best:27.39
+2024-12-28 02:48:03,689: Snapshot:3	Epoch:9	Loss:1.1	translation_Loss:0.536	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.564                                                   	MRR:27.33	Hits@10:43.97	Best:27.39
+2024-12-28 02:48:07,613: Snapshot:3	Epoch:10	Loss:1.052	translation_Loss:0.508	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.544                                                   	MRR:27.33	Hits@10:43.79	Best:27.39
+2024-12-28 02:48:11,589: Snapshot:3	Epoch:11	Loss:1.022	translation_Loss:0.498	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.525                                                   	MRR:27.74	Hits@10:43.57	Best:27.74
+2024-12-28 02:48:16,137: Snapshot:3	Epoch:12	Loss:0.992	translation_Loss:0.483	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.509                                                   	MRR:27.85	Hits@10:43.65	Best:27.85
+2024-12-28 02:48:20,041: Snapshot:3	Epoch:13	Loss:0.972	translation_Loss:0.473	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.498                                                   	MRR:27.72	Hits@10:43.5	Best:27.85
+2024-12-28 02:48:24,008: Snapshot:3	Epoch:14	Loss:0.954	translation_Loss:0.463	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.491                                                   	MRR:27.38	Hits@10:42.83	Best:27.85
+2024-12-28 02:48:27,935: Snapshot:3	Epoch:15	Loss:0.936	translation_Loss:0.455	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.48                                                   	MRR:27.36	Hits@10:43.12	Best:27.85
+2024-12-28 02:48:32,333: Snapshot:3	Epoch:16	Loss:0.929	translation_Loss:0.455	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.474                                                   	MRR:27.25	Hits@10:42.85	Best:27.85
+2024-12-28 02:48:36,278: Early Stopping! Snapshot: 3 Epoch: 17 Best Results: 27.85
+2024-12-28 02:48:36,279: Start to training tokens! Snapshot: 3 Epoch: 17 Loss:0.915 MRR:27.47 Best Results: 27.85
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:48:36,279: Snapshot:3	Epoch:17	Loss:0.915	translation_Loss:0.444	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.471                                                   	MRR:27.47	Hits@10:42.7	Best:27.85
+2024-12-28 02:48:40,204: Snapshot:3	Epoch:18	Loss:17.879	translation_Loss:5.418	multi_layer_Loss:12.462	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.47	Hits@10:42.7	Best:27.85
+2024-12-28 02:48:44,092: End of token training: 3 Epoch: 19 Loss:6.824 MRR:27.47 Best Results: 27.85
+2024-12-28 02:48:44,093: Snapshot:3	Epoch:19	Loss:6.824	translation_Loss:5.419	multi_layer_Loss:1.405	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:27.47	Hits@10:42.7	Best:27.85
+2024-12-28 02:48:44,385: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2024-12-28 02:49:00,719: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2182 | 0.1142 | 0.2764 | 0.3413 |  0.4131 |
+|     1      | 0.1375 | 0.0647 | 0.1602 |  0.21  |  0.2804 |
+|     2      | 0.1843 | 0.1082 | 0.2034 | 0.2577 |  0.3377 |
+|     3      | 0.2782 | 0.1934 | 0.3143 | 0.3678 |  0.4347 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:49:13,681: Snapshot:4	Epoch:0	Loss:3.864	translation_Loss:3.647	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.217                                                   	MRR:8.21	Hits@10:20.91	Best:8.21
+2024-12-28 02:49:16,578: Snapshot:4	Epoch:1	Loss:2.356	translation_Loss:1.888	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.468                                                   	MRR:14.82	Hits@10:34.02	Best:14.82
+2024-12-28 02:49:19,475: Snapshot:4	Epoch:2	Loss:1.691	translation_Loss:1.068	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.623                                                   	MRR:19.08	Hits@10:40.94	Best:19.08
+2024-12-28 02:49:22,340: Snapshot:4	Epoch:3	Loss:1.308	translation_Loss:0.662	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.646                                                   	MRR:22.62	Hits@10:44.35	Best:22.62
+2024-12-28 02:49:25,190: Snapshot:4	Epoch:4	Loss:1.06	translation_Loss:0.462	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.597                                                   	MRR:24.29	Hits@10:45.94	Best:24.29
+2024-12-28 02:49:27,992: Snapshot:4	Epoch:5	Loss:0.908	translation_Loss:0.369	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.539                                                   	MRR:25.22	Hits@10:46.72	Best:25.22
+2024-12-28 02:49:30,915: Snapshot:4	Epoch:6	Loss:0.8	translation_Loss:0.308	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.492                                                   	MRR:25.99	Hits@10:47.92	Best:25.99
+2024-12-28 02:49:33,794: Snapshot:4	Epoch:7	Loss:0.719	translation_Loss:0.265	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.453                                                   	MRR:26.72	Hits@10:48.48	Best:26.72
+2024-12-28 02:49:36,629: Snapshot:4	Epoch:8	Loss:0.653	translation_Loss:0.233	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.42                                                   	MRR:26.79	Hits@10:48.7	Best:26.79
+2024-12-28 02:49:39,455: Snapshot:4	Epoch:9	Loss:0.602	translation_Loss:0.209	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.393                                                   	MRR:26.69	Hits@10:48.58	Best:26.79
+2024-12-28 02:49:42,724: Snapshot:4	Epoch:10	Loss:0.561	translation_Loss:0.194	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.368                                                   	MRR:26.71	Hits@10:48.55	Best:26.79
+2024-12-28 02:49:45,599: Snapshot:4	Epoch:11	Loss:0.53	translation_Loss:0.183	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.347                                                   	MRR:26.86	Hits@10:48.55	Best:26.86
+2024-12-28 02:49:48,537: Snapshot:4	Epoch:12	Loss:0.505	translation_Loss:0.173	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.331                                                   	MRR:26.89	Hits@10:48.75	Best:26.89
+2024-12-28 02:49:51,460: Snapshot:4	Epoch:13	Loss:0.486	translation_Loss:0.171	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.316                                                   	MRR:26.95	Hits@10:48.62	Best:26.95
+2024-12-28 02:49:54,327: Snapshot:4	Epoch:14	Loss:0.47	translation_Loss:0.168	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.302                                                   	MRR:27.08	Hits@10:49.26	Best:27.08
+2024-12-28 02:49:57,144: Snapshot:4	Epoch:15	Loss:0.456	translation_Loss:0.161	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.295                                                   	MRR:26.84	Hits@10:49.29	Best:27.08
+2024-12-28 02:49:59,971: Snapshot:4	Epoch:16	Loss:0.446	translation_Loss:0.157	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.289                                                   	MRR:26.72	Hits@10:49.35	Best:27.08
+2024-12-28 02:50:03,195: Snapshot:4	Epoch:17	Loss:0.439	translation_Loss:0.158	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.281                                                   	MRR:26.49	Hits@10:49.41	Best:27.08
+2024-12-28 02:50:06,063: Snapshot:4	Epoch:18	Loss:0.427	translation_Loss:0.15	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.277                                                   	MRR:26.75	Hits@10:49.42	Best:27.08
+2024-12-28 02:50:08,943: Early Stopping! Snapshot: 4 Epoch: 19 Best Results: 27.08
+2024-12-28 02:50:08,943: Start to training tokens! Snapshot: 4 Epoch: 19 Loss:0.425 MRR:26.73 Best Results: 27.08
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:50:08,943: Snapshot:4	Epoch:19	Loss:0.425	translation_Loss:0.152	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.273                                                   	MRR:26.73	Hits@10:49.12	Best:27.08
+2024-12-28 02:50:11,758: Snapshot:4	Epoch:20	Loss:15.426	translation_Loss:3.417	multi_layer_Loss:12.01	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.73	Hits@10:49.12	Best:27.08
+2024-12-28 02:50:14,587: End of token training: 4 Epoch: 21 Loss:6.217 MRR:26.73 Best Results: 27.08
+2024-12-28 02:50:14,588: Snapshot:4	Epoch:21	Loss:6.217	translation_Loss:3.411	multi_layer_Loss:2.806	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:26.73	Hits@10:49.12	Best:27.08
+2024-12-28 02:50:14,857: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2024-12-28 02:50:32,860: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2103 | 0.1097 | 0.2647 | 0.328  |  0.3989 |
+|     1      | 0.1374 | 0.064  | 0.1612 | 0.2115 |  0.2798 |
+|     2      | 0.174  | 0.1033 | 0.1893 | 0.2415 |  0.3166 |
+|     3      | 0.2641 | 0.1864 | 0.2897 | 0.3353 |  0.4055 |
+|     4      | 0.2669 | 0.1567 | 0.2994 | 0.3803 |  0.4926 |
++------------+--------+--------+--------+--------+---------+
+2024-12-28 02:50:32,862: Final Result:
+[+------------+-------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR  | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+-------+--------+--------+--------+---------+
+|     0      | 0.277 | 0.1657 | 0.3424 | 0.4118 |  0.4843 |
++------------+-------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2638 | 0.1474 | 0.334  | 0.4029 |  0.4774 |
+|     1      | 0.1494 | 0.0751 | 0.1765 | 0.2277 |  0.2931 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2206 | 0.1155 | 0.2792 | 0.3453 |  0.4181 |
+|     1      | 0.1367 | 0.063  | 0.1617 | 0.2124 |  0.2796 |
+|     2      | 0.2043 | 0.1272 | 0.226  | 0.2826 |  0.3599 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2182 | 0.1142 | 0.2764 | 0.3413 |  0.4131 |
+|     1      | 0.1375 | 0.0647 | 0.1602 |  0.21  |  0.2804 |
+|     2      | 0.1843 | 0.1082 | 0.2034 | 0.2577 |  0.3377 |
+|     3      | 0.2782 | 0.1934 | 0.3143 | 0.3678 |  0.4347 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2103 | 0.1097 | 0.2647 | 0.328  |  0.3989 |
+|     1      | 0.1374 | 0.064  | 0.1612 | 0.2115 |  0.2798 |
+|     2      | 0.174  | 0.1033 | 0.1893 | 0.2415 |  0.3166 |
+|     3      | 0.2641 | 0.1864 | 0.2897 | 0.3353 |  0.4055 |
+|     4      | 0.2669 | 0.1567 | 0.2994 | 0.3803 |  0.4926 |
++------------+--------+--------+--------+--------+---------+]
+2024-12-28 02:50:32,863: Report Result:
++----------+-------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time       | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+-------------------+-----------+--------------+--------------+---------------+
+|    0     | 226.1895146369934 |   0.277   |    0.166     |    0.342     |     0.484     |
+|    1     | 200.5627794265747 |   0.208   |    0.112     |    0.257     |     0.388     |
+|    2     |  122.084219455719 |   0.186   |    0.099     |    0.223     |     0.353     |
+|    3     | 91.05579137802124 |   0.191   |    0.105     |    0.226     |     0.355     |
+|    4     | 72.23799133300781 |    0.19   |    0.105     |    0.222     |     0.353     |
++----------+-------------------+-----------+--------------+--------------+---------------+
+2024-12-28 02:50:32,863: Sum_Training_Time:712.1302962303162
+2024-12-28 02:50:32,863: Every_Training_Time:[226.1895146369934, 200.5627794265747, 122.084219455719, 91.05579137802124, 72.23799133300781]
+2024-12-28 02:50:32,863: Forward transfer: 0.017 Backward transfer: -0.030775000000000018
+2024-12-28 02:51:09,347: Namespace(MAE_loss_weights=[1e-05, 1e-05, 1e-05, 1e-05], batch_size='2048', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_layer_epoch_num=10, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20241228025037/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, mask_ratio=0.2, multi_distill_num=3, multi_layer_distance_weight=40, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=5, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, second_layer_epoch_num=20, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=50000.0, token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_multi_layer_distance_loss=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2024-12-28 02:51:26,323: Snapshot:0	Epoch:0	Loss:34.762	translation_Loss:34.762	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:12.3	Hits@10:29.6	Best:12.3
+2024-12-28 02:51:39,480: Snapshot:0	Epoch:1	Loss:19.584	translation_Loss:19.584	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:21.22	Hits@10:42.59	Best:21.22
+2024-12-28 02:51:52,213: Snapshot:0	Epoch:2	Loss:10.296	translation_Loss:10.296	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:25.04	Hits@10:46.31	Best:25.04
+2024-12-28 02:52:04,845: Snapshot:0	Epoch:3	Loss:5.409	translation_Loss:5.409	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.57	Hits@10:47.54	Best:26.57
+2024-12-28 02:52:17,502: Snapshot:0	Epoch:4	Loss:3.237	translation_Loss:3.237	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.2	Hits@10:47.9	Best:27.2
+2024-12-28 02:52:30,731: Snapshot:0	Epoch:5	Loss:2.269	translation_Loss:2.269	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.38	Hits@10:48.06	Best:27.38
+2024-12-28 02:52:43,255: Snapshot:0	Epoch:6	Loss:1.786	translation_Loss:1.786	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.31	Hits@10:47.83	Best:27.38
+2024-12-28 02:52:55,784: Snapshot:0	Epoch:7	Loss:1.505	translation_Loss:1.505	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.12	Hits@10:47.72	Best:27.38
+2024-12-28 02:53:08,939: Snapshot:0	Epoch:8	Loss:1.334	translation_Loss:1.334	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.25	Hits@10:47.53	Best:27.38
+2024-12-28 02:53:21,518: Snapshot:0	Epoch:9	Loss:1.198	translation_Loss:1.198	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.36	Hits@10:47.58	Best:27.38
+2024-12-28 02:53:34,119: Early Stopping! Snapshot: 0 Epoch: 10 Best Results: 27.38
+2024-12-28 02:53:34,119: Start to training tokens! Snapshot: 0 Epoch: 10 Loss:1.105 MRR:27.01 Best Results: 27.38
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:53:34,120: Snapshot:0	Epoch:10	Loss:1.105	translation_Loss:1.105	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.01	Hits@10:47.44	Best:27.38
+2024-12-28 02:53:47,290: Snapshot:0	Epoch:11	Loss:40.49	translation_Loss:24.833	multi_layer_Loss:15.656	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.01	Hits@10:47.44	Best:27.38
+2024-12-28 02:54:00,553: End of token training: 0 Epoch: 12 Loss:24.838 MRR:27.01 Best Results: 27.38
+2024-12-28 02:54:00,553: Snapshot:0	Epoch:12	Loss:24.838	translation_Loss:24.826	multi_layer_Loss:0.013	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:27.01	Hits@10:47.44	Best:27.38
+2024-12-28 02:54:00,845: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2024-12-28 02:54:06,373: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2777 | 0.1657 | 0.3447 | 0.4134 |  0.4843 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:54:44,692: Snapshot:1	Epoch:0	Loss:30.447	translation_Loss:28.011	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.437                                                   	MRR:9.8	Hits@10:23.04	Best:9.8
+2024-12-28 02:54:56,380: Snapshot:1	Epoch:1	Loss:17.412	translation_Loss:15.006	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.406                                                   	MRR:12.89	Hits@10:26.26	Best:12.89
+2024-12-28 02:55:08,218: Snapshot:1	Epoch:2	Loss:13.132	translation_Loss:10.869	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.262                                                   	MRR:13.04	Hits@10:26.45	Best:13.04
+2024-12-28 02:55:19,823: Snapshot:1	Epoch:3	Loss:11.924	translation_Loss:9.784	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.141                                                   	MRR:13.07	Hits@10:26.54	Best:13.07
+2024-12-28 02:55:31,199: Snapshot:1	Epoch:4	Loss:11.477	translation_Loss:9.408	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.069                                                   	MRR:13.07	Hits@10:26.71	Best:13.07
+2024-12-28 02:55:42,546: Snapshot:1	Epoch:5	Loss:11.23	translation_Loss:9.194	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.036                                                   	MRR:13.19	Hits@10:26.87	Best:13.19
+2024-12-28 02:55:53,903: Snapshot:1	Epoch:6	Loss:11.127	translation_Loss:9.106	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.021                                                   	MRR:13.11	Hits@10:26.82	Best:13.19
+2024-12-28 02:56:05,246: Snapshot:1	Epoch:7	Loss:11.041	translation_Loss:9.036	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.005                                                   	MRR:13.14	Hits@10:26.97	Best:13.19
+2024-12-28 02:56:16,537: Snapshot:1	Epoch:8	Loss:10.984	translation_Loss:8.981	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.002                                                   	MRR:13.17	Hits@10:26.89	Best:13.19
+2024-12-28 02:56:27,822: Snapshot:1	Epoch:9	Loss:10.928	translation_Loss:8.936	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.993                                                   	MRR:13.03	Hits@10:26.65	Best:13.19
+2024-12-28 02:56:39,144: Early Stopping! Snapshot: 1 Epoch: 10 Best Results: 13.19
+2024-12-28 02:56:39,144: Start to training tokens! Snapshot: 1 Epoch: 10 Loss:10.872 MRR:13.03 Best Results: 13.19
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:56:39,145: Snapshot:1	Epoch:10	Loss:10.872	translation_Loss:8.883	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.989                                                   	MRR:13.03	Hits@10:26.74	Best:13.19
+2024-12-28 02:56:50,891: Snapshot:1	Epoch:11	Loss:48.462	translation_Loss:32.678	multi_layer_Loss:15.784	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:13.03	Hits@10:26.74	Best:13.19
+2024-12-28 02:57:02,141: End of token training: 1 Epoch: 12 Loss:32.694 MRR:13.03 Best Results: 13.19
+2024-12-28 02:57:02,141: Snapshot:1	Epoch:12	Loss:32.694	translation_Loss:32.676	multi_layer_Loss:0.018	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:13.03	Hits@10:26.74	Best:13.19
+2024-12-28 02:57:02,499: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2024-12-28 02:57:12,994: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2726 | 0.1592 | 0.338  | 0.4112 |  0.4853 |
+|     1      | 0.1326 | 0.0661 | 0.1528 | 0.1962 |  0.2668 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:57:41,278: Snapshot:2	Epoch:0	Loss:22.711	translation_Loss:19.274	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.437                                                   	MRR:12.29	Hits@10:24.8	Best:12.29
+2024-12-28 02:57:49,685: Snapshot:2	Epoch:1	Loss:13.729	translation_Loss:9.752	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.977                                                   	MRR:17.97	Hits@10:31.65	Best:17.97
+2024-12-28 02:57:58,094: Snapshot:2	Epoch:2	Loss:10.089	translation_Loss:6.983	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.106                                                   	MRR:18.48	Hits@10:32.09	Best:18.48
+2024-12-28 02:58:06,504: Snapshot:2	Epoch:3	Loss:8.76	translation_Loss:6.072	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.688                                                   	MRR:18.18	Hits@10:31.58	Best:18.48
+2024-12-28 02:58:14,849: Snapshot:2	Epoch:4	Loss:8.326	translation_Loss:5.765	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.561                                                   	MRR:18.12	Hits@10:31.5	Best:18.48
+2024-12-28 02:58:23,163: Snapshot:2	Epoch:5	Loss:8.154	translation_Loss:5.642	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.512                                                   	MRR:18.1	Hits@10:31.34	Best:18.48
+2024-12-28 02:58:31,498: Snapshot:2	Epoch:6	Loss:8.085	translation_Loss:5.592	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.493                                                   	MRR:17.92	Hits@10:31.24	Best:18.48
+2024-12-28 02:58:39,828: Early Stopping! Snapshot: 2 Epoch: 7 Best Results: 18.48
+2024-12-28 02:58:39,828: Start to training tokens! Snapshot: 2 Epoch: 7 Loss:8.035 MRR:18.05 Best Results: 18.48
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 02:58:39,828: Snapshot:2	Epoch:7	Loss:8.035	translation_Loss:5.547	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.488                                                   	MRR:18.05	Hits@10:31.35	Best:18.48
+2024-12-28 02:58:48,134: Snapshot:2	Epoch:8	Loss:42.087	translation_Loss:25.656	multi_layer_Loss:16.431	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:18.05	Hits@10:31.35	Best:18.48
+2024-12-28 02:58:56,952: End of token training: 2 Epoch: 9 Loss:25.741 MRR:18.05 Best Results: 18.48
+2024-12-28 02:58:56,952: Snapshot:2	Epoch:9	Loss:25.741	translation_Loss:25.643	multi_layer_Loss:0.098	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:18.05	Hits@10:31.35	Best:18.48
+2024-12-28 02:58:57,280: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2024-12-28 02:59:11,559: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2425 | 0.1304 | 0.3091 | 0.3806 |  0.4489 |
+|     1      | 0.128  | 0.0606 | 0.1489 | 0.1921 |  0.2628 |
+|     2      | 0.1827 | 0.1157 | 0.2053 | 0.2488 |  0.3132 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 02:59:26,770: Snapshot:3	Epoch:0	Loss:10.42	translation_Loss:9.498	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.922                                                   	MRR:9.0	Hits@10:20.73	Best:9.0
+2024-12-28 02:59:31,076: Snapshot:3	Epoch:1	Loss:7.321	translation_Loss:6.216	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.105                                                   	MRR:16.39	Hits@10:31.93	Best:16.39
+2024-12-28 02:59:35,024: Snapshot:3	Epoch:2	Loss:5.411	translation_Loss:4.425	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.987                                                   	MRR:20.41	Hits@10:35.08	Best:20.41
+2024-12-28 02:59:38,960: Snapshot:3	Epoch:3	Loss:4.493	translation_Loss:3.583	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.91                                                   	MRR:22.34	Hits@10:36.43	Best:22.34
+2024-12-28 02:59:42,858: Snapshot:3	Epoch:4	Loss:3.935	translation_Loss:3.073	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.862                                                   	MRR:23.26	Hits@10:36.74	Best:23.26
+2024-12-28 02:59:46,759: Snapshot:3	Epoch:5	Loss:3.595	translation_Loss:2.779	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.815                                                   	MRR:23.74	Hits@10:36.85	Best:23.74
+2024-12-28 02:59:50,646: Snapshot:3	Epoch:6	Loss:3.372	translation_Loss:2.598	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.775                                                   	MRR:23.93	Hits@10:37.27	Best:23.93
+2024-12-28 02:59:54,553: Snapshot:3	Epoch:7	Loss:3.234	translation_Loss:2.485	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.749                                                   	MRR:24.05	Hits@10:37.36	Best:24.05
+2024-12-28 02:59:58,540: Snapshot:3	Epoch:8	Loss:3.147	translation_Loss:2.416	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.73                                                   	MRR:23.91	Hits@10:37.2	Best:24.05
+2024-12-28 03:00:02,437: Snapshot:3	Epoch:9	Loss:3.082	translation_Loss:2.364	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.718                                                   	MRR:23.98	Hits@10:36.96	Best:24.05
+2024-12-28 03:00:06,451: Snapshot:3	Epoch:10	Loss:3.035	translation_Loss:2.324	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.711                                                   	MRR:24.08	Hits@10:37.08	Best:24.08
+2024-12-28 03:00:10,497: Snapshot:3	Epoch:11	Loss:3.011	translation_Loss:2.308	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.703                                                   	MRR:24.33	Hits@10:37.22	Best:24.33
+2024-12-28 03:00:14,729: Snapshot:3	Epoch:12	Loss:2.995	translation_Loss:2.295	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.7                                                   	MRR:24.27	Hits@10:37.06	Best:24.33
+2024-12-28 03:00:18,570: Snapshot:3	Epoch:13	Loss:2.977	translation_Loss:2.284	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.694                                                   	MRR:23.98	Hits@10:37.32	Best:24.33
+2024-12-28 03:00:22,411: Snapshot:3	Epoch:14	Loss:2.959	translation_Loss:2.268	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.691                                                   	MRR:24.11	Hits@10:37.29	Best:24.33
+2024-12-28 03:00:26,325: Snapshot:3	Epoch:15	Loss:2.948	translation_Loss:2.262	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.686                                                   	MRR:24.12	Hits@10:37.05	Best:24.33
+2024-12-28 03:00:30,246: Early Stopping! Snapshot: 3 Epoch: 16 Best Results: 24.33
+2024-12-28 03:00:30,246: Start to training tokens! Snapshot: 3 Epoch: 16 Loss:2.942 MRR:24.07 Best Results: 24.33
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:00:30,247: Snapshot:3	Epoch:16	Loss:2.942	translation_Loss:2.257	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.685                                                   	MRR:24.07	Hits@10:37.35	Best:24.33
+2024-12-28 03:00:34,074: Snapshot:3	Epoch:17	Loss:23.28	translation_Loss:9.758	multi_layer_Loss:13.523	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:24.07	Hits@10:37.35	Best:24.33
+2024-12-28 03:00:37,916: End of token training: 3 Epoch: 18 Loss:10.335 MRR:24.07 Best Results: 24.33
+2024-12-28 03:00:37,917: Snapshot:3	Epoch:18	Loss:10.335	translation_Loss:9.74	multi_layer_Loss:0.596	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:24.07	Hits@10:37.35	Best:24.33
+2024-12-28 03:00:38,304: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2024-12-28 03:00:54,287: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2385 | 0.1286 | 0.3019 | 0.3709 |  0.4411 |
+|     1      | 0.1289 | 0.0619 | 0.149  | 0.192  |  0.2637 |
+|     2      | 0.1738 | 0.1045 | 0.1957 | 0.2445 |  0.3143 |
+|     3      | 0.241  | 0.1681 | 0.2703 | 0.3116 |  0.3752 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 03:01:06,859: Snapshot:4	Epoch:0	Loss:6.895	translation_Loss:6.225	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.67                                                   	MRR:7.37	Hits@10:19.9	Best:7.37
+2024-12-28 03:01:09,663: Snapshot:4	Epoch:1	Loss:4.963	translation_Loss:3.823	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.139                                                   	MRR:13.09	Hits@10:31.65	Best:13.09
+2024-12-28 03:01:12,507: Snapshot:4	Epoch:2	Loss:3.916	translation_Loss:2.739	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.177                                                   	MRR:18.51	Hits@10:36.79	Best:18.51
+2024-12-28 03:01:15,314: Snapshot:4	Epoch:3	Loss:3.217	translation_Loss:2.157	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.06                                                   	MRR:20.32	Hits@10:39.12	Best:20.32
+2024-12-28 03:01:18,163: Snapshot:4	Epoch:4	Loss:2.795	translation_Loss:1.815	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.98                                                   	MRR:21.47	Hits@10:41.0	Best:21.47
+2024-12-28 03:01:20,941: Snapshot:4	Epoch:5	Loss:2.503	translation_Loss:1.598	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.905                                                   	MRR:21.99	Hits@10:41.86	Best:21.99
+2024-12-28 03:01:23,776: Snapshot:4	Epoch:6	Loss:2.288	translation_Loss:1.436	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.851                                                   	MRR:22.44	Hits@10:42.16	Best:22.44
+2024-12-28 03:01:26,498: Snapshot:4	Epoch:7	Loss:2.141	translation_Loss:1.331	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.811                                                   	MRR:22.38	Hits@10:42.31	Best:22.44
+2024-12-28 03:01:29,230: Snapshot:4	Epoch:8	Loss:2.046	translation_Loss:1.261	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.785                                                   	MRR:22.14	Hits@10:42.46	Best:22.44
+2024-12-28 03:01:31,996: Snapshot:4	Epoch:9	Loss:1.976	translation_Loss:1.214	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.762                                                   	MRR:22.22	Hits@10:42.27	Best:22.44
+2024-12-28 03:01:34,721: Snapshot:4	Epoch:10	Loss:1.928	translation_Loss:1.18	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.747                                                   	MRR:22.17	Hits@10:42.32	Best:22.44
+2024-12-28 03:01:37,436: Early Stopping! Snapshot: 4 Epoch: 11 Best Results: 22.44
+2024-12-28 03:01:37,437: Start to training tokens! Snapshot: 4 Epoch: 11 Loss:1.896 MRR:22.27 Best Results: 22.44
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:01:37,437: Snapshot:4	Epoch:11	Loss:1.896	translation_Loss:1.159	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.737                                                   	MRR:22.27	Hits@10:41.88	Best:22.44
+2024-12-28 03:01:40,173: Snapshot:4	Epoch:12	Loss:19.858	translation_Loss:6.013	multi_layer_Loss:13.845	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:22.27	Hits@10:41.88	Best:22.44
+2024-12-28 03:01:42,915: End of token training: 4 Epoch: 13 Loss:7.457 MRR:22.27 Best Results: 22.44
+2024-12-28 03:01:42,915: Snapshot:4	Epoch:13	Loss:7.457	translation_Loss:6.011	multi_layer_Loss:1.445	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:22.27	Hits@10:41.88	Best:22.44
+2024-12-28 03:01:43,308: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2024-12-28 03:02:00,807: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2322 | 0.1245 | 0.2953 | 0.3607 |  0.4274 |
+|     1      | 0.1255 | 0.0585 | 0.1451 | 0.1879 |  0.2603 |
+|     2      | 0.1626 | 0.0982 | 0.1805 | 0.2258 |  0.2904 |
+|     3      | 0.2313 | 0.1561 | 0.2599 | 0.3034 |  0.3716 |
+|     4      | 0.217  | 0.1199 | 0.2428 | 0.3141 |  0.418  |
++------------+--------+--------+--------+--------+---------+
+2024-12-28 03:02:00,809: Final Result:
+[+------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2777 | 0.1657 | 0.3447 | 0.4134 |  0.4843 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2726 | 0.1592 | 0.338  | 0.4112 |  0.4853 |
+|     1      | 0.1326 | 0.0661 | 0.1528 | 0.1962 |  0.2668 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2425 | 0.1304 | 0.3091 | 0.3806 |  0.4489 |
+|     1      | 0.128  | 0.0606 | 0.1489 | 0.1921 |  0.2628 |
+|     2      | 0.1827 | 0.1157 | 0.2053 | 0.2488 |  0.3132 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2385 | 0.1286 | 0.3019 | 0.3709 |  0.4411 |
+|     1      | 0.1289 | 0.0619 | 0.149  | 0.192  |  0.2637 |
+|     2      | 0.1738 | 0.1045 | 0.1957 | 0.2445 |  0.3143 |
+|     3      | 0.241  | 0.1681 | 0.2703 | 0.3116 |  0.3752 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2322 | 0.1245 | 0.2953 | 0.3607 |  0.4274 |
+|     1      | 0.1255 | 0.0585 | 0.1451 | 0.1879 |  0.2603 |
+|     2      | 0.1626 | 0.0982 | 0.1805 | 0.2258 |  0.2904 |
+|     3      | 0.2313 | 0.1561 | 0.2599 | 0.3034 |  0.3716 |
+|     4      | 0.217  | 0.1199 | 0.2428 | 0.3141 |  0.418  |
++------------+--------+--------+--------+--------+---------+]
+2024-12-28 03:02:00,810: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 171.20521092414856 |   0.278   |    0.166     |    0.345     |     0.484     |
+|    1     | 171.00374174118042 |   0.205   |    0.114     |    0.248     |     0.379     |
+|    2     | 100.2649335861206  |   0.186   |    0.101     |    0.225     |     0.347     |
+|    3     | 84.66769051551819  |   0.188   |    0.106     |    0.225     |     0.348     |
+|    4     | 47.41363596916199  |   0.184   |    0.102     |    0.218     |     0.342     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2024-12-28 03:02:00,810: Sum_Training_Time:574.5552127361298
+2024-12-28 03:02:00,810: Every_Training_Time:[171.20521092414856, 171.00374174118042, 100.2649335861206, 84.66769051551819, 47.41363596916199]
+2024-12-28 03:02:00,810: Forward transfer: 0.014525 Backward transfer: -0.0206
+2024-12-28 03:02:37,555: Namespace(MAE_loss_weights=[1e-05, 1e-05, 1e-05, 1e-05], batch_size='2048', contrast_loss_weight=0.1, data_path='./data/RELATION/', dataset='RELATION', device=device(type='cuda', index=0), emb_dim=200, embedding_distill_weight=0.1, epoch_num=200, first_layer_epoch_num=10, first_training=True, gpu=0, l2=0.0, learning_rate=0.001, lifelong_name='double_tokened', log_path='./logs/20241228030206/RELATION', logger=<RootLogger root (INFO)>, margin=8.0, mask_ratio=0.2, multi_distill_num=3, multi_layer_distance_weight=40, multi_layer_weight=1.0, multi_layers_path='train_sorted_by_edges_betweenness.txt', muti_embedding_distill_weight=1, neg_ratio=10, note='', num_layer=1, num_old_triples=20000, patience=5, predict_result=False, random_seed=3407, record=False, reply_loss_weight=0.1, save_path='./checkpoint/RELATION', score_distill_weight=1, second_layer_epoch_num=20, skip_previous='False', snapshot_num=5, structure_distill_weight=0.1, token_distillation_weight=100000.0, token_num=5, train_new=True, two_stage_epoch_num=20, use_multi_layers='False', use_two_stage='False', using_MAE_loss=False, using_all_data=False, using_contrast_distill=False, using_different_weights=True, using_embedding_distill=True, using_mask_weight=True, using_multi_embedding_distill=False, using_multi_layer_distance_loss=False, using_relation_distill=False, using_reply=False, using_score_distill=False, using_structure_distill=False, using_test=False, using_token_distillation_loss=True, valid_metrics='mrr', without_hier_distill=False, without_multi_layers='True', without_two_stage=False)
+Snapshot 0: No changes made to optimizer or model parameters.
+Start training =============================
+2024-12-28 03:02:54,124: Snapshot:0	Epoch:0	Loss:34.762	translation_Loss:34.762	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:12.3	Hits@10:29.6	Best:12.3
+2024-12-28 03:03:06,963: Snapshot:0	Epoch:1	Loss:19.584	translation_Loss:19.584	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:21.22	Hits@10:42.6	Best:21.22
+2024-12-28 03:03:19,274: Snapshot:0	Epoch:2	Loss:10.296	translation_Loss:10.296	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:25.05	Hits@10:46.2	Best:25.05
+2024-12-28 03:03:31,625: Snapshot:0	Epoch:3	Loss:5.409	translation_Loss:5.409	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.56	Hits@10:47.49	Best:26.56
+2024-12-28 03:03:43,924: Snapshot:0	Epoch:4	Loss:3.235	translation_Loss:3.235	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.18	Hits@10:48.04	Best:27.18
+2024-12-28 03:03:56,748: Snapshot:0	Epoch:5	Loss:2.271	translation_Loss:2.271	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.49	Hits@10:48.07	Best:27.49
+2024-12-28 03:04:09,106: Snapshot:0	Epoch:6	Loss:1.785	translation_Loss:1.785	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.45	Hits@10:47.96	Best:27.49
+2024-12-28 03:04:21,368: Snapshot:0	Epoch:7	Loss:1.502	translation_Loss:1.502	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.15	Hits@10:47.84	Best:27.49
+2024-12-28 03:04:34,117: Snapshot:0	Epoch:8	Loss:1.331	translation_Loss:1.331	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.23	Hits@10:47.57	Best:27.49
+2024-12-28 03:04:46,419: Snapshot:0	Epoch:9	Loss:1.198	translation_Loss:1.198	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:27.25	Hits@10:47.53	Best:27.49
+2024-12-28 03:04:58,697: Early Stopping! Snapshot: 0 Epoch: 10 Best Results: 27.49
+2024-12-28 03:04:58,697: Start to training tokens! Snapshot: 0 Epoch: 10 Loss:1.105 MRR:26.97 Best Results: 27.49
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:04:58,698: Snapshot:0	Epoch:10	Loss:1.105	translation_Loss:1.105	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.97	Hits@10:47.3	Best:27.49
+2024-12-28 03:05:11,603: Snapshot:0	Epoch:11	Loss:40.356	translation_Loss:24.7	multi_layer_Loss:15.656	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:26.97	Hits@10:47.3	Best:27.49
+2024-12-28 03:05:24,478: End of token training: 0 Epoch: 12 Loss:24.705 MRR:26.97 Best Results: 27.49
+2024-12-28 03:05:24,479: Snapshot:0	Epoch:12	Loss:24.705	translation_Loss:24.693	multi_layer_Loss:0.013	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:26.97	Hits@10:47.3	Best:27.49
+2024-12-28 03:05:24,773: => loading checkpoint './checkpoint/RELATION/0model_best.tar'
+2024-12-28 03:05:30,227: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2778 | 0.1659 | 0.3436 | 0.4116 |  0.4849 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 1: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 03:06:07,592: Snapshot:1	Epoch:0	Loss:30.846	translation_Loss:28.45	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.396                                                   	MRR:9.34	Hits@10:22.01	Best:9.34
+2024-12-28 03:06:18,958: Snapshot:1	Epoch:1	Loss:17.664	translation_Loss:15.546	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.117                                                   	MRR:12.53	Hits@10:25.62	Best:12.53
+2024-12-28 03:06:30,319: Snapshot:1	Epoch:2	Loss:13.307	translation_Loss:11.309	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.998                                                   	MRR:12.68	Hits@10:26.02	Best:12.68
+2024-12-28 03:06:41,698: Snapshot:1	Epoch:3	Loss:12.074	translation_Loss:10.177	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.897                                                   	MRR:12.89	Hits@10:26.04	Best:12.89
+2024-12-28 03:06:53,052: Snapshot:1	Epoch:4	Loss:11.624	translation_Loss:9.779	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.845                                                   	MRR:12.85	Hits@10:26.07	Best:12.89
+2024-12-28 03:07:04,363: Snapshot:1	Epoch:5	Loss:11.378	translation_Loss:9.56	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.818                                                   	MRR:12.88	Hits@10:26.16	Best:12.89
+2024-12-28 03:07:15,742: Snapshot:1	Epoch:6	Loss:11.286	translation_Loss:9.475	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.811                                                   	MRR:12.98	Hits@10:26.15	Best:12.98
+2024-12-28 03:07:27,088: Snapshot:1	Epoch:7	Loss:11.195	translation_Loss:9.396	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.799                                                   	MRR:12.94	Hits@10:26.25	Best:12.98
+2024-12-28 03:07:38,435: Snapshot:1	Epoch:8	Loss:11.142	translation_Loss:9.346	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.796                                                   	MRR:12.95	Hits@10:26.16	Best:12.98
+2024-12-28 03:07:49,787: Snapshot:1	Epoch:9	Loss:11.09	translation_Loss:9.298	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.792                                                   	MRR:12.9	Hits@10:26.09	Best:12.98
+2024-12-28 03:08:01,147: Snapshot:1	Epoch:10	Loss:11.034	translation_Loss:9.245	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.789                                                   	MRR:12.88	Hits@10:26.11	Best:12.98
+2024-12-28 03:08:12,985: Early Stopping! Snapshot: 1 Epoch: 11 Best Results: 12.98
+2024-12-28 03:08:12,985: Start to training tokens! Snapshot: 1 Epoch: 11 Loss:10.984 MRR:12.96 Best Results: 12.98
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:08:12,985: Snapshot:1	Epoch:11	Loss:10.984	translation_Loss:9.201	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.784                                                   	MRR:12.96	Hits@10:26.06	Best:12.98
+2024-12-28 03:08:24,240: Snapshot:1	Epoch:12	Loss:48.859	translation_Loss:33.076	multi_layer_Loss:15.784	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:12.96	Hits@10:26.06	Best:12.98
+2024-12-28 03:08:35,556: End of token training: 1 Epoch: 13 Loss:33.077 MRR:12.96 Best Results: 12.98
+2024-12-28 03:08:35,557: Snapshot:1	Epoch:13	Loss:33.077	translation_Loss:33.059	multi_layer_Loss:0.018	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:12.96	Hits@10:26.06	Best:12.98
+2024-12-28 03:08:35,858: => loading checkpoint './checkpoint/RELATION/1model_best.tar'
+2024-12-28 03:08:46,393: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2763 | 0.163  | 0.343  | 0.4134 |  0.4857 |
+|     1      | 0.1309 | 0.0659 | 0.1522 | 0.1934 |  0.2581 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 2: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 03:09:14,151: Snapshot:2	Epoch:0	Loss:23.988	translation_Loss:20.831	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.157                                                   	MRR:8.66	Hits@10:17.84	Best:8.66
+2024-12-28 03:09:22,983: Snapshot:2	Epoch:1	Loss:15.122	translation_Loss:11.849	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:3.273                                                   	MRR:16.86	Hits@10:29.12	Best:16.86
+2024-12-28 03:09:31,514: Snapshot:2	Epoch:2	Loss:11.034	translation_Loss:8.229	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.806                                                   	MRR:17.29	Hits@10:29.65	Best:17.29
+2024-12-28 03:09:39,859: Snapshot:2	Epoch:3	Loss:9.623	translation_Loss:7.109	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.514                                                   	MRR:17.12	Hits@10:29.1	Best:17.29
+2024-12-28 03:09:48,209: Snapshot:2	Epoch:4	Loss:9.188	translation_Loss:6.762	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.426                                                   	MRR:17.05	Hits@10:28.71	Best:17.29
+2024-12-28 03:09:56,545: Snapshot:2	Epoch:5	Loss:9.03	translation_Loss:6.643	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.387                                                   	MRR:17.01	Hits@10:28.69	Best:17.29
+2024-12-28 03:10:05,532: Snapshot:2	Epoch:6	Loss:8.934	translation_Loss:6.564	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.37                                                   	MRR:17.08	Hits@10:28.69	Best:17.29
+2024-12-28 03:10:14,175: Early Stopping! Snapshot: 2 Epoch: 7 Best Results: 17.29
+2024-12-28 03:10:14,175: Start to training tokens! Snapshot: 2 Epoch: 7 Loss:8.887 MRR:17.04 Best Results: 17.29
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:10:14,176: Snapshot:2	Epoch:7	Loss:8.887	translation_Loss:6.522	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:2.364                                                   	MRR:17.04	Hits@10:28.63	Best:17.29
+2024-12-28 03:10:22,505: Snapshot:2	Epoch:8	Loss:43.008	translation_Loss:26.577	multi_layer_Loss:16.431	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:17.04	Hits@10:28.63	Best:17.29
+2024-12-28 03:10:30,869: End of token training: 2 Epoch: 9 Loss:26.681 MRR:17.04 Best Results: 17.29
+2024-12-28 03:10:30,869: Snapshot:2	Epoch:9	Loss:26.681	translation_Loss:26.584	multi_layer_Loss:0.098	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:17.04	Hits@10:28.63	Best:17.29
+2024-12-28 03:10:31,177: => loading checkpoint './checkpoint/RELATION/2model_best.tar'
+2024-12-28 03:10:46,155: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2534 | 0.144  | 0.3174 | 0.3854 |  0.456  |
+|     1      | 0.1279 | 0.0624 | 0.148  | 0.1909 |  0.2564 |
+|     2      | 0.1713 | 0.1097 | 0.1902 | 0.2314 |  0.2909 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 3: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 03:11:01,591: Snapshot:3	Epoch:0	Loss:10.809	translation_Loss:9.751	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.058                                                   	MRR:7.79	Hits@10:17.28	Best:7.79
+2024-12-28 03:11:05,528: Snapshot:3	Epoch:1	Loss:7.807	translation_Loss:6.784	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.023                                                   	MRR:15.07	Hits@10:29.11	Best:15.07
+2024-12-28 03:11:09,411: Snapshot:3	Epoch:2	Loss:5.936	translation_Loss:5.056	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.88                                                   	MRR:18.99	Hits@10:32.18	Best:18.99
+2024-12-28 03:11:13,368: Snapshot:3	Epoch:3	Loss:4.946	translation_Loss:4.149	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.797                                                   	MRR:20.83	Hits@10:33.82	Best:20.83
+2024-12-28 03:11:17,355: Snapshot:3	Epoch:4	Loss:4.384	translation_Loss:3.632	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.753                                                   	MRR:21.79	Hits@10:34.58	Best:21.79
+2024-12-28 03:11:21,272: Snapshot:3	Epoch:5	Loss:4.032	translation_Loss:3.31	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.722                                                   	MRR:22.16	Hits@10:34.82	Best:22.16
+2024-12-28 03:11:25,219: Snapshot:3	Epoch:6	Loss:3.81	translation_Loss:3.109	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.701                                                   	MRR:22.51	Hits@10:35.08	Best:22.51
+2024-12-28 03:11:29,221: Snapshot:3	Epoch:7	Loss:3.676	translation_Loss:2.99	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.686                                                   	MRR:22.93	Hits@10:35.15	Best:22.93
+2024-12-28 03:11:33,613: Snapshot:3	Epoch:8	Loss:3.601	translation_Loss:2.923	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.678                                                   	MRR:22.95	Hits@10:35.25	Best:22.95
+2024-12-28 03:11:37,569: Snapshot:3	Epoch:9	Loss:3.538	translation_Loss:2.872	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.666                                                   	MRR:23.03	Hits@10:35.04	Best:23.03
+2024-12-28 03:11:41,513: Snapshot:3	Epoch:10	Loss:3.487	translation_Loss:2.834	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.653                                                   	MRR:23.1	Hits@10:34.9	Best:23.1
+2024-12-28 03:11:45,401: Snapshot:3	Epoch:11	Loss:3.46	translation_Loss:2.812	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.648                                                   	MRR:22.89	Hits@10:34.82	Best:23.1
+2024-12-28 03:11:49,219: Snapshot:3	Epoch:12	Loss:3.445	translation_Loss:2.804	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.641                                                   	MRR:22.65	Hits@10:34.98	Best:23.1
+2024-12-28 03:11:53,084: Snapshot:3	Epoch:13	Loss:3.412	translation_Loss:2.773	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.639                                                   	MRR:22.94	Hits@10:34.93	Best:23.1
+2024-12-28 03:11:56,978: Snapshot:3	Epoch:14	Loss:3.396	translation_Loss:2.765	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.631                                                   	MRR:22.98	Hits@10:34.86	Best:23.1
+2024-12-28 03:12:00,819: Early Stopping! Snapshot: 3 Epoch: 15 Best Results: 23.1
+2024-12-28 03:12:00,819: Start to training tokens! Snapshot: 3 Epoch: 15 Loss:3.395 MRR:23.09 Best Results: 23.1
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:12:00,820: Snapshot:3	Epoch:15	Loss:3.395	translation_Loss:2.764	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.631                                                   	MRR:23.09	Hits@10:35.11	Best:23.1
+2024-12-28 03:12:04,660: Snapshot:3	Epoch:16	Loss:23.486	translation_Loss:9.964	multi_layer_Loss:13.523	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:23.09	Hits@10:35.11	Best:23.1
+2024-12-28 03:12:08,504: End of token training: 3 Epoch: 17 Loss:10.573 MRR:23.09 Best Results: 23.1
+2024-12-28 03:12:08,504: Snapshot:3	Epoch:17	Loss:10.573	translation_Loss:9.977	multi_layer_Loss:0.596	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:23.09	Hits@10:35.11	Best:23.1
+2024-12-28 03:12:08,818: => loading checkpoint './checkpoint/RELATION/3model_best.tar'
+2024-12-28 03:12:25,173: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2481 | 0.1384 | 0.3105 | 0.3813 |  0.4548 |
+|     1      | 0.1278 | 0.0626 | 0.1478 | 0.1903 |  0.2575 |
+|     2      | 0.1693 | 0.1047 | 0.1897 | 0.2344 |  0.2949 |
+|     3      | 0.2275 | 0.1574 | 0.2552 | 0.2972 |  0.3549 |
++------------+--------+--------+--------+--------+---------+
+Snapshot 4: Resetting for new snapshot...
+Token frozen for new snapshot.
+Embeddings are now trainable.
+Reinitializing token...
+Optimizer reset: Training embeddings and reinitialized token.
+Start training =============================
+2024-12-28 03:12:37,708: Snapshot:4	Epoch:0	Loss:7.526	translation_Loss:6.657	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.869                                                   	MRR:5.82	Hits@10:15.94	Best:5.82
+2024-12-28 03:12:40,512: Snapshot:4	Epoch:1	Loss:5.861	translation_Loss:4.754	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.107                                                   	MRR:11.11	Hits@10:27.33	Best:11.11
+2024-12-28 03:12:43,331: Snapshot:4	Epoch:2	Loss:4.753	translation_Loss:3.65	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.104                                                   	MRR:16.36	Hits@10:32.94	Best:16.36
+2024-12-28 03:12:46,103: Snapshot:4	Epoch:3	Loss:4.01	translation_Loss:2.944	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.065                                                   	MRR:18.28	Hits@10:34.95	Best:18.28
+2024-12-28 03:12:48,997: Snapshot:4	Epoch:4	Loss:3.529	translation_Loss:2.513	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:1.016                                                   	MRR:19.24	Hits@10:36.44	Best:19.24
+2024-12-28 03:12:51,807: Snapshot:4	Epoch:5	Loss:3.182	translation_Loss:2.213	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.969                                                   	MRR:19.84	Hits@10:37.02	Best:19.84
+2024-12-28 03:12:54,619: Snapshot:4	Epoch:6	Loss:2.961	translation_Loss:2.032	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.929                                                   	MRR:20.26	Hits@10:37.3	Best:20.26
+2024-12-28 03:12:57,419: Snapshot:4	Epoch:7	Loss:2.795	translation_Loss:1.891	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.904                                                   	MRR:20.47	Hits@10:37.42	Best:20.47
+2024-12-28 03:13:00,231: Snapshot:4	Epoch:8	Loss:2.689	translation_Loss:1.808	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.881                                                   	MRR:20.54	Hits@10:37.53	Best:20.54
+2024-12-28 03:13:02,966: Snapshot:4	Epoch:9	Loss:2.615	translation_Loss:1.749	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.866                                                   	MRR:20.41	Hits@10:37.44	Best:20.54
+2024-12-28 03:13:05,769: Snapshot:4	Epoch:10	Loss:2.571	translation_Loss:1.714	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.856                                                   	MRR:20.57	Hits@10:37.39	Best:20.57
+2024-12-28 03:13:08,557: Snapshot:4	Epoch:11	Loss:2.527	translation_Loss:1.681	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.845                                                   	MRR:20.66	Hits@10:37.27	Best:20.66
+2024-12-28 03:13:11,370: Snapshot:4	Epoch:12	Loss:2.499	translation_Loss:1.663	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.836                                                   	MRR:20.68	Hits@10:37.45	Best:20.68
+2024-12-28 03:13:14,097: Snapshot:4	Epoch:13	Loss:2.487	translation_Loss:1.652	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.834                                                   	MRR:20.59	Hits@10:37.54	Best:20.68
+2024-12-28 03:13:16,839: Snapshot:4	Epoch:14	Loss:2.458	translation_Loss:1.626	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.832                                                   	MRR:20.48	Hits@10:37.62	Best:20.68
+2024-12-28 03:13:19,570: Snapshot:4	Epoch:15	Loss:2.458	translation_Loss:1.632	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.826                                                   	MRR:20.64	Hits@10:37.75	Best:20.68
+2024-12-28 03:13:22,289: Snapshot:4	Epoch:16	Loss:2.445	translation_Loss:1.615	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.83                                                   	MRR:20.38	Hits@10:37.31	Best:20.68
+2024-12-28 03:13:25,084: Snapshot:4	Epoch:17	Loss:2.43	translation_Loss:1.609	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.821                                                   	MRR:20.69	Hits@10:37.43	Best:20.69
+2024-12-28 03:13:28,360: Snapshot:4	Epoch:18	Loss:2.431	translation_Loss:1.609	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.821                                                   	MRR:20.69	Hits@10:37.45	Best:20.69
+2024-12-28 03:13:31,155: Snapshot:4	Epoch:19	Loss:2.429	translation_Loss:1.608	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.821                                                   	MRR:20.85	Hits@10:37.28	Best:20.85
+2024-12-28 03:13:33,870: Snapshot:4	Epoch:20	Loss:2.429	translation_Loss:1.611	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.818                                                   	MRR:20.7	Hits@10:37.39	Best:20.85
+2024-12-28 03:13:36,612: Snapshot:4	Epoch:21	Loss:2.41	translation_Loss:1.587	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.823                                                   	MRR:20.67	Hits@10:37.39	Best:20.85
+2024-12-28 03:13:39,324: Snapshot:4	Epoch:22	Loss:2.411	translation_Loss:1.59	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.821                                                   	MRR:20.65	Hits@10:37.29	Best:20.85
+2024-12-28 03:13:42,041: Snapshot:4	Epoch:23	Loss:2.406	translation_Loss:1.588	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.817                                                   	MRR:20.71	Hits@10:37.51	Best:20.85
+2024-12-28 03:13:44,778: Early Stopping! Snapshot: 4 Epoch: 24 Best Results: 20.85
+2024-12-28 03:13:44,778: Start to training tokens! Snapshot: 4 Epoch: 24 Loss:2.405 MRR:20.76 Best Results: 20.85
+Token added to optimizer, embeddings excluded successfully.
+Optimizer parameter groups:
+Group 0:
+ - torch.Size([5, 200]), requires_grad: True
+ - torch.Size([5, 200]), requires_grad: True
+2024-12-28 03:13:44,778: Snapshot:4	Epoch:24	Loss:2.405	translation_Loss:1.586	multi_layer_Loss:0.0	MAE_Loss:0.0	decompose_Loss:0.819                                                   	MRR:20.76	Hits@10:37.43	Best:20.85
+2024-12-28 03:13:47,532: Snapshot:4	Epoch:25	Loss:20.401	translation_Loss:6.556	multi_layer_Loss:13.845	MAE_Loss:0.0	decompose_Loss:0.0                                                   	MRR:20.76	Hits@10:37.43	Best:20.85
+2024-12-28 03:13:50,266: End of token training: 4 Epoch: 26 Loss:7.999 MRR:20.76 Best Results: 20.85
+2024-12-28 03:13:50,266: Snapshot:4	Epoch:26	Loss:7.999	translation_Loss:6.554	multi_layer_Loss:1.445	MAE_Loss:0.0	decompose_Loss:0.0                                                           	MRR:20.76	Hits@10:37.43	Best:20.85
+2024-12-28 03:13:50,571: => loading checkpoint './checkpoint/RELATION/4model_best.tar'
+2024-12-28 03:14:08,072: 
++------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2486 | 0.1393 | 0.3125 | 0.382  |  0.4525 |
+|     1      | 0.1276 | 0.0619 | 0.1477 | 0.1908 |  0.2593 |
+|     2      | 0.1588 | 0.0963 | 0.1755 |  0.22  |  0.2829 |
+|     3      | 0.2296 | 0.1554 | 0.2599 | 0.3048 |  0.3642 |
+|     4      | 0.2009 | 0.1152 | 0.2154 | 0.2769 |  0.3775 |
++------------+--------+--------+--------+--------+---------+
+2024-12-28 03:14:08,075: Final Result:
+[+------------+--------+--------+--------+--------+---------+
+| Snapshot:0 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2778 | 0.1659 | 0.3436 | 0.4116 |  0.4849 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:1 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2763 | 0.163  | 0.343  | 0.4134 |  0.4857 |
+|     1      | 0.1309 | 0.0659 | 0.1522 | 0.1934 |  0.2581 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:2 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2534 | 0.144  | 0.3174 | 0.3854 |  0.456  |
+|     1      | 0.1279 | 0.0624 | 0.148  | 0.1909 |  0.2564 |
+|     2      | 0.1713 | 0.1097 | 0.1902 | 0.2314 |  0.2909 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:3 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2481 | 0.1384 | 0.3105 | 0.3813 |  0.4548 |
+|     1      | 0.1278 | 0.0626 | 0.1478 | 0.1903 |  0.2575 |
+|     2      | 0.1693 | 0.1047 | 0.1897 | 0.2344 |  0.2949 |
+|     3      | 0.2275 | 0.1574 | 0.2552 | 0.2972 |  0.3549 |
++------------+--------+--------+--------+--------+---------+, +------------+--------+--------+--------+--------+---------+
+| Snapshot:4 |  MRR   | Hits@1 | Hits@3 | Hits@5 | Hits@10 |
++------------+--------+--------+--------+--------+---------+
+|     0      | 0.2486 | 0.1393 | 0.3125 | 0.382  |  0.4525 |
+|     1      | 0.1276 | 0.0619 | 0.1477 | 0.1908 |  0.2593 |
+|     2      | 0.1588 | 0.0963 | 0.1755 |  0.22  |  0.2829 |
+|     3      | 0.2296 | 0.1554 | 0.2599 | 0.3048 |  0.3642 |
+|     4      | 0.2009 | 0.1152 | 0.2154 | 0.2769 |  0.3775 |
++------------+--------+--------+--------+--------+---------+]
+2024-12-28 03:14:08,075: Report Result:
++----------+--------------------+-----------+--------------+--------------+---------------+
+| Snapshot |        Time        | Whole_MRR | Whole_Hits@1 | Whole_Hits@3 | Whole_Hits@10 |
++----------+--------------------+-----------+--------------+--------------+---------------+
+|    0     | 166.9229302406311  |   0.278   |    0.166     |    0.344     |     0.485     |
+|    1     | 180.76694750785828 |   0.206   |    0.116     |     0.25     |     0.375     |
+|    2     | 101.10071778297424 |   0.187   |    0.106     |    0.224     |     0.342     |
+|    3     | 80.30276131629944  |   0.189   |    0.108     |    0.224     |     0.344     |
+|    4     | 83.54613137245178  |   0.188   |    0.107     |    0.222     |     0.344     |
++----------+--------------------+-----------+--------------+--------------+---------------+
+2024-12-28 03:14:08,075: Sum_Training_Time:612.6394882202148
+2024-12-28 03:14:08,075: Every_Training_Time:[166.9229302406311, 180.76694750785828, 101.10071778297424, 80.30276131629944, 83.54613137245178]
+2024-12-28 03:14:08,075: Forward transfer: 0.0139 Backward transfer: -0.010725000000000005

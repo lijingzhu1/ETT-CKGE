@@ -1,0 +1,1 @@
+slurmstepd: error: *** JOB 32490822 ON p0353 CANCELLED AT 2024-11-11T19:36:20 ***
