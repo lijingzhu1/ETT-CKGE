@@ -1,10 +1,7 @@
 # IncDE
 
-The codes and datasets for "[Towards Continual Knowledge Graph Embedding via Incremental Distillation](https://ojs.aaai.org/index.php/AAAI/article/view/28722)" [AAAI 2024].
+The codes and datasets for "[FEMME: Fast, Effective, and Memory-Efficient Continual Knowledge Graph Embedding"
 
-## Framework
-
-![image-20240417104607874](README.assets/framework.png)
 
 ## Folder Structure
 
@@ -31,11 +28,11 @@ Introduction to the structure of the folder:
 - /src: Source codes are in this folder.
 - /main.py: To run the IncDE.
 - data_preprocess.py: To prepare the data processing.
-- README.md: Instruct on how to realize IncDE.
+- README.md: Instruct on how to realize FEMME.
 
 ## Requirements
 
-All experiments are implemented on the NVIDIA RTX 3090Ti GPU with the PyTorch. The version of Python is 3.7.
+All experiments are implemented on the GPU with the PyTorch. The version of Python is 3.7.
 
 Please run as follows to install all the dependencies:
 
@@ -50,35 +47,13 @@ pip3 install -r requirements.txt
 1. Unzip the dataset $data1.zip$ and $data2.zip$ in the folder of $data$.
 2. Prepare the data processing in the shell:
 
-```shell
-python data_preprocess.py
-```
 
 ### Main Results
 
 3. Run the code with this in the shell:
 
 ```shell
-python main.py -dataset ENTITY -gpu 0
+python main.py -dataset ENTITY -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -multi_layer_weight 1
 ```
 
-### Ablation Results
 
-4. Run the code with this in the shell:
-
-```shell
-./ablation.sh
-```
-
-## Citation
-
-If you find this method or code useful, please cite
-
-```latex
-@inproceedings{liu2024towards,
-  title={Towards Continual Knowledge Graph Embedding via Incremental Distillation},
-  author={Liu, Jiajun and Ke, Wenjun and Wang, Peng and Shang, Ziyu and Gao, Jinhua and Li, Guozheng and Ji, Ke and Liu, Yanhe},
-  booktitle={AAAI},
-  year={2024}
-}
-```
