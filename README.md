@@ -1,4 +1,4 @@
-# IncDE
+# FEMME
 
 The codes and datasets for "[FEMME: Fast, Effective, and Memory-Efficient Continual Knowledge Graph Embedding"
 
