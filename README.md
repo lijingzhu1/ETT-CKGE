@@ -8,7 +8,7 @@ The codes and datasets for "[FEMME: Fast, Effective, and Memory-Efficient Contin
 The structure of the folder is shown below:
 
 ```csharp
- IncDE
+ FEMME
  ├─checkpoint
  ├─data
  ├─logs
