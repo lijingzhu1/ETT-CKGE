@@ -1,6 +1,6 @@
-# FEMME
+# ETT-CKGE
 
-The codes and datasets for "FEMME: Fast, Effective, and Memory-Efficient Continual Knowledge Graph Embedding"
+The codes and datasets for "ETT-CKGE: Efficient Task-driven Tokens for Continual Knowledge Graph Embedding"
 
 
 ## Folder Structure
@@ -8,7 +8,7 @@ The codes and datasets for "FEMME: Fast, Effective, and Memory-Efficient Continu
 The structure of the folder is shown below:
 
 ```csharp
- FEMME
+ ETT-CKGE
  ├─checkpoint
  ├─data
  ├─logs
