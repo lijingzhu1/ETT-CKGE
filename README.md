@@ -51,9 +51,14 @@ pip3 install -r requirements.txt
 ### Main Results
 
 3. Run the code with this in the shell:
+#### Entity
+```shell
+
+python main.py -dataset ENTITY -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 5000 10000 10000 10000 -token_num 2 -div_loss_weight 0.2
+```
+#### Relation
 
 ```shell
-python main.py -dataset ENTITY -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -multi_layer_weight 1
+python main.py -dataset RELATION -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 3000 15000 80000 80000 -token_num 2 -div_loss_weight 0.2
 ```
-
 
