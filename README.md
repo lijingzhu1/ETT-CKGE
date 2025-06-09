@@ -1,7 +1,7 @@
 # ETT-CKGE
 
 <p align="center">
-  <img src="assets/new_overview.png" alt="ETT-CKGE Model Overview" width="600"/>
+  <img src="overview_new.png" alt="ETT-CKGE Model Overview" width="600"/>
 </p>
 
 This repository contains the codes and datasets for our paper:  
