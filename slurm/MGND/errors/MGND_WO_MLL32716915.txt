@@ -1,5 +1,0 @@
-/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
-  warnings.warn(warning.format(ret))
-/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
-  warnings.warn(warning.format(ret))
-slurmstepd: error: *** JOB 32716915 ON p0317 CANCELLED AT 2024-11-24T23:00:58 ***

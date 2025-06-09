@@ -1,9 +1,0 @@
-/users/PCS0256/lijing/.local/lib/python3.7/site-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
-  warnings.warn(warning.format(ret))
-Traceback (most recent call last):
-  File "main.py", line 10, in <module>
-    from src.model.multi_layer_MGED import TransE as multi_layer_MGED
-  File "/users/PCS0256/lijing/IncDE/src/model/multi_layer_MGED.py", line 266
-    if not isinstance self.old_layer_data_ent_embeddings_weight:
-                         ^
-SyntaxError: invalid syntax
