@@ -1,6 +1,13 @@
 # ETT-CKGE
 
-The codes and datasets for "ETT-CKGE: Efficient Task-driven Tokens for Continual Knowledge Graph Embedding"
+<p align="center">
+  <img src="assets/new_overview.png" alt="ETT-CKGE Model Overview" width="600"/>
+</p>
+
+This repository contains the codes and datasets for our paper:  
+**"ETT-CKGE: Efficient Task-driven Tokens for Continual Knowledge Graph Embedding"**,  
+which has been **accepted at ECML PKDD 2025** 🎉.
+
 
 
 ## Folder Structure
