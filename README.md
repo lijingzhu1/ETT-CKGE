@@ -29,7 +29,7 @@ The structure of the folder is shown below:
 Introduction to the structure of the folder:
 
 - /checkpoint: The generated models are stored in this folder.
-- /data: The datasets(ENTITY, RELATION, FACT, HYBRID, graph_equal, graph_higher, graph_lower) are stored in this folder.
+- /data: The datasets(ENTITY, RELATION, FACT, HYBRID, FB-CKGE, WN-CKGE) are stored in this folder.
 - /logs: Logs for the training are stored in this folder.
 - /save: Some temp results are in this folder.
 - /src: Source codes are in this folder.
