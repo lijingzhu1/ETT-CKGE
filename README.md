@@ -51,14 +51,35 @@ pip3 install -r requirements.txt
 ### Main Results
 
 3. Run the code with this in the shell:
-#### Entity
+#### ENTITY
 ```shell
 
 python main.py -dataset ENTITY -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 5000 10000 10000 10000 -token_num 2 -div_loss_weight 0.2
 ```
-#### Relation
+#### FACT
+```shell
+
+python main.py -dataset FACT -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 1000 10000 10000 10000 -token_num 4 -div_loss_weight 0.6
+```
+#### HYBRID
+```shell
+
+python main.py -dataset HYBRID -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 10000 3000 800 200000 -token_num 10 -div_loss_weight 0.2
+```
+#### RELATION
 
 ```shell
 python main.py -dataset RELATION -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 3000 15000 80000 80000 -token_num 2 -div_loss_weight 0.2
 ```
+#### WN-CKGE
+
+```shell
+python main.py -dataset WN_CKGE -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 10000 5000 10000 10000 -token_num 10 -div_loss_weight 0.4
+```
+#### FB-CKGAE
+
+```shell
+python main.py -dataset WN_CKGE -lifelong_name double_tokened -using_token_distillation_loss True -use_multi_layers False -without_multi_layers True -use_two_stage False -batch_size 3072 -learning_rate 0.001 -patience 3 -token_distillation_weight 10000 10000 10000 20000 -token_num 10 -div_loss_weight 0.2
+```
+
 
